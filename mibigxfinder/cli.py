@@ -59,5 +59,20 @@ def structure(
     typer.echo(df.to_string(index=False))
 
 
+@app.command("build-reference")
+def build_reference(
+    pfam: Path = typer.Option(Path("data/pfam/Pfam-A.hmm"), help="Pfam-A.hmm file"),
+    mibig_version: str = typer.Option("4.0", help="MIBiG version"),
+    gbk_dir: Optional[Path] = typer.Option(None, help="Folder of antiSMASH-processed MIBiG .gbk files (default: download)"),
+    out_dir: Path = typer.Option(Path("data/bgc_reference"), help="Output directory"),
+    cores: int = typer.Option(1, help="CPU cores for the domain search"),
+):
+    """Build the MIBiG domain table used by BGC search (needs BiG-SCAPE)."""
+    from mibigxfinder.bgc import build_reference as build
+
+    out = build(out_dir, pfam, mibig_version=mibig_version, gbk_dir=gbk_dir, cores=cores)
+    typer.echo(f"wrote {out} and {out.with_suffix('.json').name}")
+
+
 if __name__ == "__main__":
     app()

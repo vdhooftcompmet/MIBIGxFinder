@@ -13,6 +13,10 @@ built with the same Pfam release and BiG-SCAPE version.
 
 from __future__ import annotations
 
+import hashlib
+import json
+from datetime import date
+from importlib.metadata import version
 from pathlib import Path
 from typing import Iterable
 
@@ -26,6 +30,7 @@ from big_scape.genbank import CDS, GBK, Region
 from big_scape.hmm import HMMer, HSP, HSPAlignment
 
 CONFIG = Path(big_scape.__file__).parent / "config.yml"
+ALIGNMENT, EXTEND, WEIGHTS = ALIGNMENT_MODE.GLOCAL, EXTEND_STRATEGY.LEGACY, "mix"
 
 COLUMNS = [
     "bgc_id", "region_start", "region_stop", "contig_edge",
@@ -120,11 +125,60 @@ def score(queries: pd.DataFrame, references: pd.DataFrame) -> pd.DataFrame:
     if not pairs:
         return pd.DataFrame(columns=cols)
 
-    results = calculate_scores_pair(
-        (pairs, ALIGNMENT_MODE.GLOCAL, EXTEND_STRATEGY.LEGACY, 0, "mix", CONFIG)
-    )
+    results = calculate_scores_pair((pairs, ALIGNMENT, EXTEND, 0, WEIGHTS, CONFIG))
     df = pd.DataFrame(
         [(names[a], names[b], dist, jc, ai, dss) for a, b, dist, jc, ai, dss, *_ in results],
         columns=cols,
     )
     return df.sort_values(["query_id", "distance", "reference_id"], ignore_index=True)
+
+
+def build_reference(
+    out_dir: str | Path,
+    pfam_path: str | Path,
+    *,
+    mibig_version: str = "4.0",
+    gbk_dir: str | Path | None = None,
+    cores: int = 1,
+    batch: int = 100,
+) -> Path:
+    """Annotate MIBiG .gbk files into ``<out_dir>/mibig_<version>.parquet`` plus a JSON manifest.
+
+    Without ``gbk_dir`` the antiSMASH-processed MIBiG release is downloaded into
+    ``<out_dir>/MIBiG/`` by BiG-SCAPE's own downloader (reused if already there).
+    """
+    out_dir = Path(out_dir)
+    if gbk_dir is None:
+        from big_scape.file_input.load_files import get_mibig
+        print(f"getting antiSMASH-processed MIBiG {mibig_version} ...")
+        gbk_dir = get_mibig(mibig_version, out_dir)
+    files = sorted(Path(gbk_dir).glob("*.gbk"))
+    if not files:
+        raise FileNotFoundError(f"no .gbk files in {gbk_dir}")
+
+    parts = []
+    for i in range(0, len(files), batch):   # batches only to report progress
+        parts.append(annotate(files[i:i + batch], pfam_path, mibig=True, cores=cores))
+        print(f"annotated {min(i + batch, len(files))}/{len(files)} BGCs")
+    table = pd.concat(parts, ignore_index=True)
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out = out_dir / f"mibig_{mibig_version}.parquet"
+    table.to_parquet(out, index=False)
+    with open(pfam_path, "rb") as f:
+        pfam_sha256 = hashlib.file_digest(f, "sha256").hexdigest()
+    manifest = {
+        "mibig_version": mibig_version,
+        "gbk_dir": Path(gbk_dir).name,
+        "n_bgcs": int(table["bgc_id"].nunique()),
+        "n_domains": int(table["domain"].notna().sum()),
+        "pfam_sha256": pfam_sha256,
+        "bigscape_version": version("big-scape"),
+        "settings": {
+            "record_type": "region", "alignment_mode": ALIGNMENT.value,
+            "extend_strategy": EXTEND.value, "weights": WEIGHTS,
+        },
+        "created": date.today().isoformat(),
+    }
+    out.with_suffix(".json").write_text(json.dumps(manifest, indent=2))
+    return out

@@ -64,6 +64,16 @@ Output columns: `feature_id, library_id, bgc_id, inchikey, similarity, matched_p
 mibigxfinder structure query_smiles.csv tests/fixtures/library_fake.mgf --out-dir out/
 ```
 
+### Build the BGC reference
+
+Annotate all MIBiG BGCs with Pfam once; BGC search compares query BGCs against this table (needs BiG-SCAPE, see Install).
+
+```bash
+mibigxfinder build-reference --mibig-version 4.0 --cores 4
+```
+
+Without `--gbk-dir`, the antiSMASH-processed MIBiG release is downloaded into `data/bgc_reference/MIBiG/`. Writes `data/bgc_reference/mibig_4.0.parquet` (one row per gene and Pfam domain) and `mibig_4.0.json` (MIBiG version, Pfam checksum, BiG-SCAPE version and settings). Expect roughly an hour on one core for MIBiG 4.0.
+
 ### BGC-links file format
 
 Plain CSV, at least these two columns (other columns are ignored):
