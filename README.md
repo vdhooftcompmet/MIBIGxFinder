@@ -8,6 +8,24 @@ cd mibigxfinder
 pip install -e .
 ```
 
+### BGC search (optional)
+
+BGC search uses the distance metric of [BiG-SCAPE 2](https://github.com/medema-group/BiG-SCAPE) and needs BiG-SCAPE (2.0.3) and the Pfam database. Install BiG-SCAPE from bioconda (Linux or macOS) into the same environment:
+
+```bash
+conda install -n mibigxfinder -c conda-forge -c bioconda bigscape=2.0.3 -y
+```
+
+Download Pfam into `data/pfam` (~2 GB):
+
+```bash
+mkdir -p data/pfam
+wget -P data/pfam https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
+gunzip data/pfam/Pfam-A.hmm.gz
+```
+
+The first BGC annotation presses the profiles (`Pfam-A.hmm.h3*` files are written), so the folder must be writable.
+
 ## Usage
 
 ### Spectra search

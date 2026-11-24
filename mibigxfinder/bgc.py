@@ -1,0 +1,130 @@
+# mibigxfinder/bgc.py
+"""BGC distances with BiG-SCAPE 2's metric, without its database.
+
+``annotate`` turns region .gbk files into a domain table (one row per CDS and
+Pfam domain) using BiG-SCAPE's own parsing and HMMER code. ``score`` rebuilds
+BiG-SCAPE records from such tables and runs BiG-SCAPE's own pair scoring.
+Settings are the ``bigscape query`` defaults: region records, glocal
+alignment, legacy extend strategy, mix weights.
+
+Needs BiG-SCAPE 2 (bioconda) and a Pfam-A.hmm; tables are only comparable if
+built with the same Pfam release and BiG-SCAPE version.
+"""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Iterable
+
+import pandas as pd
+
+import big_scape
+from big_scape.cli.config import BigscapeConfig
+from big_scape.comparison.workflow import calculate_scores_pair
+from big_scape.enums import ALIGNMENT_MODE, EXTEND_STRATEGY, SOURCE_TYPE
+from big_scape.genbank import CDS, GBK, Region
+from big_scape.hmm import HMMer, HSP, HSPAlignment
+
+CONFIG = Path(big_scape.__file__).parent / "config.yml"
+
+COLUMNS = [
+    "bgc_id", "region_start", "region_stop", "contig_edge",
+    "orf_num", "cds_start", "cds_stop", "strand", "gene_kind",
+    "domain", "score", "env_start", "env_stop", "alignment",
+]
+
+# GBK.parse only reads these run settings
+_PARSE_RUN = {
+    "classify": None, "legacy_weights": False, "force_gbk": False,
+    "include_categories": None, "exclude_categories": None,
+}
+
+
+def annotate(
+    gbk_files: Iterable[str | Path], pfam_path: str | Path, *, mibig: bool = False, cores: int = 1
+) -> pd.DataFrame:
+    """Domain table for region .gbk files; ``bgc_id`` is the file name without suffix.
+
+    Use ``mibig=True`` for MIBiG files: BiG-SCAPE then accepts regions without
+    candidate cluster features, as it does for ``--mibig-version``.
+    """
+    BigscapeConfig.parse_config(CONFIG)
+    source = SOURCE_TYPE.MIBIG if mibig else SOURCE_TYPE.QUERY
+    gbks = [
+        GBK.parse(Path(f), source, _PARSE_RUN, BigscapeConfig.CDS_OVERLAP_CUTOFF)
+        for f in gbk_files
+    ]
+    genes = [cds for gbk in gbks for cds in gbk.genes]
+
+    # same steps as bigscape's hmmsearch/hmmalign tasks (simple search on every platform)
+    pfam_path = Path(pfam_path)
+    if not HMMer.are_profiles_pressed(pfam_path):
+        HMMer.press(pfam_path)
+    HMMer.init(pfam_path)
+    HMMer.hmmsearch_simple(genes, BigscapeConfig.DOMAIN_OVERLAP_CUTOFF, cores)
+    HMMer.unload()
+    for cds in genes:
+        cds.hsps = sorted(cds.hsps)
+    HMMer.init(pfam_path, False)
+    HMMer.align_simple([hsp for cds in genes for hsp in cds.hsps])
+    HMMer.unload()
+
+    rows = []
+    for gbk in gbks:
+        r = gbk.region
+        region = (gbk.path.stem, r.nt_start, r.nt_stop, bool(r.contig_edge))
+        for cds in gbk.genes:
+            gene = (cds.orf_num, cds.nt_start, cds.nt_stop, cds.strand, cds.gene_kind)
+            for hsp in cds.hsps or [None]:
+                domain = (
+                    (hsp.domain, hsp.score, hsp.env_start, hsp.env_stop, hsp.alignment.align_string)
+                    if hsp is not None else (None,) * 5
+                )
+                rows.append(region + gene + domain)
+    return pd.DataFrame(rows, columns=COLUMNS)
+
+
+def _records(table: pd.DataFrame) -> dict[str, Region]:
+    """Rebuild minimal BiG-SCAPE region records, like bigscape's fetch_records_from_database."""
+    records: dict[str, Region] = {}
+    cds = None
+    for row in table[COLUMNS].itertuples(index=False):
+        if row.bgc_id not in records:
+            gbk = GBK(Path(row.bgc_id), "", SOURCE_TYPE.REFERENCE)
+            records[row.bgc_id] = Region(
+                gbk, 0, int(row.region_start), int(row.region_stop), bool(row.contig_edge), ""
+            )
+            cds = None
+        gbk = records[row.bgc_id].parent_gbk
+        if cds is None or cds.orf_num != row.orf_num:
+            cds = CDS(int(row.cds_start), int(row.cds_stop))
+            cds.orf_num, cds.strand = int(row.orf_num), int(row.strand)
+            cds.gene_kind = row.gene_kind if isinstance(row.gene_kind, str) else None
+            gbk.genes.append(cds)
+        if isinstance(row.domain, str):
+            hsp = HSP(cds, row.domain, float(row.score), int(row.env_start), int(row.env_stop))
+            hsp.alignment = HSPAlignment(hsp, row.alignment)
+            cds.hsps.append(hsp)
+    return records
+
+
+def score(queries: pd.DataFrame, references: pd.DataFrame) -> pd.DataFrame:
+    """BiG-SCAPE distances of every query BGC to every reference BGC, closest first."""
+    cols = ["query_id", "reference_id", "distance", "jaccard", "adjacency", "dss"]
+    query_recs, ref_recs = _records(queries), _records(references)
+    names = {}
+    for i, (name, rec) in enumerate([*query_recs.items(), *ref_recs.items()]):
+        rec._db_id = i          # scoring indexes records by this id
+        names[i] = name
+    pairs = [(q, r) for q in query_recs.values() for r in ref_recs.values()]
+    if not pairs:
+        return pd.DataFrame(columns=cols)
+
+    results = calculate_scores_pair(
+        (pairs, ALIGNMENT_MODE.GLOCAL, EXTEND_STRATEGY.LEGACY, 0, "mix", CONFIG)
+    )
+    df = pd.DataFrame(
+        [(names[a], names[b], dist, jc, ai, dss) for a, b, dist, jc, ai, dss, *_ in results],
+        columns=cols,
+    )
+    return df.sort_values(["query_id", "distance", "reference_id"], ignore_index=True)
