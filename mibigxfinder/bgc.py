@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import warnings
 from datetime import date
 from importlib.metadata import version
 from pathlib import Path
@@ -22,12 +23,15 @@ from typing import Iterable
 
 import pandas as pd
 
-import big_scape
-from big_scape.cli.config import BigscapeConfig
-from big_scape.comparison.workflow import calculate_scores_pair
-from big_scape.enums import ALIGNMENT_MODE, EXTEND_STRATEGY, SOURCE_TYPE
-from big_scape.genbank import CDS, GBK, Region
-from big_scape.hmm import HMMer, HSP, HSPAlignment
+# BiG-SCAPE calls warnings.filterwarnings("ignore") when its profiler module is imported,
+# which would silence warnings in the whole process; catch_warnings undoes that afterwards.
+with warnings.catch_warnings():
+    import big_scape
+    from big_scape.cli.config import BigscapeConfig
+    from big_scape.comparison.workflow import calculate_scores_pair
+    from big_scape.enums import ALIGNMENT_MODE, EXTEND_STRATEGY, SOURCE_TYPE
+    from big_scape.genbank import CDS, GBK, Region
+    from big_scape.hmm import HMMer, HSP, HSPAlignment
 
 CONFIG = Path(big_scape.__file__).parent / "config.yml"
 ALIGNMENT, EXTEND, WEIGHTS = ALIGNMENT_MODE.GLOCAL, EXTEND_STRATEGY.LEGACY, "mix"
@@ -137,7 +141,7 @@ def build_reference(
     out_dir: str | Path,
     pfam_path: str | Path,
     *,
-    mibig_version: str = "4.0",
+    mibig_version: str = "5.0",
     gbk_dir: str | Path | None = None,
     cores: int = 1,
     batch: int = 100,
@@ -165,14 +169,12 @@ def build_reference(
     out_dir.mkdir(parents=True, exist_ok=True)
     out = out_dir / f"mibig_{mibig_version}.parquet"
     table.to_parquet(out, index=False)
-    with open(pfam_path, "rb") as f:
-        pfam_sha256 = hashlib.file_digest(f, "sha256").hexdigest()
     manifest = {
         "mibig_version": mibig_version,
         "gbk_dir": Path(gbk_dir).name,
         "n_bgcs": int(table["bgc_id"].nunique()),
         "n_domains": int(table["domain"].notna().sum()),
-        "pfam_sha256": pfam_sha256,
+        "pfam_sha256": sha256(pfam_path),
         "bigscape_version": version("big-scape"),
         "settings": {
             "record_type": "region", "alignment_mode": ALIGNMENT.value,
@@ -182,3 +184,9 @@ def build_reference(
     }
     out.with_suffix(".json").write_text(json.dumps(manifest, indent=2))
     return out
+
+
+def sha256(path: str | Path) -> str:
+    """Checksum of a file, e.g. to check that queries use the reference's Pfam release."""
+    with open(path, "rb") as f:
+        return hashlib.file_digest(f, "sha256").hexdigest()

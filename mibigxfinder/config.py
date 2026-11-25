@@ -54,6 +54,50 @@ class SpectraSearchConfig(BaseModel):
         return v
 
 
+class BgcSearchConfig(BaseModel):
+    query: list[Path]                                # region .gbk files and/or folders of them
+    reference: Path = Path("data/bgc_reference/mibig_5.0.parquet")
+    bgc_links: Path = Path("data/library/bgc_links.csv")
+    pfam: Path = Path("data/pfam/Pfam-A.hmm")
+    top_n: int = 5                                   # closest MIBiG BGCs with spectra, per query
+    max_distance: float = 1.0                        # 1.0 = no shared domains
+    cores: int = 1
+    out_dir: Path = Path("./out")
+
+    @field_validator("query")
+    @classmethod
+    def _gbk_files(cls, v: list[Path]) -> list[Path]:
+        files = []
+        for p in v:
+            if p.is_dir():
+                files += sorted(p.glob("*.gbk"))
+            elif p.is_file() and p.suffix.lower() == ".gbk":
+                files.append(p)
+            else:
+                raise ValueError(f"not a .gbk file or folder: {p}")
+        if not files:
+            raise ValueError("no .gbk files found")
+        stems = [f.stem for f in files]
+        dupes = sorted({s for s in stems if stems.count(s) > 1})
+        if dupes:
+            raise ValueError(f"query file names must be unique: {dupes}")
+        return files
+
+    @field_validator("reference", "bgc_links", "pfam")
+    @classmethod
+    def _exists(cls, v: Path) -> Path:
+        if not v.exists():
+            raise ValueError(f"file not found: {v}")
+        return v
+
+    @field_validator("max_distance")
+    @classmethod
+    def _distance_range(cls, v: float) -> float:
+        if not (0 < v <= 1):
+            raise ValueError("max_distance must be in (0, 1]")
+        return v
+
+
 class StructureSearchConfig(BaseModel):
     query: Path
     database: Path                                   # local MGF (SMILES pulled from spectrum metadata)

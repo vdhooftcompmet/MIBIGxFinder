@@ -10,13 +10,15 @@ pip install -e .
 
 ### BGC search (optional)
 
-BGC search uses the distance metric of [BiG-SCAPE 2](https://github.com/medema-group/BiG-SCAPE) and needs BiG-SCAPE (2.0.3) and the Pfam database. Install BiG-SCAPE from bioconda (Linux or macOS) into the same environment:
+BGC search uses the distance metric of [BiG-SCAPE 2](https://github.com/medema-group/BiG-SCAPE) (2.0.3) and needs BiG-SCAPE and the Pfam database.
+
+Install BiG-SCAPE via conda:
 
 ```bash
 conda install -n mibigxfinder -c conda-forge -c bioconda bigscape=2.0.3 -y
 ```
 
-Download Pfam into `data/pfam` (~2 GB):
+Download Pfam database into `data/pfam`:
 
 ```bash
 mkdir -p data/pfam
@@ -24,7 +26,7 @@ wget -P data/pfam https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-
 gunzip data/pfam/Pfam-A.hmm.gz
 ```
 
-The first BGC annotation presses the profiles (`Pfam-A.hmm.h3*` files are written), so the folder must be writable.
+The first BGC annotation presses the hmm profiles (`Pfam-A.hmm.h3*` files are written), so the folder must be writable.
 
 ## Usage
 
@@ -64,15 +66,45 @@ Output columns: `feature_id, library_id, bgc_id, inchikey, similarity, matched_p
 mibigxfinder structure query_smiles.csv tests/fixtures/library_fake.mgf --out-dir out/
 ```
 
+### BGC search
+
+Compare query BGCs against MIBiG with BiG-SCAPE's distance and return the spectra linked to the closest MIBiG BGCs (needs BiG-SCAPE, see Install).
+
+```bash
+mibigxfinder bgc \
+    tests/fixtures/NC_003888.3.region002.gbk \
+    --reference tests/fixtures/bgc_reference_small.parquet \
+    --links tests/fixtures/bgc_links.csv \
+    --out-dir out/
+```
+
+Positional arguments:
+| arg | description |
+|---|---|
+| `query` | One or more antiSMASH region `.gbk` files, or folders of them; file names must be unique |
+
+Options:
+| flag | default | description |
+|---|---|---|
+| `--reference` | `data/bgc_reference/mibig_5.0.parquet` | BGC reference table (see `build-reference`) |
+| `--links` | `data/library/bgc_links.csv` | BGC-links CSV/TSV (see below) |
+| `--pfam` | `data/pfam/Pfam-A.hmm` | Pfam file the reference was built with; checked against the reference's `.json` manifest |
+| `--top-n` | `5` | Closest MIBiG BGCs with spectra kept per query |
+| `--max-distance` | `1.0` | Keep BGCs with a BiG-SCAPE distance below this; `1.0` only drops BGCs without shared domains (BiG-SCAPE groups BGCs into families at `0.3`) |
+| `--cores` | `1` | CPU cores for the domain search |
+| `--out-dir` | `./out` | Where to write `bgc_matches.csv` / `.parquet` |
+
+Output columns: `query_id, bgc_id, distance, jaccard, adjacency, dss, mibig_rank`, plus the columns of the links file, one row per query, MIBiG BGC and linked spectrum. `mibig_rank` is the rank among all MIBiG BGCs, so rank 3 means two closer MIBiG BGCs have no spectra.
+
 ### Build the BGC reference
 
 Annotate all MIBiG BGCs with Pfam once; BGC search compares query BGCs against this table (needs BiG-SCAPE, see Install).
 
 ```bash
-mibigxfinder build-reference --mibig-version 4.0 --cores 4
+mibigxfinder build-reference --mibig-version 5.0 --cores 4
 ```
 
-Without `--gbk-dir`, the antiSMASH-processed MIBiG release is downloaded into `data/bgc_reference/MIBiG/`. Writes `data/bgc_reference/mibig_4.0.parquet` (one row per gene and Pfam domain) and `mibig_4.0.json` (MIBiG version, Pfam checksum, BiG-SCAPE version and settings). Expect roughly an hour on one core for MIBiG 4.0.
+Without `--gbk-dir`, the antiSMASH-processed MIBiG release is downloaded from https://dl.secondarymetabolites.org/mibig/ into `data/bgc_reference/MIBiG/` (MIBiG 5.0 is not available there yet; until then use `--mibig-version 4.0` or pass your own files with `--gbk-dir`). Writes `data/bgc_reference/mibig_5.0.parquet` (one row per gene and Pfam domain) and `mibig_5.0.json` (MIBiG version, Pfam checksum, BiG-SCAPE version and settings). Expect roughly an hour on one core for MIBiG 4.0's ~2,600 BGCs.
 
 ### BGC-links file format
 

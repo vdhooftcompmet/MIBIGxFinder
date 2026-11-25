@@ -59,10 +59,39 @@ def structure(
     typer.echo(df.to_string(index=False))
 
 
+@app.command()
+def bgc(
+    query: list[Path] = typer.Argument(..., help="Query antiSMASH region .gbk files or folders of them"),
+    reference: Path = typer.Option(Path("data/bgc_reference/mibig_5.0.parquet"), help="BGC reference table (see build-reference)"),
+    bgc_links: Path = typer.Option(Path("data/library/bgc_links.csv"), "--links", help="BGC links CSV/TSV (spectrum_idx,bgc_id,...)"),
+    pfam: Path = typer.Option(Path("data/pfam/Pfam-A.hmm"), help="Pfam-A.hmm the reference was built with"),
+    top_n: int = typer.Option(5, help="Closest MIBiG BGCs with spectra kept per query"),
+    max_distance: float = typer.Option(1.0, help="Keep BGCs with a BiG-SCAPE distance below this (1.0 = no shared domains)"),
+    cores: int = typer.Option(1, help="CPU cores for the domain search"),
+    out_dir: Optional[Path] = typer.Option("./out", help="Output directory"),
+):
+    """Find MIBiG BGCs similar to query BGCs and return their linked spectra (needs BiG-SCAPE)."""
+    from mibigxfinder.config import BgcSearchConfig
+    from mibigxfinder.services import search_bgcs
+
+    cfg = BgcSearchConfig(
+        query=query,
+        reference=reference,
+        bgc_links=bgc_links,
+        pfam=pfam,
+        top_n=top_n,
+        max_distance=max_distance,
+        cores=cores,
+        out_dir=out_dir,
+    )
+    df = search_bgcs(cfg)
+    typer.echo(df.to_string(index=False))
+
+
 @app.command("build-reference")
 def build_reference(
     pfam: Path = typer.Option(Path("data/pfam/Pfam-A.hmm"), help="Pfam-A.hmm file"),
-    mibig_version: str = typer.Option("4.0", help="MIBiG version"),
+    mibig_version: str = typer.Option("5.0", help="MIBiG version"),
     gbk_dir: Optional[Path] = typer.Option(None, help="Folder of antiSMASH-processed MIBiG .gbk files (default: download)"),
     out_dir: Path = typer.Option(Path("data/bgc_reference"), help="Output directory"),
     cores: int = typer.Option(1, help="CPU cores for the domain search"),

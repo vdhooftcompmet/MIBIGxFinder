@@ -3,13 +3,15 @@
 
 from __future__ import annotations
 
+import json
+import warnings
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 from mibigxfinder import chem, spectra
-from mibigxfinder.config import SpectraSearchConfig, StructureSearchConfig
+from mibigxfinder.config import BgcSearchConfig, SpectraSearchConfig, StructureSearchConfig
 
 
 # ---------------------------------------------------------------------------
@@ -134,6 +136,42 @@ def search_structures(cfg: StructureSearchConfig) -> pd.DataFrame:
         if not df.empty:
             df = df.sort_values(["query_id", "best_tanimoto"], ascending=[True, False])
         _maybe_write(df, cfg.out_dir, name="structure_matches")
+    return df
+
+
+# ---------------------------------------------------------------------------
+# BGC search
+# ---------------------------------------------------------------------------
+
+def search_bgcs(cfg: BgcSearchConfig) -> pd.DataFrame:
+    """Rank MIBiG BGCs by BiG-SCAPE distance to each query region; keep the closest ones with spectra.
+
+    One row per (query, MIBiG BGC, linked spectrum). ``mibig_rank`` is the rank among
+    all MIBiG BGCs, so a gap to 1 means closer BGCs without spectra exist.
+    """
+    from mibigxfinder import bgc            # needs BiG-SCAPE, so only imported here
+
+    manifest = cfg.reference.with_suffix(".json")
+    if manifest.exists() and bgc.sha256(cfg.pfam) != json.loads(manifest.read_text())["pfam_sha256"]:
+        raise ValueError(
+            f"{cfg.pfam} is not the Pfam file {cfg.reference.name} was built with (see {manifest.name}); "
+            "queries and reference must use the same Pfam release"
+        )
+    references = pd.read_parquet(cfg.reference)
+    sep = "\t" if cfg.bgc_links.suffix.lower() == ".tsv" else ","
+    links = pd.read_csv(cfg.bgc_links, sep=sep)
+    missing = sorted(set(links["bgc_id"]) - set(references["bgc_id"]))
+    if missing:
+        warnings.warn(f"{len(missing)} linked BGCs are not in {cfg.reference.name} and can't be found, e.g. {missing[:3]}")
+
+    hits = bgc.score(bgc.annotate(cfg.query, cfg.pfam, cores=cfg.cores), references)
+    hits = hits.rename(columns={"reference_id": "bgc_id"})
+    hits["mibig_rank"] = hits.groupby("query_id").cumcount() + 1   # hits are sorted by distance
+    hits = hits[(hits["distance"] < cfg.max_distance) & hits["bgc_id"].isin(links["bgc_id"])]
+    hits = hits.groupby("query_id").head(cfg.top_n)
+
+    df = hits.merge(links, on="bgc_id")
+    _maybe_write(df, cfg.out_dir, name="bgc_matches")
     return df
 
 
