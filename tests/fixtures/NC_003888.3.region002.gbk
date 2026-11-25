@@ -1,0 +1,2309 @@
+LOCUS       NC_003888              28271 bp    DNA     linear   CON 03-AUG-2016
+DEFINITION  Streptomyces coelicolor A3(2) chromosome, complete genome.
+ACCESSION   NC_003888
+VERSION     NC_003888.3
+KEYWORDS    RefSeq; complete genome.
+SOURCE      Streptomyces coelicolor A3(2)
+  ORGANISM  Streptomyces coelicolor A3(2)
+            Bacteria; Actinomycetota; Actinomycetes; Kitasatosporales;
+            Streptomycetaceae; Streptomyces; Streptomyces albidoflavus group.
+REFERENCE   1  (bases 1 to 8667507)
+  AUTHORS   Hsiao,N.H. and Kirby,R.
+  TITLE     Comparative genomics of Streptomyces avermitilis, Streptomyces
+            cattleya, Streptomyces maritimus and Kitasatospora aureofaciens
+            using a Streptomyces coelicolor microarray system
+  JOURNAL   Antonie Van Leeuwenhoek 93 (1-2), 1-25 (2008)
+   PUBMED   17588127
+REFERENCE   2  (bases 1 to 8667507)
+  AUTHORS   Bentley,S.D., Chater,K.F., Cerdeno-Tarraga,A.M., Challis,G.L.,
+            Thomson,N.R., James,K.D., Harris,D.E., Quail,M.A., Kieser,H.,
+            Harper,D., Bateman,A., Brown,S., Chandra,G., Chen,C.W., Collins,M.,
+            Cronin,A., Fraser,A., Goble,A., Hidalgo,J., Hornsby,T., Howarth,S.,
+            Huang,C.H., Kieser,T., Larke,L., Murphy,L., Oliver,K., O'Neil,S.,
+            Rabbinowitsch,E., Rajandream,M.A., Rutherford,K., Rutter,S.,
+            Seeger,K., Saunders,D., Sharp,S., Squares,R., Squares,S., Taylor,K.,
+            Warren,T., Wietzorrek,A., Woodward,J., Barrell,B.G., Parkhill,J. and
+            Hopwood,D.A.
+  TITLE     Complete genome sequence of the model actinomycete Streptomyces
+            coelicolor A3(2)
+  JOURNAL   Nature 417 (6885), 141-147 (2002)
+   PUBMED   12000953
+REFERENCE   3  (bases 1 to 8667507)
+  AUTHORS   Redenbach,M., Kieser,H.M., Denapaite,D., Eichner,A., Cullum,J.,
+            Kinashi,H. and Hopwood,D.A.
+  TITLE     A set of ordered cosmids and a detailed genetic and physical map for
+            the 8 Mb Streptomyces coelicolor A3(2) chromosome
+  JOURNAL   Mol. Microbiol. 21 (1), 77-96 (1996)
+   PUBMED   8843436
+REFERENCE   4  (bases 1 to 8667507)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (28-MAY-2002) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+  REMARK    Direct Submission
+REFERENCE   5  (bases 1 to 8667507)
+  AUTHORS   Bentley,S.D.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (09-MAY-2002) Sanger Institute, Wellcome Trust Genome
+            Campus, Hinxton, Cambridge CB10 1SA, United Kingdom
+  REMARK    Direct Submission
+COMMENT     ##antiSMASH-Data-START##
+            Version     :: 8.0.4
+            Run date    :: 2025-09-05 14:14:22
+            NOTE :: This is a single region extracted from a larger record!
+            Orig. start :: 163767
+            Orig. end   :: 192038
+            ##antiSMASH-Data-END##
+            REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AL645882.
+            On Jun 22, 2003 this sequence version replaced NC_003888.2.
+            RefSeq Category: Reference Genome
+            MOD: Model Organism
+            UPR: UniProt Genome
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     region          1..28271
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="False"
+                     /product="terpene"
+                     /region_number="2"
+                     /rules="(PT_phytoene_like or phytoene_synt or Lycopene_cycl
+                     or Lycopene_cycl_fung or T1TS or T1TS_KS or T2TS or TS_UbiA
+                     or TS_Pyr4)"
+                     /tool="antismash"
+     cand_cluster    1..28271
+                     /candidate_cluster_number="1"
+                     /contig_edge="False"
+                     /detection_rules="(PT_phytoene_like or phytoene_synt or
+                     Lycopene_cycl or Lycopene_cycl_fung or T1TS or T1TS_KS or
+                     T2TS or TS_UbiA or TS_Pyr4)"
+                     /kind="single"
+                     /product="terpene"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..28271
+                     /aStool="rule-based-clusters"
+                     /category="terpene"
+                     /contig_edge="False"
+                     /core_location="[10000:18271]"
+                     /cutoff="20000"
+                     /detection_rule="(PT_phytoene_like or phytoene_synt or
+                     Lycopene_cycl or Lycopene_cycl_fung or T1TS or T1TS_KS or
+                     T2TS or TS_UbiA or TS_Pyr4)"
+                     /neighbourhood="10000"
+                     /product="terpene"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      10001..18271
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(PT_phytoene_like or phytoene_synt or
+                     Lycopene_cycl or Lycopene_cycl_fung or T1TS or T1TS_KS or
+                     T2TS or TS_UbiA or TS_Pyr4)"
+                     /neighbourhood="10000"
+                     /product="terpene"
+                     /protocluster_number="1"
+     gene            complement(256..1227)
+                     /db_xref="GeneID:1095598"
+                     /gene_synonym="SCJ1.23c"
+                     /locus_tag="SCO0174"
+     CDS             complement(256..1227)
+                     /codon_start=1
+                     /db_xref="GeneID:1095598"
+                     /gene_synonym="SCJ1.23c"
+                     /locus_tag="SCO0174"
+                     /note="SCJ1.23c, possible DNA-binding protein, len: 323 aa.
+                     Similar in parts to many, e.g. Mycobacterium tuberculosis
+                     TR:O53625 (EMBL; AL021428) hypothetical 16.6 KD protein
+                     MTV030.24 (152 aa), fasta scores opt: 224 z-score: 258.5
+                     E(): 4.9e-07 34.3% identity in 134 aa overlap and
+                     Mycobacterium tuberculosis SW:YU07_MYCTU (EMBL; Z77163)
+                     hypothetical 8.6 KD protein MTCY339.07C (80 aa), fasta
+                     scores opt: 182 z-score: 216.4 E(): 0.00011 42.3% identity
+                     in 71 aa overlap. Also similar to TR:Q9RJ05 (EMBL:AL109962)
+                     Streptomyces coelicolor possible DNA-binding protein
+                     SCJ1.09c, 233 aa; fasta scores: opt: 516 Z-score: 566.6
+                     E(): 6.3e-24; 37.615% identity in 218 aa overlap. Contains
+                     a Pfam match to entry PF01381 HTH_3, Helix-turn-helix and a
+                     possible helix-turn-helix motif at residues 127..148 (+2.82
+                     SD)"
+                     /product="DNA-binding protein"
+                     /protein_id="NP_624510.1"
+                     /transl_table=11
+                     /translation="MGAVSPREAGVRNSFDGEGAVMYAHLGDRLIVESPSTGVTRRDGE
+                     IVGLHHDDGTPPYDVRWSDTGDVTLVFPGPDARVNHGAEEAEASQGAPSGVSRGEGVDS
+                     SLIAAGAGDLGRRLAAARRRRGLSLEQVARRARMAPQYLAYLETHTADPGFGSLVRLAD
+                     ALGTTYAELQGGGADRPPGQGAALRNPTLRDLDEKECRALLSAHGVGRLALNTPDGPAV
+                     FPLNYVVSQGTIAFRTDPDAATAAAVDSEVAFEVDHIDDPMSQGWSVLAVGRCRAVTDP
+                     EEVRRLAEKAHTEPWAGGRRTMWLAVETERLTGRRITSVSGS"
+     PFAM_domain     complement(280..642)
+                     /aSDomain="Pyridox_ox_2"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF12900.10"
+                     /description="Pyridoxamine 5'-phosphate oxidase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0174_0049"
+                     /evalue="4.80E-25"
+                     /label="SCO0174"
+                     /locus_tag="SCO0174"
+                     /protein_end="316"
+                     /protein_start="195"
+                     /score="88.4"
+                     /tool="antismash"
+                     /translation="DEKECRALLSAHGVGRLALNTPDGPAVFPLNYVVSQGTIAFRTDP
+                     DAATAAAVDSEVAFEVDHIDDPMSQGWSVLAVGRCRAVTDPEEVRRLAEKAHTEPWAGG
+                     RRTMWLAVETERLTGRR"
+     misc_feature    complement(712..876)
+                     /gene_synonym="SCJ1.23c"
+                     /locus_tag="SCO0174"
+                     /note="Pfam match to entry PF01381 HTH_3, Helix-turn-helix,
+                     score 39.60, E-value 7.1e-08"
+     PFAM_domain     complement(712..891)
+                     /aSDomain="HTH_31"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF13560.9"
+                     /description="Helix-turn-helix domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0174_0048"
+                     /evalue="1.60E-11"
+                     /label="SCO0174"
+                     /locus_tag="SCO0174"
+                     /protein_end="172"
+                     /protein_start="112"
+                     /score="44.5"
+                     /tool="antismash"
+                     /translation="DLGRRLAAARRRRGLSLEQVARRARMAPQYLAYLETHTADPGFGS
+                     LVRLADALGTTYAEL"
+     PFAM_domain     complement(991..1164)
+                     /aSDomain="DUF1918"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF08940.14"
+                     /description="Domain of unknown function (DUF1918)"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0174_0047"
+                     /evalue="1.70E-24"
+                     /label="SCO0174"
+                     /locus_tag="SCO0174"
+                     /protein_end="79"
+                     /protein_start="21"
+                     /score="85.4"
+                     /tool="antismash"
+                     /translation="MYAHLGDRLIVESPSTGVTRRDGEIVGLHHDDGTPPYDVRWSDTG
+                     DVTLVFPGPDARV"
+     gene            complement(1292..1639)
+                     /db_xref="GeneID:1095599"
+                     /gene_synonym="SCJ1.24c"
+                     /locus_tag="SCO0175"
+     CDS             complement(1292..1639)
+                     /codon_start=1
+                     /db_xref="GeneID:1095599"
+                     /gene_synonym="SCJ1.24c"
+                     /locus_tag="SCO0175"
+                     /note="SCJ1.24c, unknown, len: 115 aa."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624511.1"
+                     /transl_table=11
+                     /translation="MTCSPAERSVGWSSRTGSAGSGPSDLADEIRLRHDADEAADAVHH
+                     QDGGDVVMGQCLGDRLEGCVRSDVDDGPGHEITYSPVPHDEPPLGGEPPWSTDATAVRT
+                     SSLSTCRSEPP"
+     gene            1693..2088
+                     /db_xref="GeneID:1095600"
+                     /gene_synonym="SCJ1.25"
+                     /locus_tag="SCO0176"
+     CDS             1693..2088
+                     /codon_start=1
+                     /db_xref="GeneID:1095600"
+                     /gene_synonym="SCJ1.25"
+                     /locus_tag="SCO0176"
+                     /note="SCJ1.25, unknown, len: 131 aa."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624512.1"
+                     /transl_table=11
+                     /translation="MEAARLMVTEEVKCLTVVDEADRWVGVVSRGDLLRVSLRRDDALR
+                     EETSRAVLIRTRGPAPTGMTVDVDEGRVTVGGRVDNGQPLPVIERLCLGVDGVASVDLH
+                     VTGREDRTRPVDTLGRARPTTLHVDVP"
+     PFAM_domain     1813..2007
+                     /aSDomain="BON"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF04972.20"
+                     /description="BON domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0176_0050"
+                     /evalue="4.80E-08"
+                     /label="SCO0176"
+                     /locus_tag="SCO0176"
+                     /protein_end="105"
+                     /protein_start="40"
+                     /score="33.3"
+                     /tool="antismash"
+                     /translation="DDALREETSRAVLIRTRGPAPTGMTVDVDEGRVTVGGRVDNGQPL
+                     PVIERLCLGVDGVASVDLHV"
+     misc_feature    complement(2163..2177)
+                     /note="TFBS match to OsdR, Development and stress
+                     management regulator, confidence: medium, score: 25.09"
+                     /tool="antismash"
+     gene            2266..2847
+                     /db_xref="GeneID:1095601"
+                     /gene_synonym="SCJ1.26"
+                     /locus_tag="SCO0177"
+     CDS             2266..2847
+                     /codon_start=1
+                     /db_xref="GeneID:1095601"
+                     /gene_synonym="SCJ1.26"
+                     /locus_tag="SCO0177"
+                     /note="SCJ1.26, possible membrane protein, len: 193 aa.
+                     Similar to Mycobacterium tuberculosis TR:P71991(EMBL;
+                     Z81360) hypothetical 22.5 KD protein (210 aa), fasta scores
+                     opt: 287 z-score: 333.1 E(): 3.4e-11 35.2% identity in 182
+                     aa overlap and S. coelicolor TR:Q9ZBP2 (EMBL;AL034492) 50KD
+                     proline rich protein (456 aa), fasta scores opt: 338
+                     z-score: 385.2 E(): 4.3e-14 35.6% identity in 188 aa
+                     overlap. Contains possible membrane-spanning hydrophobic
+                     region."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624513.1"
+                     /transl_table=11
+                     /translation="MRAGTTIRRSLWRWRRNPLRRREDVLEAWILLIVWLVVALAGPVA
+                     GVLAAHASAHGAAQRRAERHSATATLVSDVSGSPLSTGTAGGRIEATVRWTAPDGTRHS
+                     GKIPVDEAMKAGSRVTVWTDHRNQLTTAPPTTAQAGVDAAFMGAASSFAVVTAAAAGYY
+                     GARVVLNRRRRAAWEHEWQDIGSQWGRAAS"
+     gene            3124..3570
+                     /db_xref="GeneID:1095602"
+                     /gene_synonym="SCJ1.27"
+                     /locus_tag="SCO0178"
+     CDS             3124..3570
+                     /codon_start=1
+                     /db_xref="GeneID:1095602"
+                     /gene_synonym="SCJ1.27"
+                     /locus_tag="SCO0178"
+                     /note="SCJ1.27, unknown, len: 148 aa. Weak similarity to
+                     Mycobacterium tuberculosis SW:YW23_MYCTU (EMBL; Z74025)
+                     hypothetical 33.9 KD protein MTCY39.23C (317 aa), fasta
+                     scores opt: 201 z-score: 231.7 E(): 1.5e-05 33.1% identity
+                     in 136 aa overlap and Mycobacterium tuberculosis TR:O06189
+                     (EMBL; Z95387)hypothetical 31.7 KD protein MTCY1A10.09C
+                     (297 aa), fasta scores opt: 199 z-score: 229.8 E(): 1.9e-05
+                     33.3% identity in 153 aa overlap."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624514.1"
+                     /transl_table=11
+                     /translation="MLVAQALSAAAVVVGHRGPHPFQGALIGSLATGLAAHSECPVVVV
+                     GEPENPAGPVALGVDGSAAGAAAVRLPGDFRAGCGHHRRARLDGLERADAASPRRETEP
+                     YACEPGMLAAEEGRLLAETLAGMCARYPEVRVERSTVHGVHGRR"
+     PFAM_domain     3127..3258
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0178_0051"
+                     /evalue="5.10E-08"
+                     /label="SCO0178"
+                     /locus_tag="SCO0178"
+                     /protein_end="45"
+                     /protein_start="1"
+                     /score="33.7"
+                     /tool="antismash"
+                     /translation="LVAQALSAAAVVVGHRGPHPFQGALIGSLATGLAAHSECPVVVV"
+     gene            complement(3677..4747)
+                     /db_xref="GeneID:1095603"
+                     /gene_synonym="SCJ1.28c"
+                     /locus_tag="SCO0179"
+     CDS             complement(3677..4747)
+                     /NRPS_PKS="Domain: PKS_ER (23-337). E-value: 5e-10. Score:
+                     30.9. Matches aSDomain: nrpspksdomains_SCO0179_PKS_ER.1"
+                     /codon_start=1
+                     /db_xref="GeneID:1095603"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) ADH_N"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) ADH_zinc_N"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1040: alcohol dehydrogenase"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="SCJ1.28c"
+                     /locus_tag="SCO0179"
+                     /note="SCJ1.28c,possible zinc-containing dehydrogenase,
+                     len: 356 aa. Similar to many including: Thermoanaerobacter
+                     brockii SW:ADH_THEBR (EMBL; X64841) NADP-dependent alcohol
+                     dehydrogenase (EC 1.1.1.2) (352 aa), fasta scores opt: 556
+                     z-score: 601.1 E(): 4e-26 33.7% identity in 338 aa overlap
+                     and Halobacterium volcanii TR:O34179 (EMBL; U95372)
+                     dehydrogenase (389 aa), fasta scores opt: 715 z-score:
+                     770.1 E(): 0 37.0% identity in 351 aa overlap. Contains a
+                     Pfam match to entry PF00107 adh_zinc, Zinc-binding
+                     dehydrogenases and a PS00059 Zinc-containing alcohol
+                     dehydrogenases signature"
+                     /product="zinc-containing dehydrogenase"
+                     /protein_id="NP_624515.1"
+                     /sec_met_domain="ADH_N (E-value: 2.1e-29, bitscore: 100.4,
+                     seeds: 66, tool: rule-based-clusters)"
+                     /sec_met_domain="ADH_zinc_N (E-value: 4.2e-25, bitscore:
+                     87.1, seeds: 86, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKGYVFHGPGRSAWEDIPDPELKEPTDAIVRVDAVTICGTDLHIL
+                     KGDVPEVRPGTVLGHEAVGEIVEVGTDVRTVRPGDRVLVSCITACGRCRYCREGVYGQC
+                     LGGGGWILGHLINGTQAEYVRVPYADLSVHSLPGAVTDEDAVLLADIFPTAYEVGVLNG
+                     RVSPGDTVVVVGAGPIGLAAVATARLFAPERIVVVDLATARLEAARKLGAEAVADARED
+                     PEQLVADLTGGLGADVVIEAVGVPETFEMCTRVVRPGGHVANVGVHGRPATLHLEDLWS
+                     KNVTVTTGLVDTRSTPTLLRMAASGRLPTGQLVTHTFPLERMEEAYEVFSAAADTGALK
+                     VVLGGPKREVVAANAV"
+     misc_feature    complement(3716..4720)
+                     /gene_synonym="SCJ1.28c"
+                     /locus_tag="SCO0179"
+                     /note="Pfam match to entry PF00107 adh_zinc, Zinc-binding
+                     dehydrogenases, score 236.60, E-value 3.4e-67"
+     aSDomain        complement(3737..4678)
+                     /aSDomain="PKS_ER"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO0179_PKS_ER.1"
+                     /evalue="5.00E-10"
+                     /label="SCO0179_PKS_ER.1"
+                     /locus_tag="SCO0179"
+                     /protein_end="337"
+                     /protein_start="23"
+                     /score="30.9"
+                     /tool="antismash"
+                     /translation="EPTDAIVRVDAVTICGTDLHILKGDVPEVRPGTVLGHEAVGEIVE
+                     VGTDVRTVRPGDRVLVSCITACGRCRYCREGVYGQCLGGGGWILGHLINGTQAEYVRVP
+                     YADLSVHSLPGAVTDEDAVLLADIFPTAYEVGVLNGRVSPGDTVVVVGAGPIGLAAVAT
+                     ARLFAPERIVVVDLATARLEAARKLGAEAVADAREDPEQLVADLTGGLGADVVIEAVGV
+                     PETFEMCTRVVRPGGHVANVGVHGRPATLHLEDLWSKNVTVTTGLVDTRSTPTLLRMAA
+                     SGRLPTGQLVTHTFPLERMEEAYEVFSAAADTG"
+     PFAM_domain     complement(3848..4216)
+                     /aSDomain="ADH_zinc_N"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00107.29"
+                     /description="Zinc-binding dehydrogenase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0179_0053"
+                     /evalue="1.10E-24"
+                     /label="SCO0179"
+                     /locus_tag="SCO0179"
+                     /protein_end="300"
+                     /protein_start="177"
+                     /score="87.1"
+                     /tool="antismash"
+                     /translation="PIGLAAVATARLFAPERIVVVDLATARLEAARKLGAEAVADARED
+                     PEQLVADLTGGLGADVVIEAVGVPETFEMCTRVVRPGGHVANVGVHGRPATLHLEDLWS
+                     KNVTVTTGLVDTRSTPTLL"
+     PFAM_domain     complement(4358..4672)
+                     /aSDomain="ADH_N"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF08240.15"
+                     /description="Alcohol dehydrogenase GroES-like domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0179_0052"
+                     /evalue="5.20E-29"
+                     /label="SCO0179"
+                     /locus_tag="SCO0179"
+                     /protein_end="130"
+                     /protein_start="25"
+                     /score="100.4"
+                     /tool="antismash"
+                     /translation="TDAIVRVDAVTICGTDLHILKGDVPEVRPGTVLGHEAVGEIVEVG
+                     TDVRTVRPGDRVLVSCITACGRCRYCREGVYGQCLGGGGWILGHLINGTQAEYVRVPYA
+                     D"
+     misc_feature    complement(4529..4573)
+                     /gene_synonym="SCJ1.28c"
+                     /locus_tag="SCO0179"
+                     /note="PS00059 Zinc-containing alcohol dehydrogenases
+                     signature, GHE.{2}G.{5}[GA].{2}[IVSAC], info count = 21.8"
+     regulatory      complement(4761..4766)
+                     /regulatory_class="ribosome_binding_site"
+     misc_feature    complement(4883..4897)
+                     /note="TFBS match to OsdR, Development and stress
+                     management regulator, confidence: medium, score: 26.9"
+                     /tool="antismash"
+     gene            complement(4938..5789)
+                     /db_xref="GeneID:1095604"
+                     /gene_synonym="SCJ1.29c"
+                     /locus_tag="SCO0180"
+     CDS             complement(4938..5789)
+                     /codon_start=1
+                     /db_xref="GeneID:1095604"
+                     /gene_synonym="SCJ1.29c"
+                     /locus_tag="SCO0180"
+                     /note="SCJ1.29c, unknown, len: 283 aa. Similar to many
+                     including: Mycobacterium tuberculosis TR:O53472 (EMBL;
+                     AL021899) hypothetical 31.5 KD protein (294 aa), fasta
+                     scores opt: 329 z-score: 389.0 E(): 2.6e-14 32.1% identity
+                     in 293 aa overlap and Mycobacterium tuberculosis TR:O06189
+                     (EMBL; Z95387) hypothetical 31.7 KD protein (297 aa), fasta
+                     scores opt: 330 z-score: 390.1 E(): 2.3e-14 31.8% identity
+                     in 296 aa overlap. Also similar to S. coelicolor SCJ1.16c
+                     (294 aa), fasta scores opt: 806 z-score: 748.1 E():0 46.1%
+                     identity in 295 aa overlap. Contains a Pfam match to entry
+                     PF00582 Usp, Universal stress protein family"
+                     /product="hypothetical protein"
+                     /protein_id="NP_624516.1"
+                     /transl_table=11
+                     /translation="MYLPLVVGVDGSEPSLRAVDWAADEAALHAVPLWVVFGDLWERYE
+                     GAALAREPGKPSTDMQADDILAAAAIRAGRRHPDLVVTTETVPDEAEHALICAGRNASM
+                     IVMGSRGRSGIADRLLGSVSRTVAAGSDCPVVVLRGNHDNRAIGGRNGRIVVGVGEVSA
+                     SVLRLAFMEARLRQVPVAAVRAWRCPAHETIDHPLPAGEPARRYEERAARELEAALEDA
+                     PPDVAVRRYTVEGPARAVLPAASAEAGLLVIGRRTQGRLGRVAHAVLHRSACPVVVVPE
+                     RT"
+     PFAM_domain     complement(4950..5336)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0180_0055"
+                     /evalue="2.40E-13"
+                     /label="SCO0180"
+                     /locus_tag="SCO0180"
+                     /protein_end="280"
+                     /protein_start="151"
+                     /score="50.9"
+                     /tool="antismash"
+                     /translation="GRIVVGVGEVSASVLRLAFMEARLRQVPVAAVRAWRCPAHETIDH
+                     PLPAGEPARRYEERAARELEAALEDAPPDVAVRRYTVEGPARAVLPAASAEAGLLVIGR
+                     RTQGRLGRVAHAVLHRSACPVVVVP"
+     PFAM_domain     complement(5373..5789)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0180_0054"
+                     /evalue="1.30E-25"
+                     /label="SCO0180"
+                     /locus_tag="SCO0180"
+                     /protein_end="139"
+                     /protein_start="0"
+                     /score="90.7"
+                     /tool="antismash"
+                     /translation="MYLPLVVGVDGSEPSLRAVDWAADEAALHAVPLWVVFGDLWERYE
+                     GAALAREPGKPSTDMQADDILAAAAIRAGRRHPDLVVTTETVPDEAEHALICAGRNASM
+                     IVMGSRGRSGIADRLLGSVSRTVAAGSDCPVVVLR"
+     misc_feature    complement(5376..5714)
+                     /gene_synonym="SCJ1.29c"
+                     /locus_tag="SCO0180"
+                     /note="Pfam match to entry PF00582 Usp, Universal stress
+                     protein family, score 34.80, E-value 2e-06"
+     regulatory      complement(5796..5803)
+                     /regulatory_class="ribosome_binding_site"
+     gene            complement(5817..6803)
+                     /db_xref="GeneID:1095605"
+                     /gene_synonym="SCJ1.30c"
+                     /locus_tag="SCO0181"
+     CDS             complement(5817..6803)
+                     /codon_start=1
+                     /db_xref="GeneID:1095605"
+                     /gene_synonym="SCJ1.30c"
+                     /locus_tag="SCO0181"
+                     /note="SCJ1.30c, unknown, len: 328 aa. Similar to many
+                     including: Mycobacterium tuberculosis SW:YW23_MYCTU (EMBL;
+                     Z74025) hypothetical 33.9 KD protein MTCY39.23C (317 aa)
+                     fasta scores opt: 382 z-score: 439.2 E(): 4.2e-17 32.6%
+                     identity in 319 aa overlap and Mycobacterium tuberculosis
+                     TR:O53472 (EMBL; AL021899) hypothetical 31.5 KD protein
+                     (294 aa), fasta scores opt: 382 z-score: 439.2 E(): 4.2e-17
+                     32.6% identity in 319 aa overlap. Contains a Pfam match to
+                     entry PF00582 Usp, Universal stress protein family."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624517.1"
+                     /transl_table=11
+                     /translation="MSEDEWPYPGAQLRDTLESEGPTREVRDMTRTITVGIDGSPESHA
+                     AAEWAAREAELRDLPVRLLHVWEPAPAVLAQDSILGAKTHQHWTERVPQKVGEGLRLRH
+                     PGVVVTSDQRSGPPADTLVRDADGAELLVLGSRAPSGLGGFLAGSVGQSVIAHSETPVV
+                     LVRAGEQAAGEHVVDSVGVPPAANRRRPVVVGLDIGSPDDGVLSFAFDEAQRRGTAVHV
+                     VSGWRPPPYYPSLTAGGVPDQGVARRKAADLTRLLLPWRQSYPDVEVVEASRPGSPADL
+                     LAEASHEASLVVVGRRIRPSPLGVHIGAVAHAVLHRVSAPVAVVAHP"
+     misc_feature    complement(5829..6152)
+                     /gene_synonym="SCJ1.30c"
+                     /locus_tag="SCO0181"
+                     /note="Pfam match to entry PF00582 Usp, Universal stress
+                     protein family, score 42.80, E-value 7.5e-09"
+     PFAM_domain     complement(5829..6236)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0181_0057"
+                     /evalue="1.80E-17"
+                     /label="SCO0181"
+                     /locus_tag="SCO0181"
+                     /protein_end="325"
+                     /protein_start="189"
+                     /score="64.3"
+                     /tool="antismash"
+                     /translation="RPVVVGLDIGSPDDGVLSFAFDEAQRRGTAVHVVSGWRPPPYYPS
+                     LTAGGVPDQGVARRKAADLTRLLLPWRQSYPDVEVVEASRPGSPADLLAEASHEASLVV
+                     VGRRIRPSPLGVHIGAVAHAVLHRVSAPVAVV"
+     PFAM_domain     complement(6306..6719)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0181_0056"
+                     /evalue="3.20E-26"
+                     /label="SCO0181"
+                     /locus_tag="SCO0181"
+                     /protein_end="166"
+                     /protein_start="28"
+                     /score="92.7"
+                     /tool="antismash"
+                     /translation="MTRTITVGIDGSPESHAAAEWAAREAELRDLPVRLLHVWEPAPAV
+                     LAQDSILGAKTHQHWTERVPQKVGEGLRLRHPGVVVTSDQRSGPPADTLVRDADGAELL
+                     VLGSRAPSGLGGFLAGSVGQSVIAHSETPVVLVR"
+     gene            complement(6889..7113)
+                     /db_xref="GeneID:1095606"
+                     /gene_synonym="SCJ1.31c"
+                     /locus_tag="SCO0182"
+     CDS             complement(6889..7113)
+                     /codon_start=1
+                     /db_xref="GeneID:1095606"
+                     /gene_synonym="SCJ1.31c"
+                     /locus_tag="SCO0182"
+                     /note="SCJ1.31c, doubtful CDS, len: 74 aa. Contains a
+                     TTA/leucine codon, possible target for bldA regulation."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624518.1"
+                     /transl_table=11
+                     /translation="MCRAAVGVLEAGARREGVTCGTYGLWDGVTAWREPRSSMPDLTQV
+                     LKPIEGSDLVPAASVVAAHAEDRLKGEGH"
+     misc_feature    complement(7039..7041)
+                     /gene_synonym="SCJ1.31c"
+                     /locus_tag="SCO0182"
+                     /note="TTA/leucine codon, possible target for bldA
+                     regulation."
+     misc_feature    complement(7039..7041)
+                     /note="tta leucine codon, possible target for bldA
+                     regulation"
+                     /tool="antismash"
+     gene            7144..8391
+                     /db_xref="GeneID:1095607"
+                     /gene_synonym="SCJ1.32"
+                     /locus_tag="SCO0183"
+     CDS             7144..8391
+                     /codon_start=1
+                     /db_xref="GeneID:1095607"
+                     /gene_synonym="SCJ1.32"
+                     /locus_tag="SCO0183"
+                     /note="SCJ1.32, unknown,len: 415 aa. Likely to have arisen
+                     as a result of a duplication of SCF43A.31/32, followed by a
+                     deletion event generating a possible CDS with the 5' coding
+                     sequence of SCF43A.31 and the 3' coding sequence of
+                     SCF43A.32. Similarity scores are as follows: to
+                     Streptomyces coelicolor TR:CAB48918 (EMBL; AL096837)
+                     oxidoreductase SCF43A.31 (520 aa), fasta scores opt: 1191
+                     z-score: 1365.3 E(): 0 64.2% identity in 307 aa overlap and
+                     to Streptomyces coelicolor TR:CAB48919(EMBL; AL096837)
+                     deoxyribodipyrimidine photolyase SCF43A.32 (458 aa), opt:
+                     909 z-score: 1043.2 E(): 0 45.7% identity in 418 aa
+                     overlap. Contains a PS00394 DNA photolyases class 1
+                     signature 1 and a PS00691 DNA photolyases class 1 signature
+                     2."
+                     /product="deoxiribopirymidine photolyase"
+                     /protein_id="NP_624519.1"
+                     /transl_table=11
+                     /translation="MRRIVYLGGLTPRGVPERTLSPHLRSRAEVGPILVRDVLHYLAGA
+                     ATMPDDIDRAFDVGGPDVPTYREMMRRHATVSGLRRRIIVPAPVLTPGLSSHWVGLVTP
+                     VPASIARPLTESLRHEVVCQEHDIARYVPDAPGRPLPFDVALTLALRRVREAQVATRWS
+                     SASVPGAPSDPLPTDPDWAGGSLYEDERHLPVDASPEALWKVVEGIGGDNGWYSFPPAW
+                     AVRGWLDRFVGGVGLRRGRRDAQRLHPARPVAWRGGRRRGHRRLAGRTGYPVVDAAMRQ
+                     LRHQGWMHNRARLLVASFLTKTLYVDWRIGARHFLDLLVDGDVVNNQLNWQWAAGTGTD
+                     TRPHRVLNPLVQARRFDPDGVYVRRWVPELRSVEGGKVHEPWRLAAAERGELDYPDPLV
+                     ELADGLARFKHARGRD"
+     PFAM_domain     7684..7899
+                     /aSDomain="DUF2867"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF11066.11"
+                     /description="Protein of unknown function (DUF2867)"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0183_0058"
+                     /evalue="3.90E-13"
+                     /label="SCO0183"
+                     /locus_tag="SCO0183"
+                     /protein_end="252"
+                     /protein_start="180"
+                     /score="50.1"
+                     /tool="antismash"
+                     /translation="WAGGSLYEDERHLPVDASPEALWKVVEGIGGDNGWYSFPPAWAVR
+                     GWLDRFVGGVGLRRGRRDAQRLHPARP"
+     PFAM_domain     7942..8364
+                     /aSDomain="FAD_binding_7"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF03441.17"
+                     /description="FAD binding domain of DNA photolyase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0183_0059"
+                     /evalue="2.70E-58"
+                     /label="SCO0183"
+                     /locus_tag="SCO0183"
+                     /protein_end="407"
+                     /protein_start="266"
+                     /score="197.0"
+                     /tool="antismash"
+                     /translation="AGRTGYPVVDAAMRQLRHQGWMHNRARLLVASFLTKTLYVDWRIG
+                     ARHFLDLLVDGDVVNNQLNWQWAAGTGTDTRPHRVLNPLVQARRFDPDGVYVRRWVPEL
+                     RSVEGGKVHEPWRLAAAERGELDYPDPLVELADGLAR"
+     misc_feature    7951..7989
+                     /gene_synonym="SCJ1.32"
+                     /locus_tag="SCO0183"
+                     /note="PS00394 DNA photolyases class 1 signature 1"
+     misc_feature    8011..8070
+                     /gene_synonym="SCJ1.32"
+                     /locus_tag="SCO0183"
+                     /note="PS00691 DNA photolyases class 1 signature 2"
+     gene            8403..10217
+                     /db_xref="GeneID:1095608"
+                     /gene_synonym="SCJ1.33"
+                     /locus_tag="SCO0184"
+     CDS             8403..10217
+                     /codon_start=1
+                     /db_xref="GeneID:1095608"
+                     /gene_synonym="SCJ1.33"
+                     /locus_tag="SCO0184"
+                     /note="SCJ1.33 unknown, len: 604 aa. Highly similar to
+                     Synechocystis sp. (strain PCC6803) TR:P74080 (EMBL;D90912)
+                     hypothetical 58.1 KD protein (504 aa), fasta scores opt:
+                     931 z-score: 996.4 E(): 0 38.8% identity in 479 aa overlap
+                     and Methanobacterium thermoautotrophicum TR:O27804
+                     (EMBL;AE000932) conserved protein MTH1776 (491 aa), fasta
+                     scores opt: 572 z-score: 613.5 E(): 8.1e-27 31.7% identity
+                     in 483 aa overlap. Also shares a low level of similarity
+                     with Streptomyces coelicolor TR:CAB48919 (EMBL;AL096837)
+                     deoxyribodipyrimidine photolyase SCF43A.32 (458 aa), fasta
+                     scores opt: 176 z-score: 191.4 E(): 0.0026 31.1% identity
+                     in 219 aa overlap."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624520.1"
+                     /transl_table=11
+                     /translation="MHWLFGDQLGPHFLTPGEEGPGPETPLLMIEARSVFRRRRFHRAK
+                     AHLVLSAMRHRAAEPGDRVTYVRADTYRQGLARTARGRPVGVHHPTSHAALRLVRALPQ
+                     VTVGPARGFLVPMTGFAAWAEGHGGKRLRQEDFYRWVRRGHGLLMDGEQPAAGRWNLDH
+                     DNREPPPREAASLQVGRPYRPREDDIDEEVRHDLDRWERDGDVSFVGRDGPRLFPATRT
+                     EGLRALRRFVEHRLATFGPHEDAMLAADPVMSHSLLSSTLNLGPLDPVECVERAERAWR
+                     EGRAPLNSVEGFVRQIAGWREYVWQLYWYFGEGYRRSNALGHTAPLPDWWNRLDADAVR
+                     ANCLRTVLAQVRDTGWTHHIPRLMVLGSHALQRGWDPAAVTNWFHRCFVDGYDWVMLPN
+                     VVGMSQYADGGRMTTKPYTSAGAYVNRMSDLCGPCGYRPGDRTCEHACPYTTGYWAFLD
+                     RHRELLAGNQRVARPVRQSDRLADLPDVCAQGTRGVTHRHEPPPLRRRGEVGPHPVPER
+                     AEVSASTTGHPAEAVACGQPRVRRGCACLDCRRWWPRRPNRSTTPSPRPMRRTRSTPSS
+                     GGYWTNGCATAVPSTPSSPGNWPTVSRR"
+     PFAM_domain     8409..8999
+                     /aSDomain="DPRP"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF04244.16"
+                     /description="Deoxyribodipyrimidine photo-lyase-related
+                     protein"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0184_0060"
+                     /evalue="3.50E-31"
+                     /label="SCO0184"
+                     /locus_tag="SCO0184"
+                     /protein_end="199"
+                     /protein_start="2"
+                     /score="108.9"
+                     /tool="antismash"
+                     /translation="WLFGDQLGPHFLTPGEEGPGPETPLLMIEARSVFRRRRFHRAKAH
+                     LVLSAMRHRAAEPGDRVTYVRADTYRQGLARTARGRPVGVHHPTSHAALRLVRALPQVT
+                     VGPARGFLVPMTGFAAWAEGHGGKRLRQEDFYRWVRRGHGLLMDGEQPAAGRWNLDHDN
+                     REPPPREAASLQVGRPYRPREDDIDEEVRHDLDR"
+     gene            10001..11179
+                     /db_xref="GeneID:1095609"
+                     /gene_synonym="crtB; SCJ1.34"
+                     /locus_tag="SCO0185"
+     CDS             10001..11179
+                     /codon_start=1
+                     /db_xref="GeneID:1095609"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     terpene: PT_FPPS_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1182: Polyprenyl synthetase"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="crtB; SCJ1.34"
+                     /locus_tag="SCO0185"
+                     /note="SCJ1.34, crtB, possible geranylgeranyl pyrophosphate
+                     synthase, len: 392 aa. Shares a high level of similarity
+                     with Streptomyces griseus TR:Q54193 (EMBL:L37405)
+                     geranylgeranyl pyrophosphate synthase (425 aa), fasta
+                     scores: opt: 964 z-score: 1076.9 E(): 0 48.0% identity in
+                     381 aa overlap and Mycobacterium tuberculosis TR:O53507
+                     (EMBL:AL021957) geranylgeranyl pyrophosphate synthase (352
+                     aa), fasta scores opt: 742 z-score: 831.2 E(): 0 43.0%
+                     identity in 328 aa overlap. Contains a PS00723 Polyprenyl
+                     synthetases signature 1"
+                     /product="geranylgeranyl pyrophosphate synthase"
+                     /protein_id="NP_624521.1"
+                     /sec_met_domain="PT_FPPS_like (E-value: 7.4e-45, bitscore:
+                     152.0, seeds: 145, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MRTTESEKGLRMPGLPPMVAPPAEQVDDPVTATDAANAVDAVLRG
+                     VLDERLRHCRAVDPLFARELADRLAALTARGGKRLRTAFAHCGWRAAGGSGDATAVLRT
+                     GAALELLQACALVHDDVMDGSVQRRGAPALHVDLARGHWAAGMHGSSESFGTSAAVLTG
+                     DLALAWADDLLTETALGTPHGPRLHGEWRAMRTEMVAGQYRDLHAQAARSSGVDEALAI
+                     ATLKSALYTVARPLALGAVLAGAADGDALEALRAAGRCAGLAFQLRDDLLGAFGDPALT
+                     GKPADDDLRSRKLTYLLAVAVRLADAADDHLAAAALAPDADPKSEKAVRQVRSALVRTG
+                     ARDLVETKIGELTDMSLAHFDRCGARPAVRHEFAALIGRATGAVPRGTGEVV"
+     PFAM_domain     10193..10999
+                     /aSDomain="polyprenyl_synt"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00348.20"
+                     /db_xref="GO:0008299"
+                     /description="Polyprenyl synthetase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0185_0061"
+                     /evalue="1.20E-45"
+                     /gene_ontologies="GO:0008299: isoprenoid biosynthetic
+                     process"
+                     /label="SCO0185"
+                     /locus_tag="SCO0185"
+                     /protein_end="333"
+                     /protein_start="64"
+                     /score="155.7"
+                     /tool="antismash"
+                     /translation="LADRLAALTARGGKRLRTAFAHCGWRAAGGSGDATAVLRTGAALE
+                     LLQACALVHDDVMDGSVQRRGAPALHVDLARGHWAAGMHGSSESFGTSAAVLTGDLALA
+                     WADDLLTETALGTPHGPRLHGEWRAMRTEMVAGQYRDLHAQAARSSGVDEALAIATLKS
+                     ALYTVARPLALGAVLAGAADGDALEALRAAGRCAGLAFQLRDDLLGAFGDPALTGKPAD
+                     DDLRSRKLTYLLAVAVRLADAADDHLAAAALAPDADPKSEKAVRQVR"
+     misc_feature    10346..10390
+                     /gene_synonym="crtB; SCJ1.34"
+                     /locus_tag="SCO0185"
+                     /note="PS00723 Polyprenyl synthetases signature 1,
+                     [LIVM]{2}.DD.{2,4}D.{4}RR[GH], info count = 26.9"
+     gene            11176..12747
+                     /db_xref="GeneID:1095610"
+                     /gene_synonym="crtE; SCJ1.35"
+                     /locus_tag="SCO0186"
+     CDS             11176..12747
+                     /codon_start=1
+                     /db_xref="GeneID:1095610"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) DAO"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1222: dehydrogenase"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="crtE; SCJ1.35"
+                     /locus_tag="SCO0186"
+                     /note="SCJ1.35, crtE, probable phytoene dehydrogenase
+                     (phytoene desaturase) (hypothetical protein), len: 523 aa.
+                     High level of similarity to Streptomyces griseus
+                     SW:CRTI_STRGR (EMBL; L37405) phytoene dehydrogenase (EC
+                     1.3.-.-) (phytoene desaturase) (507 aa), fasta scores opt:
+                     2459 z-score: 2615.3 E(): 0; 74.5% identity in 501 aa
+                     overlap and Streptomyces setonii SW:CRTI_STRSE (EMBL;
+                     D55723) phytoene dehydrogenase (EC 1.3.-.-) (phytoene
+                     desaturase) (508 aa), fasta scores opt: 2455 z-score:
+                     2611.0 E(): 0; 74.3% identity in 498 aa overlap. Contains a
+                     PS00982 Bacterial-type phytoene dehydrogenase signature"
+                     /product="phytoene dehydrogenase"
+                     /protein_id="NP_624522.1"
+                     /sec_met_domain="DAO (E-value: 9.7e-17, bitscore: 60.4,
+                     seeds: 521, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MRRVPGPTGHVVVVGAGLSGLACALHLLGAGRRVTVVERDAGPGG
+                     RSGRVRLGGYELDTGPTVLTMPHLADEAFAAVGDSLRRRVELTALDPAYRACFADGSAL
+                     DVHTDGEAMEAEVRRFAGPAQAAGYRDLRRWLERLYRAQMRRFIDTNFDSPLQLLHPDL
+                     ARLAALGGFGRLDGRIGRFLSDERLRRVFSFQALYAGVAPARALAAYAVIAYMDTVAGV
+                     WFPKGGMHALPRAMADAAATAGADLRWSAEVKALERSAGRVRAVHLASGERIACDAVVL
+                     TCELSTAYGLLGRAPRRPARLRHSPSAVILHAGTDRTWPHLAHHTLSFGAAWERTFEEL
+                     TRTGELMSDPSLLITRPTTHDPALAPPGRHLHYVLAPCPNTDVGPDAVAWRDLGPRYRE
+                     SLVGVLESRGLEGFADSVQEELLVTPLDWDAQGHAAGSPFSVSHTFAQTGPFRPRNLVR
+                     GLDNVVLAGCGTTPGVGVPTVLVSGKLAAARVTGGAGSRPARTRRSPAVSDPCPAPVPA
+                     GADDPS"
+     aSDomain        11206..12687
+                     /aSDomain="TIGR02734"
+                     /aSTool="tigrfam"
+                     /description="crtI_fam: phytoene desaturase"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_SCO0186_0003"
+                     /evalue="2.30E-179"
+                     /identifier="TIGR02734"
+                     /label="SCO0186"
+                     /locus_tag="SCO0186"
+                     /protein_end="504"
+                     /protein_start="10"
+                     /score="595.3"
+                     /tool="antismash"
+                     /translation="VVVVGAGLSGLACALHLLGAGRRVTVVERDAGPGGRSGRVRLGGY
+                     ELDTGPTVLTMPHLADEAFAAVGDSLRRRVELTALDPAYRACFADGSALDVHTDGEAME
+                     AEVRRFAGPAQAAGYRDLRRWLERLYRAQMRRFIDTNFDSPLQLLHPDLARLAALGGFG
+                     RLDGRIGRFLSDERLRRVFSFQALYAGVAPARALAAYAVIAYMDTVAGVWFPKGGMHAL
+                     PRAMADAAATAGADLRWSAEVKALERSAGRVRAVHLASGERIACDAVVLTCELSTAYGL
+                     LGRAPRRPARLRHSPSAVILHAGTDRTWPHLAHHTLSFGAAWERTFEELTRTGELMSDP
+                     SLLITRPTTHDPALAPPGRHLHYVLAPCPNTDVGPDAVAWRDLGPRYRESLVGVLESRG
+                     LEGFADSVQEELLVTPLDWDAQGHAAGSPFSVSHTFAQTGPFRPRNLVRGLDNVVLAGC
+                     GTTPGVGVPTVLVSGKLAAARVTGGAGSRPARTRRS"
+     PFAM_domain     11227..12645
+                     /aSDomain="Amino_oxidase"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF01593.27"
+                     /db_xref="GO:0016491"
+                     /description="Flavin containing amine oxidoreductase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0186_0062"
+                     /evalue="2.50E-58"
+                     /gene_ontologies="GO:0016491: oxidoreductase activity"
+                     /label="SCO0186"
+                     /locus_tag="SCO0186"
+                     /protein_end="490"
+                     /protein_start="17"
+                     /score="198.6"
+                     /tool="antismash"
+                     /translation="LSGLACALHLLGAGRRVTVVERDAGPGGRSGRVRLGGYELDTGPT
+                     VLTMPHLADEAFAAVGDSLRRRVELTALDPAYRACFADGSALDVHTDGEAMEAEVRRFA
+                     GPAQAAGYRDLRRWLERLYRAQMRRFIDTNFDSPLQLLHPDLARLAALGGFGRLDGRIG
+                     RFLSDERLRRVFSFQALYAGVAPARALAAYAVIAYMDTVAGVWFPKGGMHALPRAMADA
+                     AATAGADLRWSAEVKALERSAGRVRAVHLASGERIACDAVVLTCELSTAYGLLGRAPRR
+                     PARLRHSPSAVILHAGTDRTWPHLAHHTLSFGAAWERTFEELTRTGELMSDPSLLITRP
+                     TTHDPALAPPGRHLHYVLAPCPNTDVGPDAVAWRDLGPRYRESLVGVLESRGLEGFADS
+                     VQEELLVTPLDWDAQGHAAGSPFSVSHTFAQTGPFRPRNLVRGLDNVVLAGCGTTPGVG
+                     VPTVLVSGKLAAARV"
+     misc_feature    12559..12621
+                     /gene_synonym="crtE; SCJ1.35"
+                     /locus_tag="SCO0186"
+                     /note="PS00982 Bacterial-type phytoene dehydrogenase
+                     signature"
+     gene            12734..13729
+                     /db_xref="GeneID:1095611"
+                     /gene_synonym="crtI; SCJ1.36"
+                     /locus_tag="SCO0187"
+     CDS             12734..13729
+                     /codon_start=1
+                     /db_xref="GeneID:1095611"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     terpene: PT_phytoene_like"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     terpene: phytoene_synt"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="crtI; SCJ1.36"
+                     /locus_tag="SCO0187"
+                     /note="SCJ1.36, crtI, probable phytoene synthase, len: 331
+                     aa. Shares a high level of similarity with Streptomyces
+                     griseus SW:CRTB_STRGR (EMBL; L37405) phytoene synthase (342
+                     aa), fasta scores opt: 1388 z-score: 1657.5 E(): 0 67.6%
+                     identity in 343 aa overlap and Mycobacterium marinum TR:
+                     O05423 (EMBL; U92075) phytoene synthase (319 aa), fasta
+                     scores opt: 996 z-score: 1191.5 E():0 52.2% identity in 316
+                     aa overlap. Contains a PS01045 Squalene and phytoene
+                     synthases signature 2 and a Pfam match to entry PF00494
+                     SQS_PSY, Squalene and phytoene synthases"
+                     /product="phytoene synthase"
+                     /protein_id="NP_624523.1"
+                     /sec_met_domain="phytoene_synt (E-value: 7.3e-127,
+                     bitscore: 421.0, seeds: 8, tool: rule-based-clusters)"
+                     /sec_met_domain="PT_phytoene_like (E-value: 1.8e-63,
+                     bitscore: 213.4, seeds: 61, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTRRELDAAGITDPLLRAAYTRCRRLNARHGKTYFLATRLLPLER
+                     RSAVHALYGFARWADDIVDDLDRHRTAGERDRALRRLESDLADGLRTGTGREPVVRAVA
+                     DTADRYDIDHVLFADFLSSMRADLTVTHYPTYADLQAYVHGSAAVIGLQMLPVLGTVTD
+                     RKEAAPHAAALGVAFQLTNFLRDVGEDLDRGRVYLPGSLLAAHGVDRPLLEWSRRTGRR
+                     DRRIRAALVAAEAMTRRVYRTAEPGIAMLDPRVRPCIRAAFTLYGGILDAIAEQDYTVL
+                     HRRAVVSRRRRAATAAEGVLCVAAARWRARTSPRVEAAGGPAAEWQGPVR"
+     PFAM_domain     12818..13606
+                     /aSDomain="SQS_PSY"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00494.22"
+                     /db_xref="GO:0009058"
+                     /description="Squalene/phytoene synthase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0187_0063"
+                     /evalue="5.70E-61"
+                     /gene_ontologies="GO:0009058: biosynthetic process"
+                     /label="SCO0187"
+                     /locus_tag="SCO0187"
+                     /protein_end="291"
+                     /protein_start="28"
+                     /score="206.4"
+                     /tool="antismash"
+                     /translation="RHGKTYFLATRLLPLERRSAVHALYGFARWADDIVDDLDRHRTAG
+                     ERDRALRRLESDLADGLRTGTGREPVVRAVADTADRYDIDHVLFADFLSSMRADLTVTH
+                     YPTYADLQAYVHGSAAVIGLQMLPVLGTVTDRKEAAPHAAALGVAFQLTNFLRDVGEDL
+                     DRGRVYLPGSLLAAHGVDRPLLEWSRRTGRRDRRIRAALVAAEAMTRRVYRTAEPGIAM
+                     LDPRVRPCIRAAFTLYGGILDAIAEQDYTVLHRRAVVSRRR"
+     misc_feature    12878..13648
+                     /gene_synonym="crtI; SCJ1.36"
+                     /locus_tag="SCO0187"
+                     /note="Pfam match to entry PF00494 SQS_PSY, Squalene and
+                     phytoene synthases, score 253.20, E-value 3.5e-72"
+     misc_feature    13253..13330
+                     /gene_synonym="crtI; SCJ1.36"
+                     /locus_tag="SCO0187"
+                     /note="PS01045 Squalene and phytoene synthases signature 2"
+     gene            13726..14736
+                     /db_xref="GeneID:1095612"
+                     /gene_synonym="crtV; SCJ1.37"
+                     /locus_tag="SCO0188"
+     CDS             13726..14736
+                     /codon_start=1
+                     /db_xref="GeneID:1095612"
+                     /gene_synonym="crtV; SCJ1.37"
+                     /locus_tag="SCO0188"
+                     /note="SCJ1.37, crtV, probable methylesterase, len: 336 aa.
+                     Highly similar to Streptomyces griseus TR:P72448 (EMBL;
+                     X95596) methylesterase (338 aa), fasta scores opt: 1315
+                     z-score: 1538.7 E(): 0 60.5% identity in 337 aa overlap"
+                     /product="methylesterase"
+                     /protein_id="NP_624524.1"
+                     /transl_table=11
+                     /translation="MSGRRGGRRWSPPVRRRGAGPDWAAQTPTWRQARPSLIADALERA
+                     SARPSGNWFVVGASRQVRAGDRPYGRTVGGVEVVLWRSDDGEPRAGSGICPHLGAPLRD
+                     SRVVCGTLVCHWHGLALDGSASAGWRPFPVHDDGVLVWVRLDEVGGEEPTERPVVPTRP
+                     ATGRGVDSVFTATGRCEPQDVVANRLDPWHGSWFHPYSFVDLSVVREPQGGEDDAFVVD
+                     VSFRVAGRLVVPVRAEFTAPEPRTVVMRITDGEGATSVVETHATPLTGPDHERPRTAVV
+                     EAVVAASDRPGFALARAAAPVLRPLMRRTAGRLWRDDLAYAERRWALRSTGRFPG"
+     PFAM_domain     13879..14115
+                     /aSDomain="Rieske"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00355.29"
+                     /db_xref="GO:0051537"
+                     /description="Rieske [2Fe-2S] domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0188_0064"
+                     /evalue="1.90E-13"
+                     /gene_ontologies="GO:0051537: 2 iron, 2 sulfur cluster
+                     binding"
+                     /label="SCO0188"
+                     /locus_tag="SCO0188"
+                     /protein_end="130"
+                     /protein_start="51"
+                     /score="50.3"
+                     /tool="antismash"
+                     /translation="NWFVVGASRQVRAGDRPYGRTVGGVEVVLWRSDDGEPRAGSGICP
+                     HLGAPLRDSRVVCGTLVCHWHGLALDGSASAGWR"
+     PFAM_domain     14167..14724
+                     /aSDomain="DUF5914"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF19299.2"
+                     /description="Domain of unknown function (DUF5914)"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0188_0065"
+                     /evalue="6.80E-96"
+                     /label="SCO0188"
+                     /locus_tag="SCO0188"
+                     /protein_end="333"
+                     /protein_start="147"
+                     /score="319.4"
+                     /tool="antismash"
+                     /translation="VGGEEPTERPVVPTRPATGRGVDSVFTATGRCEPQDVVANRLDPW
+                     HGSWFHPYSFVDLSVVREPQGGEDDAFVVDVSFRVAGRLVVPVRAEFTAPEPRTVVMRI
+                     TDGEGATSVVETHATPLTGPDHERPRTAVVEAVVAASDRPGFALARAAAPVLRPLMRRT
+                     AGRLWRDDLAYAERRWALRSTGR"
+     gene            complement(14752..16320)
+                     /db_xref="GeneID:1095613"
+                     /gene_synonym="crtU; SCJ1.38c"
+                     /locus_tag="SCO0189"
+     CDS             complement(14752..16320)
+                     /codon_start=1
+                     /db_xref="GeneID:1095613"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) DAO"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="crtU; SCJ1.38c"
+                     /locus_tag="SCO0189"
+                     /note="SCJ1.38c, crtU, probable dehydrogenase, a partial
+                     CDS, len: >336 aa. Highly similar to Streptomyces griseus
+                     TR:P72449 (EMBL:X95596) dehydrogenase (517 aa), fasta
+                     scores opt: 1277 z-score: 1459.8 E():0 69.0% identity in
+                     281 aa overlap and Synechocystis sp SW:CRTI_SYNY3 (EMBL;
+                     X62574) phytoene dehydrogenase (427 aa), fasta scores opt:
+                     133 z-score: 155.8 E():0.25 24.6% identity in 260 aa
+                     overlap.; SCJ12.01c, crtU, probable dehydrogenase, partial
+                     CDS, len: >278 aa. Highly similar to Streptomyces griseus
+                     TR:P72449 (EMBL:X95596) dehydrogenase (517 aa), fasta
+                     scores opt: 1311 z-score: 1471.3 E(): 0 74.0% identity in
+                     269 aa overlap and Synechocystis sp. (strain PCC 6803)
+                     SW:CRTI_SYNY3 (EMBL:X62574) phytoene dehydrogenase (EC
+                     1.3.-.-) (phytoene desaturase) (427 aa), fasta scores opt:
+                     219 z-score: 250.2 E(): 1.4e-06 27.6% identity in 254 aa
+                     overlap."
+                     /product="dehydrogenase"
+                     /protein_id="NP_733493.1"
+                     /sec_met_domain="DAO (E-value: 3.1e-12, bitscore: 45.5,
+                     seeds: 521, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTVRRTAAARRGRDRKAEIVFPAPGADRFGRGDEPSVAVIGGGIA
+                     GLAAATLMAERGARVTLYEKEDAVGGRLSGRRTTLADGSAVTMTRGFHAFFRQYYNLRG
+                     LLRRTDPGLDRLTPLPDYPLRHSGGLTDGFARVPRTPPLSAIGFVALSPTFGWRDLAAM
+                     DPRAALPLLDVRVPQVYERFDGVTATAFLESVRFPEAAHHLAFEVFSRSFFADPRRLSA
+                     AELLLMFHIYFLGSSEGLLFDVPVEPFPQALWNPLGDYLRRLGADVRTGTPVHGILPRA
+                     DGGADVLTDTGADRHQAVVLALDTAGLRQTVAASPGLGTDTWRDGIAALRTAPPFLVSR
+                     LWLDRPVDADRPGFLGTSGYGGLDNVSVLERYEGEAARWAARTGGSVVELHAYAVDPAA
+                     EPKEVQDELVDRLHQAYPETREARVVDARHEWRADCPMFEVGSHRRRPTVRTPHPWLTL
+                     AGDGIRCDLPVALMERAATTGFLAANALLADRGVRGQVLWTVPRTGRSPVLRAFGAVAG
+                     HRSAP"
+     PFAM_domain     complement(14860..16191)
+                     /aSDomain="Amino_oxidase"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF01593.27"
+                     /db_xref="GO:0016491"
+                     /description="Flavin containing amine oxidoreductase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0189_0066"
+                     /evalue="7.90E-33"
+                     /gene_ontologies="GO:0016491: oxidoreductase activity"
+                     /label="SCO0189"
+                     /locus_tag="SCO0189"
+                     /protein_end="487"
+                     /protein_start="43"
+                     /score="114.5"
+                     /tool="antismash"
+                     /translation="IAGLAAATLMAERGARVTLYEKEDAVGGRLSGRRTTLADGSAVTM
+                     TRGFHAFFRQYYNLRGLLRRTDPGLDRLTPLPDYPLRHSGGLTDGFARVPRTPPLSAIG
+                     FVALSPTFGWRDLAAMDPRAALPLLDVRVPQVYERFDGVTATAFLESVRFPEAAHHLAF
+                     EVFSRSFFADPRRLSAAELLLMFHIYFLGSSEGLLFDVPVEPFPQALWNPLGDYLRRLG
+                     ADVRTGTPVHGILPRADGGADVLTDTGADRHQAVVLALDTAGLRQTVAASPGLGTDTWR
+                     DGIAALRTAPPFLVSRLWLDRPVDADRPGFLGTSGYGGLDNVSVLERYEGEAARWAART
+                     GGSVVELHAYAVDPAAEPKEVQDELVDRLHQAYPETREARVVDARHEWRADCPMFEVGS
+                     HRRRPTVRTPHPWLTLAGDGIRCDLPVALMERAATTGFLAANALL"
+     misc_feature    15485..15617
+                     /note="665 (-1) 36793 36925 overlap with cosmid StJ1"
+     misc_feature    complement(15485..15617)
+                     /gene_synonym="crtU; SCJ1.38c"
+                     /locus_tag="SCO0189"
+                     /note="overlap with StJ12"
+     gene            complement(16317..17057)
+                     /db_xref="GeneID:1095614"
+                     /gene_synonym="crtT; SCJ12.02c"
+                     /locus_tag="SCO0190"
+     CDS             complement(16317..17057)
+                     /codon_start=1
+                     /db_xref="GeneID:1095614"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1089: methyltransferase"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="crtT; SCJ12.02c"
+                     /locus_tag="SCO0190"
+                     /note="SCJ12.02c, crtT, probable methyltransferase, len:
+                     246 aa. Shares a high level of sequence similarity with
+                     Streptomyces griseus TR:P72450 (EMBL:X95596)
+                     methyltransferase (242 aa), fasta scores opt: 984 z-score:
+                     1164.2 E(): 0 65.0% identity in 234 aa overlap. Contains a
+                     Pfam match to entry PF01209 Ubie_methyltran, ubiE/COQ5
+                     methyltransferase family"
+                     /product="methyltransferase"
+                     /protein_id="NP_624525.1"
+                     /transl_table=11
+                     /translation="MTLLRDHDLARAFDHASHTYDGLTALNPGYRTGLLRSARRLALPA
+                     DGAGLHLLDLGCGTGASTRALLRAAPRARITAVDASAGMLRRALVKPWPARVRFLHLTA
+                     EEFATTREDEGPFDAVFAAYLFRNVTDPDAVLRAVRQLLRPGGRFAAHEYSLSGSPGHR
+                     ALWSAVCRGVVIPAGTLTGDRTLYRHLRRSVVAFDTAPEFAARLTRAGLTSVRVAPVAG
+                     WQTGIVHTFLARNGGPTTTEERVL"
+     regulatory      complement(16329..16334)
+                     /gene_synonym="crtT; SCJ12.02c"
+                     /locus_tag="SCO0190"
+                     /regulatory_class="ribosome_binding_site"
+     misc_feature    complement(16356..17057)
+                     /gene_synonym="crtT; SCJ12.02c"
+                     /locus_tag="SCO0190"
+                     /note="Pfam match to entry PF01209 Ubie_methyltran,
+                     ubiE/COQ5 methyltransferase family, score -45.20, E-value
+                     1.1e-08"
+     PFAM_domain     complement(16401..17042)
+                     /aSDomain="Ubie_methyltran"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF01209.21"
+                     /description="ubiE/COQ5 methyltransferase family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0190_0067"
+                     /evalue="1.90E-19"
+                     /label="SCO0190"
+                     /locus_tag="SCO0190"
+                     /protein_end="219"
+                     /protein_start="5"
+                     /score="70.1"
+                     /tool="antismash"
+                     /translation="DHDLARAFDHASHTYDGLTALNPGYRTGLLRSARRLALPADGAGL
+                     HLLDLGCGTGASTRALLRAAPRARITAVDASAGMLRRALVKPWPARVRFLHLTAEEFAT
+                     TREDEGPFDAVFAAYLFRNVTDPDAVLRAVRQLLRPGGRFAAHEYSLSGSPGHRALWSA
+                     VCRGVVIPAGTLTGDRTLYRHLRRSVVAFDTAPEFAARLTRAGLTSVRVAP"
+     gene            complement(17054..18271)
+                     /db_xref="GeneID:1095615"
+                     /gene_synonym="crtY; SCJ12.03c"
+                     /locus_tag="SCO0191"
+     CDS             complement(17054..18271)
+                     /codon_start=1
+                     /db_xref="GeneID:1095615"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     terpene: Lycopene_cycl"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="crtY; SCJ12.03c"
+                     /locus_tag="SCO0191"
+                     /note="SCJ12.03c, crtY, probable lycopene cyclase, len: 405
+                     aa. Highly similar to Streptomyces griseus TR:P72451
+                     (EMBL:X95596) lycopene cyclase (418 aa), fasta scores opt:
+                     1426 z-score: 1602.7 E(): 0 56.3% identity in 396 aa
+                     overlap"
+                     /product="lycopene cyclase"
+                     /protein_id="NP_624526.1"
+                     /sec_met_domain="Lycopene_cycl (E-value: 3.1e-111,
+                     bitscore: 370.9, seeds: 20, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTPRSAQDSDVLVIGGGAAGLSLAHRLTENGTAPAMTLVEPPDGP
+                     LRPAERTWCYWGAAADGLEEAVGASWSVLRLHGADGGSVTVDPAPFTYRMVRSADFERM
+                     VHGRLARTDGARLLRGTAESVRAVPAGTEVRCTLPGGRPLTLYARRVFDSRPLPELPPA
+                     RTCLLQHFRGWFVHTRTDRFDPAVADLMDFRVPQPAHGLAFGYVLPLAPDRALVEYTEF
+                     SRAPLTTEAYESALGHYCRDILGLGELTVERTEQGVIPMTDARFPGRAGPAVYRIGTAG
+                     GATRPATGYTFAAVQRHSGAIAAALRDGHDRVPAPHGRRARAMDAVLLRALDTGRIDGP
+                     RFFTDLFRRVPAERLLRFLDGTTSLREEWGIGLRTPVRPMLRTAAEVPFLPRRSQPLAR
+                     TGGNNR"
+     PFAM_domain     complement(17120..18244)
+                     /aSDomain="Lycopene_cycl"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF05834.15"
+                     /description="Lycopene cyclase protein"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0191_0068"
+                     /evalue="5.20E-130"
+                     /label="SCO0191"
+                     /locus_tag="SCO0191"
+                     /protein_end="384"
+                     /protein_start="9"
+                     /score="434.0"
+                     /tool="antismash"
+                     /translation="DVLVIGGGAAGLSLAHRLTENGTAPAMTLVEPPDGPLRPAERTWC
+                     YWGAAADGLEEAVGASWSVLRLHGADGGSVTVDPAPFTYRMVRSADFERMVHGRLARTD
+                     GARLLRGTAESVRAVPAGTEVRCTLPGGRPLTLYARRVFDSRPLPELPPARTCLLQHFR
+                     GWFVHTRTDRFDPAVADLMDFRVPQPAHGLAFGYVLPLAPDRALVEYTEFSRAPLTTEA
+                     YESALGHYCRDILGLGELTVERTEQGVIPMTDARFPGRAGPAVYRIGTAGGATRPATGY
+                     TFAAVQRHSGAIAAALRDGHDRVPAPHGRRARAMDAVLLRALDTGRIDGPRFFTDLFRR
+                     VPAERLLRFLDGTTSLREEWGIGLRTPVRPMLRTA"
+     gene            complement(18542..19792)
+                     /db_xref="GeneID:1095616"
+                     /gene_synonym="SCJ12.04c"
+                     /locus_tag="SCO0192"
+     CDS             complement(18542..19792)
+                     /codon_start=1
+                     /db_xref="GeneID:1095616"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) DAO"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1222: dehydrogenase"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="SCJ12.04c"
+                     /locus_tag="SCO0192"
+                     /note="SCJ12.04c, possible oxidoreductase, len: 416 aa.
+                     Similar to many protoporphyrinogen oxidases including:
+                     Propionibacterium freudenreichii shermanii SW:PPOX_PROFR
+                     (EMBL:D85417) HemY (527 aa), fasta scores opt: 228 z-score:
+                     249.0 E(): 1.6e-06 26.8% identity in 504 aa overlap and
+                     Bacillus subtilis SW:PPOX_BACSU (EMBL; M97208) HemY (470
+                     aa), fasta scores opt: 209 z-score: 229.3 E(): 2.1e-05
+                     25.7% identity in 311 aa overlap. Contains a Pfam match to
+                     entry PF01593 Amino_oxidase"
+                     /product="oxidoreductase"
+                     /protein_id="NP_624527.1"
+                     /sec_met_domain="DAO (E-value: 4.4e-09, bitscore: 35.2,
+                     seeds: 521, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSDGQHRAADAVVVGAGLAGLACALDLCRAGWRVALLEASDGVGG
+                     RMRTDRRDGFLLDRGFQVFNTSYPQVKRRMELKSLRLRPFTAGVVAHTSNGPVRLADPT
+                     REPRAAGTLLPGRALPARDLAALAALTARDAVLPVAVTRRRRDRPTSAALSRVGLSDAA
+                     IAGILRPFLSGVFLEDRLETSARFFHLVWRSMVRGSLCLPAEGIGAVPAQLADGLPDGV
+                     LRLGTPVAEITDAGVLLGDGGEVPARVVVVATDPATAAGLLPDLTVPDTRTVTTYYHAT
+                     DSPPTAEPILMVDSTGAILNTCVLSQVAPTYAPPGTGLVSTSVLGTDPPGRAQAVLRRL
+                     AELYGTDTSGWEQVAARTVDGALPAMLPPWPLSRTTRIGPGRYVCGDHRATGSVQGALA
+                     SGTRAAREVRADREPQR"
+     misc_feature    complement(18566..19741)
+                     /gene_synonym="SCJ12.04c"
+                     /locus_tag="SCO0192"
+                     /note="Pfam match to entry PF01593 Amino_oxidase, score
+                     -105.60, E-value 0.0012"
+     PFAM_domain     complement(18569..19741)
+                     /aSDomain="Amino_oxidase"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF01593.27"
+                     /db_xref="GO:0016491"
+                     /description="Flavin containing amine oxidoreductase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0192_0069"
+                     /evalue="2.40E-50"
+                     /gene_ontologies="GO:0016491: oxidoreductase activity"
+                     /label="SCO0192"
+                     /locus_tag="SCO0192"
+                     /protein_end="408"
+                     /protein_start="17"
+                     /score="172.3"
+                     /tool="antismash"
+                     /translation="LAGLACALDLCRAGWRVALLEASDGVGGRMRTDRRDGFLLDRGFQ
+                     VFNTSYPQVKRRMELKSLRLRPFTAGVVAHTSNGPVRLADPTREPRAAGTLLPGRALPA
+                     RDLAALAALTARDAVLPVAVTRRRRDRPTSAALSRVGLSDAAIAGILRPFLSGVFLEDR
+                     LETSARFFHLVWRSMVRGSLCLPAEGIGAVPAQLADGLPDGVLRLGTPVAEITDAGVLL
+                     GDGGEVPARVVVVATDPATAAGLLPDLTVPDTRTVTTYYHATDSPPTAEPILMVDSTGA
+                     ILNTCVLSQVAPTYAPPGTGLVSTSVLGTDPPGRAQAVLRRLAELYGTDTSGWEQVAAR
+                     TVDGALPAMLPPWPLSRTTRIGPGRYVCGDHRATGSVQGALASGTRAAREV"
+     regulatory      complement(19797..19801)
+                     /regulatory_class="ribosome_binding_site"
+     gene            complement(20026..21030)
+                     /db_xref="GeneID:1095617"
+                     /gene_synonym="SCJ12.05c"
+                     /locus_tag="SCO0193"
+     CDS             complement(20026..21030)
+                     /codon_start=1
+                     /db_xref="GeneID:1095617"
+                     /gene_synonym="SCJ12.05c"
+                     /locus_tag="SCO0193"
+                     /note="SCJ12.05c, possible DNA-binding regulator, len:334
+                     aa. Some similarity to Myxococcus xanthus TR:Q50900
+                     (EMBL:Z21955) regulatory protein (299 aa), fasta scores
+                     opt: 121 z-score: 141.6 E(): 1.6 32.4% identity in 281 aa
+                     overlap and Myxococcus xanthus TR:Q50899 (EMBL:Z21955)
+                     regulatory protein (288 aa), fasta scores opt: 118 z-score:
+                     138.5 E() 2.4 26.9% identity in 279 aa overlap. Contains a
+                     possible helix-turn-helix motif between aa's 23..44."
+                     /product="DNA-binding regulator"
+                     /protein_id="NP_624528.1"
+                     /transl_table=11
+                     /translation="MNAYTGDGDEPVDDGGPRRGGLTTGEVARRLGVAPTTVRTWDRRY
+                     GLGPDAHVDGRHRRWTAADLARLERMCALTATGLPPAEAARLARSEERPTAAGPRNTDA
+                     ARRAPTGRRSRAGSGLQLGDVRQECRGIARAALRLDASALDELLLAAIAEHGLVAAWTE
+                     VIVPTLQAVGRKWETSGEKYVEVEHFLSWHVSGALRRAAPPAVEDRPGSTTVLACVPGE
+                     NHTLPLEVLSAALTERGVPVRMFGGALPVESLVAAVRRTGPAAVGLWSQSRTTASRPLA
+                     QHVAAMEWGVRGARRRPVVLTLGPGWAGQAVAGLARPSGLAEAVAALEPSVYP"
+     PFAM_domain     complement(20431..20643)
+                     /aSDomain="B12-binding_2"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF02607.20"
+                     /description="B12 binding domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0193_0071"
+                     /evalue="1.10E-07"
+                     /label="SCO0193"
+                     /locus_tag="SCO0193"
+                     /protein_end="200"
+                     /protein_start="129"
+                     /score="32.4"
+                     /tool="antismash"
+                     /translation="RGIARAALRLDASALDELLLAAIAEHGLVAAWTEVIVPTLQAVGR
+                     KWETSGEKYVEVEHFLSWHVSGALRR"
+     PFAM_domain     complement(20761..20964)
+                     /aSDomain="MerR_1"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF13411.9"
+                     /db_xref="GO:0003677"
+                     /db_xref="GO:0006355"
+                     /description="MerR HTH family regulatory protein"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0193_0070"
+                     /evalue="1.90E-12"
+                     /gene_ontologies="GO:0003677: DNA binding"
+                     /gene_ontologies="GO:0006355: regulation of DNA-templated
+                     transcription"
+                     /label="SCO0193"
+                     /locus_tag="SCO0193"
+                     /protein_end="90"
+                     /protein_start="22"
+                     /score="47.1"
+                     /tool="antismash"
+                     /translation="TTGEVARRLGVAPTTVRTWDRRYGLGPDAHVDGRHRRWTAADLAR
+                     LERMCALTATGLPPAEAARLARS"
+     regulatory      21178..21183
+                     /regulatory_class="ribosome_binding_site"
+     gene            21191..21799
+                     /db_xref="GeneID:1095618"
+                     /gene_synonym="SCJ12.06"
+                     /locus_tag="SCO0194"
+     CDS             21191..21799
+                     /codon_start=1
+                     /db_xref="GeneID:1095618"
+                     /gene_functions="regulatory (smcogs) SMCOG1032: RNA
+                     polymerase, sigma-24 subunit, ECF subfamily"
+                     /gene_kind="regulatory"
+                     /gene_synonym="SCJ12.06"
+                     /locus_tag="SCO0194"
+                     /note="SCJ12.06, possible sigma factor, len: 202 aa.
+                     Similar to many including: Rhodobacter sphaeroide TR:O33546
+                     (EMBL; U11283) RpoE homologue (168 aa), fasta scores opt:
+                     291 z-score: 373.4 E(): 1.9e-13 35.4% identity in 161 aa
+                     overlap and Streptomyces coelicolor TR:O54163 (EMBL;
+                     AL021411) sigma factor SC7H1.04 (200 aa), fasta scores opt:
+                     255 z-score: 327.4 E(): 7.1e-11 33.7% identity in 184 aa
+                     overlap. Contains a PS01063 Sigma-70 factors ECF subfamily
+                     signature and a Pfam match to entry PF00776 Sigma70_ECF,
+                     Sigma-70 factor (ECF subfamily). Contains a possible
+                     helix-turn-helix motif between aa's 162..183."
+                     /product="sigma factor"
+                     /protein_id="NP_624529.1"
+                     /transl_table=11
+                     /translation="MNTRTRPTTTPVPPVEETRYEEELAHGLVKADEDAFAAIYRRWGS
+                     LVHTLATRSLGDAHEAEDVTQQVFVGAWRGRHGFRPERGTLGAWLVGITRRKVVDALAA
+                     RTRRLSLVESAGQDITPARLVQPALDEVLDRVLLVEALSRLPQAQRDVLCMAFYEDLTQ
+                     AQIAERTGVPLGTVKSHARRGLHRLRTAVGPGAAHDTCV"
+     aSDomain        21290..21763
+                     /aSDomain="TIGR02937"
+                     /aSTool="tigrfam"
+                     /description="sigma70-ECF: RNA polymerase sigma factor,
+                     sigma-70 family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_SCO0194_0004"
+                     /evalue="5.20E-25"
+                     /identifier="TIGR02937"
+                     /label="SCO0194"
+                     /locus_tag="SCO0194"
+                     /protein_end="191"
+                     /protein_start="33"
+                     /score="85.9"
+                     /tool="antismash"
+                     /translation="DAFAAIYRRWGSLVHTLATRSLGDAHEAEDVTQQVFVGAWRGRHG
+                     FRPERGTLGAWLVGITRRKVVDALAARTRRLSLVESAGQDITPARLVQPALDEVLDRVL
+                     LVEALSRLPQAQRDVLCMAFYEDLTQAQIAERTGVPLGTVKSHARRGLHRLRTA"
+     PFAM_domain     21305..21511
+                     /aSDomain="Sigma70_r2"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF04542.17"
+                     /db_xref="GO:0003700"
+                     /db_xref="GO:0006352"
+                     /db_xref="GO:0006355"
+                     /description="Sigma-70 region 2"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0194_0072"
+                     /evalue="5.00E-18"
+                     /gene_ontologies="GO:0003700: DNA-binding transcription
+                     factor activity"
+                     /gene_ontologies="GO:0006352: DNA-templated transcription
+                     initiation"
+                     /gene_ontologies="GO:0006355: regulation of DNA-templated
+                     transcription"
+                     /label="SCO0194"
+                     /locus_tag="SCO0194"
+                     /protein_end="107"
+                     /protein_start="38"
+                     /score="64.8"
+                     /tool="antismash"
+                     /translation="IYRRWGSLVHTLATRSLGDAHEAEDVTQQVFVGAWRGRHGFRPER
+                     GTLGAWLVGITRRKVVDALAARTR"
+     misc_feature    21335..21541
+                     /gene_synonym="SCJ12.06"
+                     /locus_tag="SCO0194"
+                     /note="Pfam match to entry PF00776 Sigma70_ECF, Sigma-70
+                     factor (ECF subfamily), score 47.10, E-value 3.8e-10"
+     misc_feature    21371..21469
+                     /gene_synonym="SCJ12.06"
+                     /locus_tag="SCO0194"
+                     /note="PS01063 Sigma-70 factors ECF subfamily signature,
+                     info count = 32.1"
+     PFAM_domain     21611..21757
+                     /aSDomain="Sigma70_r4"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF04545.19"
+                     /db_xref="GO:0003700"
+                     /db_xref="GO:0006352"
+                     /db_xref="GO:0006355"
+                     /description="Sigma-70, region 4"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0194_0073"
+                     /evalue="4.70E-17"
+                     /gene_ontologies="GO:0003700: DNA-binding transcription
+                     factor activity"
+                     /gene_ontologies="GO:0006352: DNA-templated transcription
+                     initiation"
+                     /gene_ontologies="GO:0006355: regulation of DNA-templated
+                     transcription"
+                     /label="SCO0194"
+                     /locus_tag="SCO0194"
+                     /protein_end="189"
+                     /protein_start="140"
+                     /score="61.4"
+                     /tool="antismash"
+                     /translation="ALSRLPQAQRDVLCMAFYEDLTQAQIAERTGVPLGTVKSHARRGL
+                     HRLR"
+     regulatory      21893..21897
+                     /regulatory_class="ribosome_binding_site"
+     gene            21908..22594
+                     /db_xref="GeneID:1095619"
+                     /gene_synonym="SCJ12.07"
+                     /locus_tag="SCO0195"
+     CDS             21908..22594
+                     /codon_start=1
+                     /db_xref="GeneID:1095619"
+                     /gene_synonym="SCJ12.07"
+                     /locus_tag="SCO0195"
+                     /note="SCJ12.07, possible lipoprotein, len: 228 aa.
+                     Contains an N-terminal signal sequence and a PS00013
+                     Prokaryotic membrane lipoprotein lipid attachment site."
+                     /product="lipoprotein"
+                     /protein_id="NP_624530.1"
+                     /transl_table=11
+                     /translation="MMSRTTIAVAGSAGACALAPTAPAATAAPEQAQDTGLVSVFHGIP
+                     GTTVDVFANGDEPLGDFQPGTVTEGGNTTVAAHLSADGKPRLTTFTDDVSKTDAGRSRL
+                     TVRHVAAAPAVDVRAGGHPLFTGLANPDEDTALVEAGIVNADVVLAGTETVVVGPAGLD
+                     LKEGTTNVVYAWGSAEDQTLALPGQAFGGMDSTPLAVHPGAGGTAATPNASDRWRARAA
+                     TPARSR"
+     misc_feature    21923..21955
+                     /gene_synonym="SCJ12.07"
+                     /locus_tag="SCO0195"
+                     /note="PS00013 Prokaryotic membrane lipoprotein lipid
+                     attachment site."
+     PFAM_domain     22103..22258
+                     /aSDomain="DUF4397"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF14344.9"
+                     /description="Domain of unknown function (DUF4397)"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0195_0074"
+                     /evalue="4.60E-08"
+                     /label="SCO0195"
+                     /locus_tag="SCO0195"
+                     /protein_end="117"
+                     /protein_start="65"
+                     /score="33.9"
+                     /tool="antismash"
+                     /translation="TVTEGGNTTVAAHLSADGKPRLTTFTDDVSKTDAGRSRLTVRHVA
+                     AAPAVDV"
+     regulatory      22705..22710
+                     /regulatory_class="ribosome_binding_site"
+     gene            22716..23120
+                     /db_xref="GeneID:1095620"
+                     /gene_synonym="SCJ12.08"
+                     /locus_tag="SCO0196"
+     CDS             22716..23120
+                     /codon_start=1
+                     /db_xref="GeneID:1095620"
+                     /gene_synonym="SCJ12.08"
+                     /locus_tag="SCO0196"
+                     /note="SCJ12.08, unknown, len:134 aa. Shares a low level of
+                     similarity with Mycobacterium tuberculosis TR:O53597 (EMBL;
+                     AL021426) hypothetical 24.0 KD protein MTV028.10C (224 aa),
+                     fasta scores opt: 119 z-score: 159.2 E(): 0.1 32.8%
+                     identity in 116 aa overlap."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624531.1"
+                     /transl_table=11
+                     /translation="MGHVHPSHLVELALGHASGEADVGALRHAASCPRCREELLRLTRV
+                     VTAARGAEASDLPVPPPERVWQRIALEVLPETDRVPRLRESSAHGSADERVRGSQRRWT
+                     DHAGEGLLGLALAIAVLLLRRWRIRAGSGN"
+     gene            complement(23252..23692)
+                     /db_xref="GeneID:1095621"
+                     /gene_synonym="SCJ12.09c"
+                     /locus_tag="SCO0197"
+     CDS             complement(23252..23692)
+                     /codon_start=1
+                     /db_xref="GeneID:1095621"
+                     /gene_synonym="SCJ12.09c"
+                     /locus_tag="SCO0197"
+                     /note="SCJ12.09c, hypothetical protein, len: 146 aa. Some
+                     similarity to Mycobacterium tuberculosis TR:O53625 (EMBL;
+                     AL021428) hypothetical 16.6 KD protein (152 aa), fasta
+                     scores opt: 291 z-score: 377.8 E(): 1.1e-13 42.9% identity
+                     in 133 aa overlap. Also similar to TR:Q9RI34
+                     (EMBL:AL109989) S. coelicolor SCJ12.26 (137 aa), fasta
+                     scores: opt: 524 z-score: 568.0 E(): 2.2e-26 62.2% identity
+                     in 135 aa overlap"
+                     /product="hypothetical protein"
+                     /protein_id="NP_624532.1"
+                     /transl_table=11
+                     /translation="MYRNDGFRELNRQESLQRLANAPVGRIVHTRDALPAVLPVNFVLE
+                     KSGAVLLRTSASSELVRAVDGAVVAFEADEVDAVTHSGWSVVVTGLASVVTDPGEHEQL
+                     VRTGPRSWVPWPVEVFVRIAPDLVSGRELVGGRTLYGLDPPT"
+     PFAM_domain     complement(23300..23659)
+                     /aSDomain="Pyridox_ox_2"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF12900.10"
+                     /description="Pyridoxamine 5'-phosphate oxidase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0197_0075"
+                     /evalue="8.90E-26"
+                     /label="SCO0197"
+                     /locus_tag="SCO0197"
+                     /protein_end="131"
+                     /protein_start="11"
+                     /score="90.7"
+                     /tool="antismash"
+                     /translation="RQESLQRLANAPVGRIVHTRDALPAVLPVNFVLEKSGAVLLRTSA
+                     SSELVRAVDGAVVAFEADEVDAVTHSGWSVVVTGLASVVTDPGEHEQLVRTGPRSWVPW
+                     PVEVFVRIAPDLVSGR"
+     gene            complement(24225..25091)
+                     /db_xref="GeneID:1095622"
+                     /gene_synonym="SCJ12.10c"
+                     /locus_tag="SCO0198"
+     CDS             complement(24225..25091)
+                     /codon_start=1
+                     /db_xref="GeneID:1095622"
+                     /gene_synonym="SCJ12.10c"
+                     /locus_tag="SCO0198"
+                     /note="SCJ12.10c, unknown, len: 288 aa. Similar to several
+                     hypothetical proteins including: Mycobacterium tuberculosis
+                     SW:YW12_MYCTU (EMBL; Z74025) hypothetical 30.9 KD protein
+                     MTCY39.12 (295 aa), fasta scores opt: 363 z-score: 441.0
+                     E(): 3.3e-17 32.3% identity in 288 aa overlap and
+                     Mycobacterium tuberculosis TR:O06189 (EMBL; Z95387)
+                     hypothetical 31.7 KD protein MTCY1A10.09C (297 aa), fasta
+                     scores opt: 336 z-score: 408.6 E(): 2.1e-15 29.3% identity
+                     in 294 aa overlap. Also highly similar to S. coelicolor
+                     hypothetical proteins (AL109962) SCJ1.29c (283 aa), fasta
+                     scores opt: 1161 z-score: 1097.2 E(): 0 63.5% identity in
+                     288 aa overlap and SCJ1.16c (294 aa), fasta scores opt:892
+                     z-score: 844.7 E():0 50.3% identity in 296 aa overlap"
+                     /product="hypothetical protein"
+                     /protein_id="NP_624533.1"
+                     /transl_table=11
+                     /translation="MYLPMVVGVDGSESSLGAVDWAADEAALHEVPLRIVHAYRWDRYE
+                     GASLARELGKPSGHVTTDDILAVATRRARRHHPDLAVTTEATAEEPEYVLLREARNASA
+                     VILGTRGRGELAGLLLGSVSLTVATMSDCPVVVTRGDHDDRAAGGGRRGRIVVGVADAP
+                     TAAVRFACEEARRRGAALDAVRAWRCPTHDTVDHPLLAGTPERLHEERAAKELEAALAD
+                     APADVRLRRRTAEGPGSRVLSAASHEADLLVVGRRRPGQFGHRLGRVAHTLLHHSACPV
+                     AVVPDTT"
+     PFAM_domain     complement(24237..24632)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0198_0077"
+                     /evalue="1.40E-19"
+                     /label="SCO0198"
+                     /locus_tag="SCO0198"
+                     /protein_end="285"
+                     /protein_start="153"
+                     /score="71.1"
+                     /tool="antismash"
+                     /translation="RIVVGVADAPTAAVRFACEEARRRGAALDAVRAWRCPTHDTVDHP
+                     LLAGTPERLHEERAAKELEAALADAPADVRLRRRTAEGPGSRVLSAASHEADLLVVGRR
+                     RPGQFGHRLGRVAHTLLHHSACPVAVVP"
+     PFAM_domain     complement(24675..25091)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0198_0076"
+                     /evalue="6.10E-25"
+                     /label="SCO0198"
+                     /locus_tag="SCO0198"
+                     /protein_end="139"
+                     /protein_start="0"
+                     /score="88.5"
+                     /tool="antismash"
+                     /translation="MYLPMVVGVDGSESSLGAVDWAADEAALHEVPLRIVHAYRWDRYE
+                     GASLARELGKPSGHVTTDDILAVATRRARRHHPDLAVTTEATAEEPEYVLLREARNASA
+                     VILGTRGRGELAGLLLGSVSLTVATMSDCPVVVTR"
+     gene            complement(25097..26119)
+                     /db_xref="GeneID:1095623"
+                     /gene_synonym="SCJ12.11c"
+                     /locus_tag="SCO0199"
+     CDS             complement(25097..26119)
+                     /NRPS_PKS="Domain: PKS_ER (15-227). E-value: 3.8e-12.
+                     Score: 37.9. Matches aSDomain:
+                     nrpspksdomains_SCO0199_PKS_ER.1"
+                     /codon_start=1
+                     /db_xref="GeneID:1095623"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) ADH_N"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) ADH_zinc_N"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1040: alcohol dehydrogenase"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="SCJ12.11c"
+                     /locus_tag="SCO0199"
+                     /note="SCJ12.11c, probable alcohol dehydrogenase, len: 340
+                     aa. Highly similar to many e.g. Bacillus stearothermophilus
+                     SW:ADH3_BACST (EMBL; Z27089) alcohol dehydrogenase (EC
+                     1.1.1.1) (ADH-HT) (339 aa), fasta scores opt: 1281 z-score:
+                     1383.7 E(): 0 55.2% identity in 337 aa overlap. Contains a
+                     PS00059 Zinc-containing alcohol dehydrogenases signature
+                     and a Pfam match to entry PF00107 adh_zinc, Zinc-binding
+                     dehydrogenases."
+                     /product="alcohol dehydrogenase"
+                     /protein_id="NP_624534.1"
+                     /sec_met_domain="ADH_N (E-value: 1.9e-31, bitscore: 107.0,
+                     seeds: 66, tool: rule-based-clusters)"
+                     /sec_met_domain="ADH_zinc_N (E-value: 6.5e-28, bitscore:
+                     96.2, seeds: 86, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKAAVVREFGKPLVIEDRPDPEPGPGQVLVAVEASGLCHTDIHAA
+                     HGDWPVKPTPPFVPGHEGVGLVEKLGDGVTHLAVGQRVAVPWLGKACGRCEHCRSGWET
+                     LCEDQVNTGYGCDGGYAEKMLAWADFAQPVPEGVSALDAAPLTCAGVTTYKALKVAEVG
+                     PAQLVAVSGVGGLGHLAVQYAKIAGARVVAIDVTDDKLQLARELGADLVIDARTQDVGA
+                     ELKRHGGAHAALALAVNPAAFQAVNSGLRRGGKLVMVALPAHGTLQVPIFDTVLNGTSV
+                     IGSIVGTRQDLAEVFQLHAEGRTKVIRETRPLAAVNDCIDEVLGGQVKARIVFDLNAGG
+                     "
+     regulatory      complement(25101..25105)
+                     /gene_synonym="SCJ12.11c"
+                     /locus_tag="SCO0199"
+                     /regulatory_class="ribosome_binding_site"
+     misc_feature    complement(25115..26113)
+                     /gene_synonym="SCJ12.11c"
+                     /locus_tag="SCO0199"
+                     /note="Pfam match to entry PF00107 adh_zinc, Zinc-binding
+                     dehydrogenases, score 359.60, E-value 3.2e-104"
+     PFAM_domain     complement(25226..25597)
+                     /aSDomain="ADH_zinc_N"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00107.29"
+                     /description="Zinc-binding dehydrogenase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0199_0079"
+                     /evalue="1.60E-27"
+                     /label="SCO0199"
+                     /locus_tag="SCO0199"
+                     /protein_end="298"
+                     /protein_start="174"
+                     /score="96.2"
+                     /tool="antismash"
+                     /translation="GLGHLAVQYAKIAGARVVAIDVTDDKLQLARELGADLVIDARTQD
+                     VGAELKRHGGAHAALALAVNPAAFQAVNSGLRRGGKLVMVALPAHGTLQVPIFDTVLNG
+                     TSVIGSIVGTRQDLAEVFQL"
+     aSDomain        complement(25439..26074)
+                     /aSDomain="PKS_ER"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO0199_PKS_ER.1"
+                     /evalue="3.80E-12"
+                     /label="SCO0199_PKS_ER.1"
+                     /locus_tag="SCO0199"
+                     /protein_end="227"
+                     /protein_start="15"
+                     /score="37.9"
+                     /tool="antismash"
+                     /translation="EDRPDPEPGPGQVLVAVEASGLCHTDIHAAHGDWPVKPTPPFVPG
+                     HEGVGLVEKLGDGVTHLAVGQRVAVPWLGKACGRCEHCRSGWETLCEDQVNTGYGCDGG
+                     YAEKMLAWADFAQPVPEGVSALDAAPLTCAGVTTYKALKVAEVGPAQLVAVSGVGGLGH
+                     LAVQYAKIAGARVVAIDVTDDKLQLARELGADLVIDARTQDVGAELKRH"
+     PFAM_domain     complement(25736..26047)
+                     /aSDomain="ADH_N"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF08240.15"
+                     /description="Alcohol dehydrogenase GroES-like domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0199_0078"
+                     /evalue="4.70E-31"
+                     /label="SCO0199"
+                     /locus_tag="SCO0199"
+                     /protein_end="128"
+                     /protein_start="24"
+                     /score="107.0"
+                     /tool="antismash"
+                     /translation="PGQVLVAVEASGLCHTDIHAAHGDWPVKPTPPFVPGHEGVGLVEK
+                     LGDGVTHLAVGQRVAVPWLGKACGRCEHCRSGWETLCEDQVNTGYGCDGGYAEKMLAWA
+                     "
+     misc_feature    complement(25898..25942)
+                     /gene_synonym="SCJ12.11c"
+                     /locus_tag="SCO0199"
+                     /note="PS00059 Zinc-containing alcohol dehydrogenases
+                     signature."
+     regulatory      complement(26127..26132)
+                     /regulatory_class="ribosome_binding_site"
+     gene            complement(26158..27063)
+                     /db_xref="GeneID:1095624"
+                     /gene_synonym="SCJ12.12c"
+                     /locus_tag="SCO0200"
+     CDS             complement(26158..27063)
+                     /codon_start=1
+                     /db_xref="GeneID:1095624"
+                     /gene_synonym="SCJ12.12c"
+                     /locus_tag="SCO0200"
+                     /note="SCJ12.12c, unknown, len: 301 aa. Similar to several
+                     hypothetical proteins including: Mycobacterium tuberculosis
+                     SW:YW23_MYCTU (EMBL; Z74025) hypothetical 33.9 KD protein
+                     MTCY39.23C (317 aa), fasta scores opt: 380 z-score: 447.3
+                     E(): 1.5e-17 33.5% identity in 316 aa overlap and S.
+                     coelicolor (EMBL;AL109962) SCJ1.30c (328 aa)fasta scores
+                     opt: 1274 z-score: 1163.7 E():0 65.3% identity in 300 aa
+                     overlap. Contains 2x Pfam match to entry PF00582 Usp,
+                     Universal stress protein family."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624535.1"
+                     /transl_table=11
+                     /translation="MARTITVGLDGSPESRAAAEWAAREGTLRRVPVRLLHVWQPVPEP
+                     MAQAPLLGAETHQHWTERIPRDTAEGLRLRHPGVEVTTEQATGNPADALLAGTLDAELL
+                     VLGSRALSGLTGFLVGSVGQSVIARTETPVILVRAGEQAADEHLKDPTGIPSAATGFRP
+                     VVVGLDTGSPDEAVLSFAFEEARRRRAPLTAVRAWNLPSSYTYSIAAGFDPREELARAQ
+                     AEALGEALLPWREKYPDVEVTETCRLGSPAEHLIDAARDASLVVVGRRIRRSPFGVHIG
+                     AVAHAVMHHATTPVAVVAHD"
+     misc_feature    complement(26170..26487)
+                     /gene_synonym="SCJ12.12c"
+                     /locus_tag="SCO0200"
+                     /note="Pfam match to entry PF00582 Usp, Universal stress
+                     protein family, score 47.30, E-value 3.4e-10"
+     PFAM_domain     complement(26170..26583)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0200_0081"
+                     /evalue="1.70E-19"
+                     /label="SCO0200"
+                     /locus_tag="SCO0200"
+                     /protein_end="298"
+                     /protein_start="160"
+                     /score="70.9"
+                     /tool="antismash"
+                     /translation="FRPVVVGLDTGSPDEAVLSFAFEEARRRRAPLTAVRAWNLPSSYT
+                     YSIAAGFDPREELARAQAEALGEALLPWREKYPDVEVTETCRLGSPAEHLIDAARDASL
+                     VVVGRRIRRSPFGVHIGAVAHAVMHHATTPVAVV"
+     PFAM_domain     complement(26650..27063)
+                     /aSDomain="Usp"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00582.29"
+                     /description="Universal stress protein family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0200_0080"
+                     /evalue="1.60E-25"
+                     /label="SCO0200"
+                     /locus_tag="SCO0200"
+                     /protein_end="138"
+                     /protein_start="0"
+                     /score="90.4"
+                     /tool="antismash"
+                     /translation="MARTITVGLDGSPESRAAAEWAAREGTLRRVPVRLLHVWQPVPEP
+                     MAQAPLLGAETHQHWTERIPRDTAEGLRLRHPGVEVTTEQATGNPADALLAGTLDAELL
+                     VLGSRALSGLTGFLVGSVGQSVIARTETPVILVR"
+     misc_feature    complement(26653..26964)
+                     /gene_synonym="SCJ12.12c"
+                     /locus_tag="SCO0200"
+                     /note="Pfam match to entry PF00582 Usp, Universal stress
+                     protein family, score 27.00, E-value 0.00011"
+     misc_feature    27148..27162
+                     /note="TFBS match to OsdR, Development and stress
+                     management regulator, confidence: strong, score: 28.31"
+                     /tool="antismash"
+     gene            complement(27216..27887)
+                     /db_xref="GeneID:1095625"
+                     /gene_synonym="SCJ12.13c"
+                     /locus_tag="SCO0201"
+     CDS             complement(27216..27887)
+                     /codon_start=1
+                     /db_xref="GeneID:1095625"
+                     /gene_synonym="SCJ12.13c"
+                     /locus_tag="SCO0201"
+                     /note="SCJ12.13c, possible integral membrane protein, len:
+                     223 aa. Contains potential membrane spanning hydrophobic
+                     domains."
+                     /product="hypothetical protein"
+                     /protein_id="NP_624536.1"
+                     /transl_table=11
+                     /translation="MSGTNRILSEGVTVMAMHQSTHRGSGFHLPSSRRNGAVSVPGAAD
+                     SVEAGALTARAFVFASARVLMGFVFLWAFLDKTFGFGYATASGKGWIDGGSPTEGFLGH
+                     VAVGPMESTFHSWAGAAWADWLFMLGLLGVGLALTAGVALRPAAVAGTVMMALMWAAEW
+                     PPAKHLSDGSASMSTNPFADYHVLYAVLLIALAAVSAGDALGLGRLWARLPIVRDHAWL
+                     R"
+     PFAM_domain     complement(27408..27704)
+                     /aSDomain="DoxX"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF07681.15"
+                     /description="DoxX"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_SCO0201_0082"
+                     /evalue="4.70E-05"
+                     /label="SCO0201"
+                     /locus_tag="SCO0201"
+                     /protein_end="160"
+                     /protein_start="61"
+                     /score="24.0"
+                     /tool="antismash"
+                     /translation="ARVLMGFVFLWAFLDKTFGFGYATASGKGWIDGGSPTEGFLGHVA
+                     VGPMESTFHSWAGAAWADWLFMLGLLGVGLALTAGVALRPAAVAGTVMMALMWA"
+ORIGIN
+        1 gttcgtcctc gtcgtaggag gcgaaggacg tgtccaggac gacgcgtccc atccgggtgg
+       61 gcagcccccg gggggtgaac cgggtgacat tgatcgtacg accacagcgt gtgtgcagtt
+      121 tcatctcgtc tcccgccggg tttcgccggt cggcctcatt gccgtcggcg ggtcctggtc
+      181 cggtctcgcg ccggccgggg cgcgtgtctc cgggcccagg ggccctgcct cgtgcgccgt
+      241 gtgagcacac gtgcctcaag agccggacac ggaagtgata cgtcgtcctg tcagacgttc
+      301 cgtctccacg gcaagccaca tggtgcgccg tccgccggcc catggctcgg tgtgcgcctt
+      361 ctccgccagt cggcgtacct cctccgggtc cgtcacggcc ctgcaacgac cgaccgcgag
+      421 gacactccat ccctgactca tgggatcgtc gatgtggtcg acctcgaagg cgacctcgct
+      481 gtccacggcc gcggcagtgg ccgcgtcggg gtcggtgcgg aacgcgatgg ttccctggga
+      541 caccacgtag ttgaggggga agaccgccgg gccgtccggc gtgttcagcg cgaggcggcc
+      601 cactccgtgt gccgagagca gggcccggca ctccttctcg tcgaggtcgc gcagtgtcgg
+      661 attgcgaaga gccgctccct gccccggtgg acggtcggca ccgcctccct gcagctcggc
+      721 gtaggtcgtg cccagggcat cagccagtcg cacgaggctg ccgaatcccg gatccgcggt
+      781 gtgggtctcc aggtaagcga gatactgcgg cgccatccgg gcccgccggg ccacctgctc
+      841 caggctcagt cccctgcgcc ggcgcgccgc ggccagccgt cgaccgaggt cgccggcgcc
+      901 ggcggcgatc agggaggagt ccaccccttc gccgcgggac acgcccgaag gcgccccctg
+      961 cgacgcctcc gcctcttctg ccccgtggtt cacacgcgcg tcggggccgg ggaacacgag
+     1021 cgtgacatcc ccggtgtcgg accagcgcac gtcgtacggc ggagttccgt cgtcgtggtg
+     1081 gaggccgacg atctccccgt cccgccgcgt gacgccggtg gacggacttt cgacgatcag
+     1141 ccggtcgccg agatgtgcgt acatgaccgc gccctctccg tcgaaggagt tcctcactcc
+     1201 agcctcgcgc ggggacaccg cgcccaccag gcggccgacg gtccccgcgg gcctgccgaa
+     1261 cggccctcat cctcggcacg aacgccccaa gtcagggcgg ctccgagcgg cacgttgaga
+     1321 gtgaggaagt gcggactgcg gtggcatcgg tgctccacgg cggctcaccg ccgagaggag
+     1381 gctcgtcatg cggcaccgga ctgtaggtga tctcatgacc cggcccgtcg tcgacgtccg
+     1441 aacggacgca tccctctagg cggtcgccga ggcattgacc cataacgacg tcaccgccgt
+     1501 cctggtggtg gacggcgtcg gccgcctcat cggcgtcgtg tcggaggcgg atctcgtccg
+     1561 caaggtcgct cggcccggat cctgccgaac cggtccggct gctccagccg acggaccgct
+     1621 ccgccggtga gcacgtcacg gtcgatgagc tgatgacggc acccgcagtg tgcgtgaccg
+     1681 gagtggagca tcgtggaggc tgcgcgcctc atggtcaccg aggaagtcaa gtgtctcacc
+     1741 gtggtcgacg aggcggaccg ctgggtcggc gtcgtcagcc gcggcgacct ccttcgggtg
+     1801 tccctgcgcc gggacgacgc actgcgggag gagacatccc gtgccgtgct gatccggact
+     1861 cggggtccgg cgcccaccgg catgacggtg gacgtggacg aaggccgggt gaccgtcggg
+     1921 ggccgcgtgg acaatgggca gccgcttccc gtcatcgaac ggctgtgcct gggcgtcgac
+     1981 ggcgtcgcct cggtcgatct gcacgtgacc ggccgggaag accgcacgcg cccggtcgac
+     2041 actctcggcc gagcccgccc gaccacgctt cacgtggacg tgccatgagc gggaatccga
+     2101 cggtccacac cggagaggcc gcaacccgct ccgcatcccg gttgtcggac ccgccgaggg
+     2161 tcggggccgg tcgacccatc cggattcccc gtgcgtgccc gaacggcccc tggtcggcag
+     2221 accaccgctg agtgaggctg aaatcgacag ccggaggtgg tcacgatgcg cgcaggcaca
+     2281 accattcggc ggtccctgtg gcgttggcgc cgcaatccgc tgcgtcgccg cgaggacgta
+     2341 ctcgaggcct ggatcctcct gatcgtctgg ctcgtcgtcg ccctcgcggg tcccgtggcc
+     2401 ggagtgctgg cggcacacgc ctcggcacac ggcgccgcac aacgacgcgc ggagcggcac
+     2461 tccgcaaccg ccaccctcgt gtcggacgtg tccggcagtc ctctgtccac ggggacggct
+     2521 ggaggccgga tcgaggccac cgtgcggtgg acggcacctg acggcacccg gcactcgggc
+     2581 aagattcccg tcgacgaggc aatgaaggcg ggctcgcggg tcacggtctg gacggatcac
+     2641 cggaaccaac tgacgacagc gccgcccacc accgcccagg caggggtgga cgcggcgttc
+     2701 atgggtgccg cgtcctcctt cgccgtcgtc accgcggcgg ccgccggcta ctacggcgcg
+     2761 cgagtcgtcc tcaaccggcg tcgtcgcgcc gcgtgggagc acgagtggca ggacatcggt
+     2821 tcccagtggg gacgcgcggc cagttgatcc gggacacgtc gtagggcttc caccggcgcg
+     2881 acatggaacg gttctcgggt ggtgaggaag cccgtgaggg gggaggagga gcgatgagcg
+     2941 acttcatggt cgtggcgcgg acggttccgc gccgggtctc caagccgtcg tacgggcggc
+     3001 gcgtgaggca gaagtccgca acatgacgct tcgggtcgtc cacgcgctgg cccggcccgc
+     3061 gcccgcaccg aggccccggg taccgttgtc gcggggctgg tctttcccgg agaaccgctt
+     3121 ccgatgctgg tggcgcaggc tctgtccgcc gctgcggtcg tggtgggtca caggggtccc
+     3181 catcccttcc agggagctct gatcggatcc ctcgcgaccg ggctcgccgc ccactccgag
+     3241 tgccccgtgg tggtcgtagg cgagcccgag aatccggcgg gtcctgtggc cttgggagtc
+     3301 gacggatcgg ccgccggagc ggctgccgtc cgccttccgg gagacttccg tgcagggtgc
+     3361 ggacatcacc gccgtgcacg cctggacggc ctggaacgcg ccgatgccgc ctcccccaga
+     3421 cgagagaccg agccctacgc ctgtgaaccc ggcatgctcg ccgcggagga agggcggctg
+     3481 ctggccgaga cgctcgcggg catgtgcgcc cgctatcccg aggtgagggt ggaacgcagc
+     3541 accgtccacg gagtgcacgg ccgacgttga tcgaggaagg gggcacgatc acgacggaag
+     3601 tcgctcaagg ctttcctgcc ggcccagcgt ccggcgaccc ggcccggcgg actcgacgcc
+     3661 caccgggccg gccgtgtcac acagcgtttg cggcgacgac ttcgcgcttc gggccgccga
+     3721 ggaccacctt gagcgctccg gtgtcggctg ccgcggagaa gacctcgtac gcctcctcca
+     3781 tgcgctccag cgggaacgtg tgggtcacca actggccggt ggggagtcgg ccggacgccg
+     3841 ccatgcgcaa cagcgtcggc gtggaacggg tgtcgaccag accggtggtg acggtgacgt
+     3901 tcttgctcca caggtcttcc aggtgcaggg tcgccggcct gccgtgcacg ccgacgttgg
+     3961 cgacgtgccc gcccgggcgc accacgcgcg tgcacatctc gaacgtctcg gggacgccca
+     4021 cggcctcgat gaccacatcg gcgccgaggc ccccggtgag gtcggcgacc agttgctccg
+     4081 ggtcctcgcg ggcgtccgcc acggcctcgg ccccgagctt ccgggcggcc tccagccgag
+     4141 cggtggccag atccacgacg acgatccgtt cgggtgcgaa cagccgtgcc gtggcgaccg
+     4201 cggcgagtcc tatggggccg gcgcccacca cgacgaccgt gtctccgggg ctgacgcgtc
+     4261 cgttgagcac gcccacctcg taggccgtcg ggaagatgtc ggcgagcagc acggcgtcct
+     4321 cgtcggtcac cgcgcccggc agggagtgca cggagaggtc cgcgtacggg actcgcacgt
+     4381 actcggcctg agtgccgttg atcaggtggc cgaggatcca gccccctccg ccgaggcact
+     4441 ggccgtacac gccctcacgg cagtaacggc accttccgca ggcggtgatg caggacacca
+     4501 ggacgcggtc tcccggccgc acggtgcgta cgtccgtgcc cacctcgacg atctcgccga
+     4561 ccgcctcgtg gccgaggacg gttccgggcc gcacctcggg gacgtccccc ttcaggatgt
+     4621 gcaggtccgt cccgcagatg gtgacggcgt cgacccgcac gatggcgtcg gtgggctcct
+     4681 tgagttccgg atccggtatg tcctcccacg cggaccggcc cggaccgtgg aatacgtagc
+     4741 ctttcatcgt gatgctcact ctccttgtgc tcgggagcat ccggggccac ggtgaccgga
+     4801 ccgcgccggg cgggcccacg accgtcggta cgacggggat tgccccacac ctccagactg
+     4861 tccccggcag cacgaacccg cttgggccgg tcggcccccc gcccgccgcc tgccggcccc
+     4921 gggtctgttc ggtgtgctca cgtccgctcc ggcacgacga cgaccgggca ggccgagcgg
+     4981 tgcaggacgg cgtgggcgac ccggccgagc cgcccttggg tgcggcggcc gatcaccagc
+     5041 aggccggctt ccgccgaagc ggcgggcagc accgcgcgtg ccgggccctc gacggtgtac
+     5101 cgacgcacgg cgacgtcggg cggtgcgtct tccagggctg cttccagttc cctggctgcc
+     5161 cgctcctcgt accgccgggc cggttctccc gccggcaagg ggtgatcgat cgtctcgtgg
+     5221 gcgggacagc gccaggcccg aacggccgca acgggcacct gacgcagacg tgcttccatg
+     5281 aaggcgagcc gtaggaccga cgccgatacc tcgccgacac cgacgacgat gcggccgttc
+     5341 cgtcctccga tggcgcggtt gtcgtggttg ccgcgcagca cgacgaccgg gcagtcgctc
+     5401 ccggcggcca cggtccggct gacggaaccc agcagtctgt cggcgatgcc gctgcggcct
+     5461 cggctgccca tgacgatcat ggatgcgttg cgccccgcgc agatcagggc gtgctcggcc
+     5521 tcgtcgggca ccgtctcggt ggtgacgacg aggtcgggat gccgacgccc ggcacggatg
+     5581 gcggcggccg cgaggatgtc gtcggcctgc atgtcggtgg agggcttccc cggctcacgg
+     5641 gcgagcgcgg cgccctcgta ccgctcccac aggtccccga agaccaccca gagggggact
+     5701 gcgtgcaggg cggcctcgtc ggccgcccag tcgacggctc gcaggctggg ctcggagccg
+     5761 tcgaccccga ccactagagg cagatacatg acgcccctcc tctcgaccgg gatgcgtcag
+     5821 ggatgggcca cgacggcgac gggggcactg acacggtgca gcaccgcgtg ggcgaccgca
+     5881 ccgatgtgca cgccgagcgg gctgggccgg atgcgccgtc cgacgaccac cagggacgcc
+     5941 tcgtgcgacg cttcggccag aaggtcggcg gggctgccgg ggcgggatgc ctcgacgacc
+     6001 tcgacatccg ggtacgactg ccgccagggc aggagcagcc gggtgaggtc ggcggccttc
+     6061 ctgcgggcca ccccttggtc cggtacgccg ccggcggtca gcgagggata gtacggcggt
+     6121 ggccgccatc cgctgaccac gtgcacggcc gtgccgcggc gctgtgcctc gtcgaaggcg
+     6181 aacgagagca cgccgtcgtc ggggctgccg atgtcgagtc cgacgacgac cggccggcgg
+     6241 cggttggccg cgggcggcac accgacggaa tccacgacgt gttcgccggc cgcctgctca
+     6301 ccggcacgta cgaggaccac gggagtctcg ctgtgggcga tcacggactg tccgacggaa
+     6361 ccggccagga agccgccgag tccgctgggc gcgcgcgagc cgaggaccag cagttccgcc
+     6421 ccgtcggcgt ccctgaccag ggtgtccgcc ggtgggccgg accgctggtc actggtcacc
+     6481 acgacaccgg ggtggcgcag ccgcagccct tcgcccacct tctgcgggac acgctcggtc
+     6541 cagtgctggt gtgtcttcgc gccgaggatc gaatcctggg ccaggaccgc gggagccggc
+     6601 tcccacacgt ggagcagacg taccggcagg tcgcgcagct cggcctcgcg ggccgcccac
+     6661 tcggcggcgg cgtggctctc gggcgagccg tcgattccca ccgtgatcgt gcgggtcatg
+     6721 tcgcgcacct cccgtgtcgg cccttccgac tccagcgtgt cgcgcaactg agccccgggg
+     6781 tagggccact cgtcctcgga cacggccgag ggtcccttcg gcgggcccgt gcggcgaacc
+     6841 gcgggtcggc atgccggaag caccgtccgc cgggtgccct gcgggtgttc agtgcccctc
+     6901 gcccttcagc cggtcctccg cgtgggcggc gacgacggag gcggccggca cgaggtccga
+     6961 gccctcgatc ggcttcagga cctgggtgag gtccggcatg ctcgaccgcg gctcccgcca
+     7021 cgcggtcacc ccgtcccata agccgtacgt cccgcaggtc acgccctcgc gtcgggcacc
+     7081 ggcttcgagg acaccgaccg ccgcgcggca cacgtcttcg cccagcaggc gtacgaggca
+     7141 ggcgtgcgga ggatcgtcta cctgggtggt ctgactccgc ggggcgttcc cgagcgcacg
+     7201 ctctcccctc acctgcgctc ccgcgcggag gtcggcccca tcttggtccg cgacgtgttg
+     7261 cactacctgg ccggggcggc caccatgccg gacgacatcg accgggcctt cgacgtcggc
+     7321 gggccggacg tgcccaccta ccgcgagatg atgcgccgcc acgccaccgt gagcggactc
+     7381 cggcggcgga tcatcgtgcc cgctccggtg ctcacccccg ggttgtccag ccactgggtc
+     7441 ggcctcgtca cgccggtccc ggcctccatc gcccggccgc tgacggagtc tctgcgtcat
+     7501 gaggtcgtgt gccaggagca cgacatcgcc cgctacgtcc ccgacgctcc cggccggccc
+     7561 ctgccgttcg acgtggccct gacgctggcc ctgcggcggg tccgggaggc ccaggtcgcc
+     7621 actcgctggt cgtccgcctc cgtgccggga gcccccagcg atcccctgcc caccgacccc
+     7681 gactgggccg gcggcagcct ctacgaggac gagcggcacc tgccggtcga cgcgtccccg
+     7741 gaggcgctgt ggaaggtggt ggagggcatc ggcggggaca acggctggta ctccttcccg
+     7801 ccggcctggg ccgtccgcgg ctggctggac cggttcgtcg gcggtgtggg tctgcgccgc
+     7861 ggccggcgtg acgcccagcg cctgcacccg gcacgaccgg tggcgtggcg aggaggacgc
+     7921 cgccgaggac atcgccgcct ggcgggacgg acgggctatc cggtcgtcga cgcggccatg
+     7981 cgccagttgc gccaccaggg ttggatgcac aaccgggcac ggctgctggt ggcgagcttc
+     8041 ctgaccaaga cgctgtacgt cgactggcgc atcggcgccc ggcacttcct ggacctcctc
+     8101 gtggacggcg acgtcgtcaa caaccagctc aactggcagt gggccgccgg caccggcacc
+     8161 gacacccgcc cccaccgcgt cctcaacccg ctcgtccagg ccaggcggtt cgacccggac
+     8221 ggcgtctacg tacggcgctg ggtccccgag ctcaggagcg tggagggcgg gaaggtgcac
+     8281 gaaccctggc gcctggcggc ggcggaacgc ggtgaactcg actacccgga cccgctcgtc
+     8341 gagctcgccg acgggctcgc gcggttcaag cacgcccgcg gccgggactg aggggacgcg
+     8401 tcgtgcattg gctcttcggc gaccagctcg gcccccactt cctcacgccg ggcgaagagg
+     8461 ggcccgggcc ggaaactccg ctgctcatga tcgaggcgcg ctccgtcttc cggcggcggc
+     8521 gtttccaccg ggccaaggcc cacctggtgc tgtccgccat gcgccaccgc gcggccgaac
+     8581 cgggcgaccg cgtcacgtac gtacgcgccg acacctaccg tcagggactg gcccggaccg
+     8641 cgcgcgggcg cccggtcggc gtccaccacc ccacctcgca cgcggctctg cgcctggtgc
+     8701 gcgccctgcc ccaggtgaca gtggggcccg cccgcggctt cctcgtgccg atgaccggct
+     8761 tcgccgcctg ggccgagggt cacggcggca agcgcctgcg gcaggaggac ttctaccgct
+     8821 gggtccgccg cgggcacggc ctgctcatgg acggcgagca gcccgcggcg ggacggtgga
+     8881 acctcgatca cgacaaccgg gaacccccgc cccgcgaggc cgcctccctc caggtcggcc
+     8941 gcccgtaccg gccccgcgag gacgacatcg acgaagaggt ccgccacgac ctcgaccgct
+     9001 gggaacgcga cggggacgtt tccttcgtcg gacgggacgg tccccgcctg ttccccgcca
+     9061 cccggacgga ggggctgcgg gcactgcgac gctttgtcga acaccggctc gccaccttcg
+     9121 gaccgcacga ggacgccatg ctcgccgccg accccgtcat gagccacagc ctcctttcgt
+     9181 ccaccctgaa cctcggcccg ctcgacccgg tcgagtgcgt cgaacgggct gagcgggctt
+     9241 ggcgcgaggg ccgggcgccg ctgaacagcg tggagggctt cgtgcggcag atcgccggct
+     9301 ggcgcgagta cgtctggcag ctgtactggt acttcggcga gggctaccga cgctccaacg
+     9361 cgctcgggca caccgccccg ctgccggact ggtggaaccg gctggacgcg gacgcggtcc
+     9421 gggcgaactg cctgcgcacc gtcctggccc aggtccggga cacgggctgg acgcaccaca
+     9481 tcccccggct gatggtgctc ggcagtcacg cgctccagcg gggctgggac cccgccgccg
+     9541 tcacgaactg gttccaccgc tgcttcgtgg acggctacga ctgggtcatg ctccccaacg
+     9601 tcgtcggcat gtcccagtac gccgacggcg gccggatgac caccaagccc tacacctcgg
+     9661 cgggtgcgta cgtgaaccgc atgagcgacc tctgcggccc gtgcggctac cggcccggcg
+     9721 accgcacctg cgagcacgcg tgtccgtaca ccaccgggta ctgggcgttc ctcgaccggc
+     9781 accgggagct gctggccggc aatcagcgcg tcgcccggcc ggtacggcag tcggaccggc
+     9841 tcgccgacct cccggacgtg tgcgcacagg gcacgcgcgg ggtgacgcac cgccatgagc
+     9901 ccccgccgtt gcgccgacgg ggtgaagtcg gaccgcaccc cgtgccggaa cgggcagaag
+     9961 tcagtgcatc cacaacaggg cacccggcgg aagcagtggc gtgcggacaa ccgagagtga
+    10021 gaaggggctg cgcatgcctg gactgccgcc gatggtggcc ccgccggccg aacaggtcga
+    10081 cgaccccgtc accgcgaccg atgcggcgaa cgcggtcgac gccgtcctcc ggggggtact
+    10141 ggacgaacgg ctgcgccact gccgtgccgt cgaccccctc ttcgcccggg aactggccga
+    10201 ccgtctcgcg gcgctgaccg cccggggcgg caagcggctg cgcaccgcgt tcgcccactg
+    10261 cggctggcgc gccgcgggcg gctcgggaga cgccaccgcc gtcctgcgaa cgggagccgc
+    10321 gctcgaactg ctccaggcgt gcgctctggt ccacgacgac gtgatggacg gctccgtgca
+    10381 gcgacgaggc gcaccggccc tgcacgtcga cctggcccgc gggcactggg cagcgggtat
+    10441 gcacggctcg tcggagtcct tcggcacctc ggccgccgtc ctcaccggtg acctggcgct
+    10501 cgcctgggcg gacgacctgc tgaccgagac ggcactcggt acgccgcacg gcccgcgcct
+    10561 gcacggggag tggcgggcga tgcgcaccga gatggtcgcc ggccagtacc gcgacctgca
+    10621 cgcgcaggcg gcacggtcct ccggcgtcga cgaggcgctg gccatcgcca ccttgaagag
+    10681 cgccctgtac accgtcgcgc ggcccctcgc gctgggagcg gtactggccg gagcggccga
+    10741 cggggacgca ctggaggcgc tgcgggcggc cggccggtgc gccgggctgg ccttccagtt
+    10801 gcgtgacgac ctcctgggcg ccttcggcga ccccgcgctg accgggaagc cggccgacga
+    10861 cgacctgcgc tcccgcaagc tcacctacct gctcgccgtc gccgtccggc tcgccgatgc
+    10921 cgccgatgat cacctggcgg ccgcggcgct ggctccggac gcggacccga agtccgagaa
+    10981 ggccgtgcgg caggtgcggt ccgcgctggt gcgcaccggc gcccgggacc tggtggagac
+    11041 gaagatcggg gagctgacgg acatgagcct cgcgcacttc gaccgctgcg gagcgcgccc
+    11101 ggccgtgcgg cacgagttcg ccgcactgat cgggcgcgcg acgggcgcgg tcccgcgtgg
+    11161 caccggggag gtcgtgtgag gagggtgccg gggccgaccg gccacgtcgt cgtggtcggg
+    11221 gccgggctgt ccgggctggc ctgcgccctg cacctgctgg gggccggccg ccgggtcacc
+    11281 gtcgtcgaac gggacgccgg tccgggcggc cggtccggcc gggtacggct gggcggttac
+    11341 gagctggaca ccggtcccac ggtgctgacc atgccgcacc tggcggacga ggcgttcgcc
+    11401 gccgtcgggg acagcctccg ccgccgcgtc gaactgaccg cgctggaccc ggcctaccgg
+    11461 gcctgtttcg cggacggttc cgcactcgac gtgcacaccg acggcgaggc gatggaggcg
+    11521 gaggtgcgcc gcttcgccgg accggcgcag gcggccggat accgcgatct gcggcggtgg
+    11581 ctcgaacggc tgtaccgggc gcagatgcgc cgcttcatcg acacgaactt cgactccccc
+    11641 ctccaactgc tgcacccgga cctggcccgg ctggcggcac tggggggatt cggacggctg
+    11701 gacggccgca tcggacgctt cctgtccgac gagcggctgc gccgcgtctt ctccttccag
+    11761 gcgctgtacg ccggtgtggc cccggcccgc gccctcgccg cctacgcggt gatcgcgtac
+    11821 atggacaccg tggccggcgt ctggttcccc aagggcggca tgcacgcgct cccccgcgcc
+    11881 atggccgacg cggcggcaac cgccggtgcc gatctgcgct ggtcggccga agtgaaggcg
+    11941 ctggagcggt ccgcaggacg ggtacgcgcc gttcacctgg cctccggaga gcgcatcgcc
+    12001 tgcgacgccg tggtgctgac gtgcgagctg tccaccgcct acgggctgct gggacgggcc
+    12061 ccccggcggc cggcccggct gcggcactct ccgtccgccg tgatcctgca cgcgggcacc
+    12121 gaccgcacct ggccgcacct cgcccaccac accctctcct tcggcgccgc gtgggagcgc
+    12181 accttcgagg aactgacccg tacgggagaa ctgatgagtg acccctcctt gctgatcacc
+    12241 cgccctacca cgcacgatcc cgccctggca ccgccggggc gccacctcca ctacgtcctc
+    12301 gcgccctgtc ccaacacgga cgtcggtccg gatgccgtcg cgtggcgtga cctcggcccg
+    12361 cgctaccgcg agagcctggt cggcgtactg gagagccggg ggctggaggg gttcgcggac
+    12421 agtgtccagg aggagctcct ggtgacgccg ctcgactggg acgcgcaggg ccatgcggcg
+    12481 ggcagcccct tctcggtctc ccacaccttc gcccagaccg gaccgttccg cccgcgcaac
+    12541 ctcgtacggg ggctggacaa cgtggtgctc gcgggctgcg ggaccacccc gggtgtcggc
+    12601 gttccgaccg tactggtcag cggcaaactc gccgccgcgc gggtcaccgg cggtgccggg
+    12661 tcccggcccg cccgcacgcg tcggtccccg gccgtttccg acccgtgccc cgccccggtc
+    12721 ccggcaggtg ccgatgaccc gtcgtgaact ggacgccgcc gggatcaccg atcccctgct
+    12781 gcgcgccgcc tacacccggt gccgccgtct caacgcccgc cacggcaaga cctacttcct
+    12841 ggccacccgt ctgctgccgc tcgaacggcg ctcggccgtg cacgccctgt acggcttcgc
+    12901 ccgctgggcg gacgacatcg tggacgacct cgaccggcac cgcacggccg gggaacgcga
+    12961 ccgtgcgctg cgccgcctgg agagcgacct ggccgacggg ctgcgcaccg gaacgggccg
+    13021 ggaaccggtg gtccgggccg tcgcggacac cgccgaccgg tacgacatcg accacgtgct
+    13081 cttcgccgac ttcctgtcct cgatgcgtgc ggacctgacc gtcacccatt accccaccta
+    13141 cgccgatctg caggcgtacg tacacggttc ggcggcggtc atcggcctgc agatgctgcc
+    13201 cgtcctcggc acggtcacgg accggaagga ggcggcaccg cacgcggcgg cgctgggcgt
+    13261 ggcgttccag ctcaccaact tcctgcggga cgtcggcgag gatctcgacc gcggccgtgt
+    13321 ctacctgccc ggcagcctgc tggccgcgca cggggtggac cggcccctgc tggagtggag
+    13381 caggcgcacc gggcgccgcg accgccgcat ccgggccgct ctcgtcgcgg cggaggccat
+    13441 gacgcggcgc gtgtaccgga cggcggagcc gggcatcgcc atgctcgatc cacgggtgcg
+    13501 tccctgcatc cgtgccgcgt tcaccctcta cggcgggatt ctcgacgcga tcgccgagca
+    13561 ggactacacc gtgctgcatc gtcgcgcggt ggtgtcgcgc cggcgtcggg cggcaacggc
+    13621 cgccgagggt gtgctgtgcg tggccgctgc ccggtggcgt gcccgcacct cgccccgggt
+    13681 ggaggcggcg ggtggtccgg cagccgagtg gcagggaccg gtgcggtgag tggtcgacgg
+    13741 ggcggcaggc ggtggtcgcc acccgtgcgc cgacgtggtg cgggccccga ctgggcggct
+    13801 cagactccga cctggcggca ggcgcggccc tcgctcatcg ccgacgcgct cgagcgggcc
+    13861 tccgcccggc cctccggcaa ctggttcgtg gtcggcgcct cccggcaggt gcgcgcgggc
+    13921 gaccggccgt acggccggac ggtcggtggg gtggaggtcg tgctgtggcg ctcggacgac
+    13981 ggcgagcccc gtgccggctc cggcatctgc ccgcacctgg gcgctccgct gcgcgacagc
+    14041 cgggtggtgt gcggcacgct ggtctgccac tggcacgggc tcgccctgga cggttcggcg
+    14101 tccgccggct ggcggccgtt cccggtgcac gacgacggtg tcctcgtctg ggtaaggctg
+    14161 gacgaggtgg gaggcgagga gcccaccgag cggcccgtcg tgcccacgcg gcccgcgacc
+    14221 ggccgggggg tcgactccgt gttcacggcg acggggcggt gcgaaccgca ggacgtggtg
+    14281 gccaaccggc tcgatccgtg gcacggctcg tggttccacc cgtactcgtt cgtggacctc
+    14341 tcggtcgtgc gggagccgca ggggggcgag gacgacgctt tcgtcgtcga cgtctccttc
+    14401 cgggtggccg ggcggctcgt ggtcccggtg cgggccgagt tcaccgcgcc ggagccacgc
+    14461 acggtcgtca tgcgcatcac cgacggcgag ggcgccacgt ccgtggtcga gacgcacgcg
+    14521 acgccgctga ccgggccgga ccacgagcgt ccccgcaccg ccgtggtcga ggcggtcgtc
+    14581 gccgcgtcgg accggcccgg tttcgccctg gcacgggccg ccgcccccgt actgcgcccg
+    14641 ttgatgcgcc gtacggccgg gcggctgtgg cgcgacgacc tggcctacgc cgaacggcgc
+    14701 tgggcactgc gcagcaccgg ccggtttccc ggctgaggac gcgggcgccg gtcagggagc
+    14761 cgagcggtgc cccgcgacgg ctccgaacgc tcggagcacg ggtgaacgac ccgtccgggg
+    14821 gaccgtccac aggacctgac cacgcactcc ccggtcggcg agcagggcgt tcgcggccag
+    14881 gaagccggtg gtggcggctc gttccatgag ggcgacgggc aggtcgcagc ggattccgtc
+    14941 gccggccagg gtcagccagg gatgcggggt acgcacggtg gggcgccgcc ggtgggaacc
+    15001 gacctcgaac atcgggcagt ccgcgcgcca ttcgtgccgg gcgtcgacga cgcgggcctc
+    15061 gcgggtctcc gggtacgcct ggtgcagccg gtcgacgagc tcgtcctgca cctccttcgg
+    15121 ttcggccgcc gggtccacgg cgtaggcgtg cagttccacg acggatcccc cggtccgcgc
+    15181 ggcccagcgg gcggcctcgc cctcgtaccg ctccaggacg ctgacgttgt ccagtccgcc
+    15241 gtagccgctg gtgccgagga acccgggccg gtcggcgtcg accggccggt cgagccagag
+    15301 ccgcgagacg aggaacggcg gcgcggtgcg cagggcggcg atgccgtctc gccaggtgtc
+    15361 ggtgcccagg ccgggtgacg cggcgacggt ctgccgcagc cccgcggtgt cgagggccag
+    15421 caccaccgcc tggtgacggt cggcaccggt gtccgtgagc acgtccgctc ccccgtcggc
+    15481 gcggggaagg atcccgtgca ccggggtgcc ggtgcgcacg tcggctccga ggcgccggag
+    15541 gtagtcgccc agtgggttcc acagtgcctg ggggaagggt tcgaccggca cgtcgaagag
+    15601 caggccctcg gacgatccga ggaagtagat gtggaacatc agcagcagtt ccgcggcgga
+    15661 cagccggcgc ggatcggcga agaagctgcg ggagaacacc tcgaaggcca ggtggtgcgc
+    15721 cgcttcgggg aagcgcacgc tctccaggaa cgcggtggcg gtgacgccgt cgaagcgttc
+    15781 gtacacctgg ggcacgcgca cgtcgaggag cggcagggcg gcccgcgggt ccatcgcggc
+    15841 gaggtcgcgc catccgaagg tggggctgag ggcgacgaat ccgatcgcgc tgaggggcgg
+    15901 ggtccgcggg acgcgggcga agccgtcggt caggccaccg ctgtgccgca aggggtagtc
+    15961 gggcagcggg gtgaggcggt ccaggccggg gtcggtacgg cggagcagtc cgcggaggtt
+    16021 gtagtactgg cggaagaagg cgtggaaccc gcgggtcatg gtcacggcgc tgccgtcggc
+    16081 cagggtggtg cgccggccgg agagcctgcc gccgaccgcg tcctccttct cgtacagcgt
+    16141 cacgcgggcg ccgcgttcgg ccatgagggt ggccgcggcc agaccggcga tcccgccgcc
+    16201 gatcaccgcg acggacggct cgtcaccgcg tccgaatcgg tccgcaccgg gcgcggggaa
+    16261 gacgatctcg gccttgcggt cgcggccccg tcgggcggcg gcggtgcggc ggacggtcac
+    16321 aggacgcgct cctctgtcgt ggtggggccg ccgttgcggg cgaggaaggt gtgcacgatg
+    16381 cccgtctgcc atccggcgac gggggcgacg cgcaccgagg tcaggccggc ccgcgtcagc
+    16441 cgggcggcga attcgggggc ggtgtcgaag gcgacgacgc tgcgccggag gtggcggtag
+    16501 agggtgcggt cgccggtgag ggtgcccgcg gggatgacga ctccgcggca caccgccgac
+    16561 cacagggccc ggtgccccgg cgagccgctc aggctgtact cgtgggcggc gaagcgtccg
+    16621 cccggcctca ggagttgccg gacggcccgc aggaccgcgt ccgggtcggt gacgttgcgg
+    16681 aacaggtagg cggcgaagac ggcgtcgaag gggccttcgt cctcacgggt cgtggcgaac
+    16741 tcctcggcgg tcaggtggag gaagcgcacg cgggcgggcc acggtttgac cagtgctcgg
+    16801 cgcagcatgc ccgcggaggc gtccacggcc gtgatccggg ctcgtggcgc ggccctgagg
+    16861 agggcccggg tggaggcgcc ggtaccgcac ccgaggtcga gcagatgcag tccggctccg
+    16921 tcggcgggga gcgcgagacg gcgggcggaa cgcaggaggc ccgtgcggta gccggggttc
+    16981 agggccgtga ggccgtcgta ggtgtgggaa gcgtggtcga aggcgcgggc caggtcgtgg
+    17041 tcgcgcagga gtgtcatcgg ttgttccctc cggttcgggc gaggggctgg gaccggcgtg
+    17101 gcaggaaggg cacttcggcc gcggtgcgca gcatcggccg gacgggagtg cgcaacccga
+    17161 tgccccactc ctcccggagg gaggtcgtgc cgtcgaggaa cctcagcagg cgctcggccg
+    17221 ggacccggcg gaacaggtcg gtgaagaagc gcggcccgtc gatgcgaccg gtgtccagcg
+    17281 cacgcagcag gaccgcgtcc atggcccgcg cccgtcgccc gtgcggtgcc gggacgcggt
+    17341 cgtggccgtc ccgcagggcg gcggcgatgg ctccgctgtg ccgttgcacc gcggcgaacg
+    17401 tgtagccggt ggcggggcga gtggcaccgc ccgcggtccc gatgcggtac acggccggcc
+    17461 cggcacgtcc cgggaagcgg gcgtcggtca tggggatgac gccttgttcc gtccgttcca
+    17521 cggtgagttc gcccagtccg aggatgtcgc ggcagtagtg cccgagtgcg gactcgtacg
+    17581 cctcggtggt cagcggggcg cgggagaact cggtgtactc cacgagcgcc cggtccggcg
+    17641 ccagcggcag gacgtagccg aaggcgagtc cgtgggccgg ctggggcacg cggaagtcca
+    17701 tcaggtccgc gaccgccggg tcgaaccggt cggtgcgggt gtgtacgaac cagccgcgga
+    17761 agtgctgcag cagacacgta cgcgccggcg gcagctcggg aagcggccgt gagtcgaaga
+    17821 cccgccgggc gtacagcgtc agcggccggc ctccgggcag cgtgcaccgg acctccgtgc
+    17881 ccgcgggcac ggcgcgaacc gattccgccg taccccgcag aaggcgcgca ccgtccgtgc
+    17941 gggccaggcg gccgtggacc atccgctcga agtcggcgga acgcaccatg cggtaggtga
+    18001 acggggccgg atcgacggtg accgacccgc cgtcggcgcc gtgcagacgc agcacggacc
+    18061 aggacgcgcc gaccgcctct tcgaggccgt cggcggccgc cccccagtag caccaggtgc
+    18121 gctccgcggg gcgcagcggg ccgtccggcg gctcgaccag ggtcatggca ggggccgtgc
+    18181 cgttctccgt cagccggtgg gcgaggctga gtccggccgc accgccaccg atgacgagca
+    18241 cgtcggagtc ctgggcggaa cggggtgtca ccacagtcgc cgttcgacga ccgggcttcc
+    18301 gtcgggaccc ggatgcggcg gctcggcggg cgtcggacgg tcggcgtcca tcagtacccc
+    18361 accaccccgt caccggcctt cgcggccgcg ccgcaggccc gggcggcgcc tgccaccggg
+    18421 tcacgcacac tcttcggttc cacgcttcac ccctcgtacg gacggcgggt ccgtccggtc
+    18481 gccatggctt cgggaccgag gccgtccgtg gatgcggccg ggcacgactt cgtcatcggc
+    18541 ctcacctctg cggttcccgg tcggcccgta cctcccgcgc cgcgcgcgta cccgaggcca
+    18601 gcgcgccctg tacggagccg gtcgcccggt ggtctccgca cacgtaccgg ccggggccga
+    18661 tgcgggtggt gcggctcagc ggccaggggg gaagcatcgc cggcagtgcg ccgtcgaccg
+    18721 tgcgggccgc gacctgctcc cagccgctcg tgtcggtgcc gtacagctcg gccagccgcc
+    18781 ggagcaccgc ctgtgccctg ccgggcgggt ccgtgcccag tacggaagtg gagaccagcc
+    18841 cggtgccggg gggcgcgtac gtgggagcga cctggctgag gacgcacgtg ttcaggatgg
+    18901 ctccggtgct gtccaccatg aggatcggtt cggccgtcgg cgggctgtcg gtggcgtggt
+    18961 agtaggtggt gacggtgcgg gtgtccggga cggtcaggtc cgggagcagc ccggcggcgg
+    19021 tcgccgggtc cgtcgccacc acgacgaccc gggccggcac ctcgccgccg tccccgagca
+    19081 gcactccggc gtccgtgatc tccgcgacgg gcgtgcccag gcgcaggacg ccgtcgggca
+    19141 ggccgtcggc cagctgggcc ggtacggcgc cgatgccctc cgccggcagg cacagggatc
+    19201 ctcggaccat gctccgccag accaggtgga agaaccgggc tgaggtctcc agccggtcct
+    19261 ccaggaagac gccggacagg aacggccgta ggatgccggc gatcgccgcg tccgacagtc
+    19321 ccacccggga cagggccgcc gaagtgggac ggtcccggcg ccgtcgggtg acggccacgg
+    19381 gcagaacggc gtcccgtgcg gtgagtgccg ccagcgcggc cagatcgcgg gccggcagag
+    19441 cccgccccgg cagcagcgtc cccgccgcgc ggggctccct ggtcggatcg gcgaggcgga
+    19501 cgggcccgtt cgacgtgtgg gcgacgacac ccgccgtgaa cggcctcagt cgcagactct
+    19561 tcagctccat gcgccgcttc acctgcggat aggaggtgtt gaacacctgg aacccgcggt
+    19621 ccagcaggaa tccgtcccgc cggtccgtgc gcatccggcc gccgacaccg tcggaggcct
+    19681 ccagcagtgc cacccgccat ccggcgcggc acaggtcgag ggcgcacgcc aggccggcca
+    19741 gacccgcgcc gacgacgacc gcgtccgctg cccggtgttg tccgtcgctc atatgtctcc
+    19801 tcactcgacg tcacgtccgt gatgcccagg ggcaaaggcc ggccggtcgg cctctccgcc
+    19861 ccggccggtg ccccggaccg gtcggcacgg tcggggccgg aagccggtgc gagtgcgggg
+    19921 aaacgcccgc cggccgacga ccgggccacg accaccgggt cagcggacca cgtcccccgg
+    19981 cccatgccca ggcgccacga ccaaggacgg ccggacgaca acacctcacg ggtacaccga
+    20041 cggctccaga gcggcgaccg cctcggcaag ccccgacgga cgcgccagac cggccaccgc
+    20101 ctggcccgcc catccagggc ccagggtcag gacgacgggc cggcgccggg ccccgcgcac
+    20161 tccccactcc atggcggcca cgtgctgggc cagcggccgg ctggcggtgg tgcgggactg
+    20221 cgaccacagc cccaccgcgg cgggcccggt cctgcgcacc gccgcgacga gcgactcaac
+    20281 gggcagcgca ccgccgaaca tccgcaccgg gacgcctcgc tccgtgagtg cagcggacag
+    20341 tacctccaac ggcagagtgt ggttctcccc cggtacgcag gcgagcaccg tggtggaacc
+    20401 gggacggtcc tcgaccgcgg ggggcgcggc gcggcggagc gccccggaca cgtgccagga
+    20461 caggaagtgc tcgacctcga cgtacttctc gccggacgtc tcccacttcc ggccgactgc
+    20521 ctggagcgtc ggcacgatca cctcggtcca ggccgcgacc aggccgtgtt ccgcgatcgc
+    20581 ggcgagcagc agttcgtcca aggcggaggc gtccagacgc agggcggccc tcgcgatccc
+    20641 ccggcactcc tgtcgtacgt cgcccagttg caggccgctg cccgcccggc tccggcgccc
+    20701 ggtgggagca cgtcgagccg cgtcggtgtt tcggggcccg gccgccgtcg gacgctcttc
+    20761 actgcgcgcg agccgtgccg cctcggccgg tggcagcccg gtcgccgtca gggcgcacat
+    20821 ccgttccagc ctcgccaggt ccgccgccgt ccagcgccgg tgccgtccgt cgacgtgcgc
+    20881 gtccggcccc agcccgtacc ggcggtccca cgtgcggacc gtggtgggcg ccacccccag
+    20941 acgccgggcc acctcgccgg tggtcaatcc gccacggcgc ggaccgccgt cgtcgaccgg
+    21001 ctcgtcgccg tctcccgtgt acgcgttcac atgcccacta tacgacgcac aaacgacgca
+    21061 tgttgcttgc gtcgtttcct cacccaacac tgggaccacg cacacggcag ccacgcaggg
+    21121 tagaccggcg acgtgccgct cggggacggc ccctcccgtc cccgtacgac gcacggcagg
+    21181 aggaacgggc atgaacacgc gtacacgacc gaccaccacc ccggtcccgc ccgtggagga
+    21241 gacgcggtac gaggaggagc tggcgcacgg cctcgtgaag gccgacgagg acgcgttcgc
+    21301 ggccatctac cggcgctggg ggtcgctcgt gcacactctg gccacccggt ccctcggcga
+    21361 cgcccacgag gcggaggacg tgactcagca ggtcttcgtc ggcgcatggc gcgggcggca
+    21421 cggtttccgg cccgagcggg gcacactcgg cgcctggctc gtcggcatca cgcgccggaa
+    21481 ggtcgtcgac gcgctggccg ccaggacacg gcgcctgtcg ctggtcgagt cggccgggca
+    21541 ggacatcacg cccgcccgtc tcgtccagcc ggcactggac gaggtactcg accgcgtact
+    21601 gctcgtggag gccctgtccc gattgccgca ggcccagcgg gatgtgctgt gcatggcctt
+    21661 ctacgaggac ctgacgcagg cgcagatcgc ggaacgcacg ggggttcccc tgggcacggt
+    21721 caagagccac gcccgccgcg gcctgcatcg gctgcgcacg gcggtcggcc cgggcgccgc
+    21781 acatgacacg tgtgtctgac cgggccggag cagagacgcc ccggggcgca tccacggcac
+    21841 cggtcgccgg cgaaacacct tcgagaccgc ccagcagacg gaaactccct acggaggggt
+    21901 gattcccatg atgtcccgga ccaccatcgc cgtcgccggc tcggccgggg cctgtgccct
+    21961 ggccccgacc gcacccgccg ccacggctgc tcccgagcag gcgcaggaca cgggcctggt
+    22021 gtccgtcttc cacggcatcc ccggcacgac ggtcgacgtc ttcgccaacg gcgacgaacc
+    22081 actcggcgac ttccagcccg gcacggtgac cgaaggcggc aacacgaccg tcgccgccca
+    22141 tctctccgcc gacggcaagc cccggctgac gacgttcacc gacgacgtct cgaagacgga
+    22201 cgccggcagg tcacgcctca cggtacggca cgtcgcggca gcacccgccg tggacgtacg
+    22261 ggccggcgga catcctctct tcaccggcct ggcgaacccg gacgaggaca ccgcgctcgt
+    22321 cgaggccggc atcgtgaacg ccgacgtcgt gctcgccggc acggagacgg tggtcgtagg
+    22381 accggccgga ctcgacctca aggagggcac gaccaacgtc gtctacgcct ggggcagcgc
+    22441 cgaggaccag actctggctc tgcccggcca ggccttcggc ggcatggatt cgacgcccct
+    22501 cgcggtccac ccgggcgccg gcggcacggc agccaccccg aacgcgtccg accggtggcg
+    22561 tgcccgggcc gcgacgccgg cacgatcgcg gtgacagccg tcctcgccgc ctcgaaccgg
+    22621 ccgccggagc ccacgccgga ccgcgcgacc gtgacggccc ccgtcctcac acagtccgcg
+    22681 tggagaagac gaagcccgag gcacaggagg gcgcagtggg tcacgtgcat ccgtcgcacc
+    22741 tggtggagct ggcactcggt cacgccagtg gcgaggcgga cgtcggcgcc ctgcggcatg
+    22801 ccgcgtcatg cccgcgctgc cgcgaggaac tgctccggtt gacccgcgtg gtgaccgctg
+    22861 cgcgcggcgc ggaagcatcg gacctgccag tgcctccgcc cgagcgcgtg tggcagcgca
+    22921 tcgccctcga agtactcccg gagaccgacc gggtgccccg tctccgggaa tcctccgctc
+    22981 acgggtccgc cgacgagagg gttcgcggtt cccagcgccg gtggaccgac cacgcgggcg
+    23041 agggcctcct cggactggct ctggccatcg ccgtccttct gctccggcgg tggcggatca
+    23101 gggccggctc ggggaactga tcaccgaggt ccgcgtctcc cgcgtgcacc tgtcgtcccg
+    23161 tcgaccgccg tgcatgcagc cgttgccgcg gccgatgtcc gcaccctttc cgagtccgcc
+    23221 cgcacgtggc ggcctgtcgt gaacggcggg ttcaagtggg cgggtccagt ccgtacaggg
+    23281 tgcggccgcc gaccagctcc cggccgctga ccaggtccgg cgcgatgcgg acgaagacct
+    23341 ccacgggcca gggcacccag gaacgaggac cggtgcgaac gagttgctcg tgttccccgg
+    23401 gatcggtgac caccgaggcg aggccggtga cgacgacgct ccagccggag tgcgtcacgg
+    23461 cgtcgacttc gtcggcctcg aaagcgacca cggcaccgtc gacggcacgg accagctccg
+    23521 aggaggccga cgtgcgcaac agcacggcac cgctcttttc caggacgaag ttgaccggca
+    23581 ggacggcggg cagggcgtcg cgggtgtgca cgatgcggcc cacgggcgcg ttggccagcc
+    23641 gctggaggct ctcctgtcgg ttcagctcgc ggaatccgtc gttgcggtac atcagccggg
+    23701 tgtctctccg tgtgtcgtcc ggtgcgttgc gcgtactccc atcctgctgc ccgtcggcga
+    23761 ccgcgacggc gagttcggcg gtgtgcgggg cgacgtgctc ggcgtggtac tcgacgaggc
+    23821 cgacgccctg tcccgcacgt tcggcgagca gggcccggtg cccgcgccga gccggcgcgc
+    23881 acacggtgtc cgcggccggg ccggcggagc gggagccggc cgagaggaag cgcaggcggc
+    23941 ggttgtccgg tgacatctcc gcgtagagcc cctccagttg ctcgtggtcc ccggctcgac
+    24001 ggcgcggata cggacggtgg tgccgtccgt gagcagcgcg tggactgcgg ggcggtgtgg
+    24061 cgtgtcgtcc ttcatggcgg ttctccttcg agccgctcgg gtcctgtgtc ctgccgagcg
+    24121 tccgtcacga cgtcggacgc gcccagggac cgaccggggg tgcccgcggg gcacgtccgg
+    24181 cccccggtct tccgccggcc gtcccgggcg gcggcctcgg gcggtcatgt cgtgtcgggt
+    24241 acgaccgcga ccggacaggc ggagtggtgc agaagggtgt gggcgacccg gccgaggcgg
+    24301 tgcccgaact gcccgggacg ccgccggccg acgaccagca ggtccgcctc gtgggaggcg
+    24361 gccgacagca ctcggctacc cggtccctcg gccgtacggc ggcgcaggcg cacgtccgcc
+    24421 ggggcgtcgg cgagcgcggc ctccagctcc ttggccgccc gttcctcgtg aagacgctcg
+    24481 ggcgtgcccg cgagcagcgg gtggtcgacc gtgtcgtggg tggggcatct ccatgcccgt
+    24541 accgcgtcca gggcggcgcc gcgccgccgg gcctcctcgc aggcgaagcg caccgcagcg
+    24601 gtgggcgcgt cggccacacc caccacgatg cggccgcgcc ggccgccacc ggcggcacgg
+    24661 tcgtcgtggt ccccccgggt cacgacgacc ggacagtccg acatggtggc caccgtcagg
+    24721 ctgacggagc cgagcagcag gccggcgagt tcgccccgcc cgcgggtgcc caggatcacg
+    24781 gcggacgcgt tgcgcgcctc gcgcaggagg acgtactccg gttcctcggc cgtcgcttcg
+    24841 gtggtgacgg cgaggtccgg gtggtgacga cgggcgcgac gggtggcgac ggcgaggatg
+    24901 tcgtcggtgg tgacgtgacc ggacggcttg ccgagctccc gggcgaggga ggcgccctcg
+    24961 tagcggtccc agcggtaggc gtggacgatc cgcaagggta cttcgtgcag ggcggcctcg
+    25021 tcagccgccc agtcgactgc cccgaggctc gactcggagc cgtcgactcc gacgaccatg
+    25081 ggcaggtaca tcgttctcag cctcccgcgt tgagatcgaa cacgatccgg gccttgacct
+    25141 gtccgccgag gacctcgtcg atgcagtcgt tgacggcggc gagcggacgg gtctcccgga
+    25201 tgaccttcgt gcggccctcg gcgtggagtt ggaagacctc ggcgagatcc tgccgggtgc
+    25261 cgacgatgga gccgatgacc gaggtgccgt tgaggacggt gtcgaagatc gggacctgga
+    25321 gggtgccgtg cgccggcagg gcaaccatga cgagtttccc gccgcgccgc agaccggagt
+    25381 tgacggcctg gaaggcggcc gggttcaccg cgagggcgag ggcggcgtgc gcgccgccgt
+    25441 gtcgcttcag ctcggcgccg acgtcctggg tgcgggcgtc gatgacgagg tcggcgccga
+    25501 gttcccgggc gagttggagt ttgtcgtcgg tgacgtcgat cgcgacgacc cgcgctccgg
+    25561 cgatcttcgc gtactgcacc gcgaggtgcc ccagtccgcc cacgcccgag acggcgacga
+    25621 gctgggcggg cccgacttcg gcgaccttca gtgccttgta ggtggtgacg cccgcgcagg
+    25681 tgagcggggc ggcgtcgagg gcgctgacgc cctcgggcac cggctgcgcg aagtcggccc
+    25741 aggcaagcat cttctcggcg tacccgccgt cgcagccgta cccggtgttg acctggtcct
+    25801 cgcacagggt ctcccagccg gaccggcagt gctcgcaccg cccgcacgcc ttgccgagcc
+    25861 agggcacggc gacgcgttgt ccgacggcga ggtgggtcac gccgtcgccc agcttctcga
+    25921 ccaggccgac gccctcgtgc ccggggacga acggcggggt gggcttgacc ggccagtcgc
+    25981 cgtgggcggc gtggatgtcg gtgtggcaca ggccggatgc ctcgacggcc acgagcacct
+    26041 gccccggacc gggctccggg tcgggcctgt cctcgatgac caggggcttg ccgaactccc
+    26101 ggacgaccgc tgccttcatg gtcctgctcc ttctgtgctc gtcttcggtg ggccgcgtca
+    26161 gtcgtgcgcg acgacggcga cgggggtggt ggcgtggtgc atgaccgcgt gggcgacggc
+    26221 gccgatgtgc acaccgaacg ggctgcggcg gatacggcgg ccgacgacga cgagggaggc
+    26281 gtcgcgggcc gcgtcgatga ggtgctcggc gggactgccg agccggcacg tctcggtcac
+    26341 ctcgacgtcc gggtacttct cccgccaggg cagcagtgcc tcgccgagtg cttcggcctg
+    26401 ggcgcgggcc agttcctcgc gcgggtcgaa cccggcggcg atgctgtagg tgtaggagga
+    26461 cggcaggttc caggccctca cggcggtcag cggggcccgc cggcgccgcg cctcctcgaa
+    26521 ggcgaaggag aggacggcct cgtccgggct gccggtgtcc agtcccacga ccacgggccg
+    26581 gaagcccgtg gcggcggacg ggatgccggt ggggtccttg aggtgttcgt cggcggcctg
+    26641 ttcccccgcg cggacgagga tcaccggcgt ctcggtgcgg gcgatcacgg actggccgac
+    26701 ggatccgacc aggaagcccg tgagcccgct gagggcgcgc gagccgagca ccagcagttc
+    26761 ggcgtcaagg gtgccggcga gcagggcgtc cgccggattc ccggtcgcct gctcggtggt
+    26821 cacctcgacc cccgggtgcc gcagcctcaa gccctcggcc gtgtcccggg ggatccgttc
+    26881 ggtccagtgc tggtgggtct cggcgccgag gagcggagcc tgggccatgg gctccggtac
+    26941 cggctgccag acgtggagca gtcgtaccgg cacccggcgc agcgtgccct cgcgggccgc
+    27001 ccactccgcg gctgcccggc tctcgggcga gccgtcgagt cctacggtga tcgtgcgggc
+    27061 cattccggcc acctcctgtg tcttctgttc tgttctcagc gtctcttcgg gcggtctacg
+    27121 ggggcagggg cctgtggtcc cgggacgggg ccgaccgtcc ctgcccgcag ggtgatggga
+    27181 cgggtcctcg ggcgggcccg ccccaccggt cgtgttcagc gcagccacgc gtggtcgcgg
+    27241 acgatcggga gcctggccca cagccggccc agtcccaggg cgtcaccggc cgagacagcg
+    27301 gccagcgcga tcagcagcac cgcgtacagc acgtggtagt cggcgaacgg attcgtcgac
+    27361 atgctcgccg acccgtcgga caggtgcttc gccggcggcc actccgccgc ccacatcagc
+    27421 gccatcatca ccgtccccgc caccgcggcc ggccgcagcg ccacccccgc cgtcaacgcc
+    27481 agcccgacgc cgagcaggcc cagcatgaac agccagtcgg cccacgccgc cccggcccac
+    27541 gagtggaacg tcgactccat cggaccgacc gccacgtgcc cgaggaagcc ctcggtcggc
+    27601 gaaccaccgt cgatccagcc cttgccggag gcggtggcgt aaccgaaccc gaacgtcttg
+    27661 tccaggaacg cccacaggaa gacgaagccc atcagcaccc gggccgacgc gaagacgaaa
+    27721 gcccgggcgg tgagcgcgcc ggcctccacc gaatctgccg cccccggcac ggatacggcg
+    27781 ccgttacggc gcgaggacgg caggtggaaa cccgaaccac gatgcgtgga ctggtgcatg
+    27841 gccatgacag tgaccccttc ggagaggatg cggttggttc ctgacaccac tcactctccc
+    27901 gggccccgcc accccgcacc cgacgccgaa agtccgcacc ccgggggctc aacagcccca
+    27961 atccgcgggg accttcggcc ggcggtgccc gtacggccct tacgcgcgcg tccgcgaggg
+    28021 ccgaggcggg gaggtgttcg cccacctgcc cggccggcct cggacgtggg cgggaaggag
+    28081 gagtaaggag gagttccgat gagttcgtca acctcgacgc cccggtcgcg gagcggctgg
+    28141 tcgcgacggc cgtggccgcg ccgtccctgc gcaccaccca gccctggcgc ttccggctcg
+    28201 ataccgacag ccgcacggtg cacatccacg ccgccgcgga tcgggcgcgg cgccacaccg
+    28261 accaggtggg c
+//
