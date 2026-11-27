@@ -10,6 +10,21 @@ from pydantic import BaseModel, Field, field_validator
 
 _SPECTRA_EXTS = {".mgf", ".parquet"}
 
+# From a folder, only take region files, like bigscape's --include-gbk/--exclude-gbk defaults:
+# an antiSMASH output folder also holds the whole-genome .gbk, with all regions in one
+# record, which BiG-SCAPE can't read as a query.
+_INCLUDE_GBK = ("cluster", "region")
+_EXCLUDE_GBK = ("final",)
+
+
+def _region_files(folder: Path) -> list[Path]:
+    """Region .gbk files in a folder, chosen by file name as bigscape does."""
+    return sorted(
+        f for f in folder.glob("*.gbk")
+        if any(s in f.name for s in _INCLUDE_GBK) and not any(s in f.name for s in _EXCLUDE_GBK)
+    )
+
+
 class SpectraSearchConfig(BaseModel):
     query: Path
     bgc_links: Path  
@@ -55,7 +70,7 @@ class SpectraSearchConfig(BaseModel):
 
 
 class BgcSearchConfig(BaseModel):
-    query: list[Path]                                # region .gbk files and/or folders of them
+    query: list[Path]                                # region .gbk files and/or folders of them (e.g. antiSMASH output)
     reference: Path = Path("data/bgc_reference/mibig_5.0.parquet")
     bgc_links: Path = Path("data/library/bgc_links.csv")
     pfam: Path = Path("data/pfam/Pfam-A.hmm")
@@ -70,7 +85,13 @@ class BgcSearchConfig(BaseModel):
         files = []
         for p in v:
             if p.is_dir():
-                files += sorted(p.glob("*.gbk"))
+                found = _region_files(p)
+                if not found:
+                    raise ValueError(
+                        f"no region .gbk files in {p}: files in a folder need 'region' or 'cluster' "
+                        "in their name (and not 'final'); pass other files one by one"
+                    )
+                files += found
             elif p.is_file() and p.suffix.lower() == ".gbk":
                 files.append(p)
             else:

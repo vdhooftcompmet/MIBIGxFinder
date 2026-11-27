@@ -61,7 +61,7 @@ def structure(
 
 @app.command()
 def bgc(
-    query: list[Path] = typer.Argument(..., help="Query antiSMASH region .gbk files or folders of them"),
+    query: list[Path] = typer.Argument(..., help="Query antiSMASH region .gbk files, or folders of them such as an antiSMASH output folder"),
     reference: Path = typer.Option(Path("data/bgc_reference/mibig_5.0.parquet"), help="BGC reference table (see build-reference)"),
     bgc_links: Path = typer.Option(Path("data/library/bgc_links.csv"), "--links", help="BGC links CSV/TSV (spectrum_idx,bgc_id,...)"),
     pfam: Path = typer.Option(Path("data/pfam/Pfam-A.hmm"), help="Pfam-A.hmm the reference was built with"),

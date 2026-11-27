@@ -66,13 +66,18 @@ mibigxfinder bgc \
     tests/fixtures/NC_003888.3.region002.gbk \
     --reference tests/fixtures/bgc_reference_small.parquet \
     --links tests/fixtures/bgc_links.csv \
+    --pfam tests/fixtures/pfam_small.hmm \
     --out-dir out/
 ```
+
+The test reference was built with `tests/fixtures/pfam_small.hmm`, which holds only the 21 Pfam families found in the test region, so the example runs in seconds. For real queries, leave out `--pfam` to use `data/pfam/Pfam-A.hmm`.
 
 Positional arguments:
 | arg | description |
 |---|---|
-| `query` | One or more antiSMASH region `.gbk` files, or folders of them; file names must be unique |
+| `query` | One or more antiSMASH region `.gbk` files, or folders of them such as an antiSMASH output folder; file names must be unique |
+
+From a folder, only `.gbk` files with `region` or `cluster` in the name (and not `final`) are used so the whole-genome `.gbk` in an antiSMASH output folder is skipped. Files given one by one are always used.
 
 Options:
 | flag | default | description |
