@@ -1,0 +1,10 @@
+name: mibigxfinder
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - bigscape=2.0.3
+  - pip
+  - pip:
+      - -e .   # MIBIGxFinder itself; its Python dependencies are in pyproject.toml

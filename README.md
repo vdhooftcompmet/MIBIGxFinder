@@ -1,24 +1,15 @@
 ## Install
 
 ```bash
-conda create -n mibigxfinder python=3.12 -y
-conda activate mibigxfinder
 git clone https://github.com/rtlortega/MIBIGxFinder.git
-cd mibigxfinder
-pip install -e .
+cd MIBIGxFinder
+conda env create -f environment.yml
+conda activate mibigxfinder
 ```
 
-### BGC search (optional)
+### Pfam database
 
-BGC search uses the distance metric of [BiG-SCAPE 2](https://github.com/medema-group/BiG-SCAPE) (2.0.3) and needs BiG-SCAPE and the Pfam database.
-
-Install BiG-SCAPE via conda:
-
-```bash
-conda install -n mibigxfinder -c conda-forge -c bioconda bigscape=2.0.3 -y
-```
-
-Download Pfam database into `data/pfam`:
+BGC search also needs the Pfam database. Download it into `data/pfam`:
 
 ```bash
 mkdir -p data/pfam
@@ -68,7 +59,7 @@ mibigxfinder structure query_smiles.csv tests/fixtures/library_fake.mgf --out-di
 
 ### BGC search
 
-Compare query BGCs against MIBiG with BiG-SCAPE's distance and return the spectra linked to the closest MIBiG BGCs (needs BiG-SCAPE, see Install).
+Compare query BGCs against MIBiG with BiG-SCAPE's distance and return the spectra linked to the closest MIBiG BGCs (needs the Pfam database, see Install).
 
 ```bash
 mibigxfinder bgc \
@@ -98,7 +89,7 @@ Output columns: `query_id, bgc_id, distance, jaccard, adjacency, dss, mibig_rank
 
 ### Build the BGC reference
 
-Annotate all MIBiG BGCs with Pfam once; BGC search compares query BGCs against this table (needs BiG-SCAPE, see Install).
+Annotate all MIBiG BGCs with Pfam once; BGC search compares query BGCs against this table (needs the Pfam database, see Install).
 
 ```bash
 mibigxfinder build-reference --mibig-version 5.0 --cores 4

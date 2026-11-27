@@ -1,4 +1,0 @@
-# this is where you put all the third-party libraries you want to install
-# e.g. 
--e .
-matchms @ git+https://github.com/matchms/matchms.git@development

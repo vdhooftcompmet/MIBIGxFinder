@@ -12,6 +12,7 @@ authors = [
     { name = "Joana Tirana", email = "joana.tirana@wur.nl" },
 ]
 keywords = ["mibig", "mass-spectrometry", "metabolomics", "natural-products", "matchms"]
+# BiG-SCAPE 2.0.3 is also required, but it is only on bioconda: see environment.yml
 dependencies = [
     "matchms>=1.0",
     "rdkit>=2024.3",
