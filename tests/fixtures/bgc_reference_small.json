@@ -1,0 +1,15 @@
+{
+  "mibig_version": "4.0",
+  "gbk_dir": "mibig_antismash_4.0_gbk",
+  "n_bgcs": 23,
+  "n_domains": 58,
+  "pfam_sha256": "ba6f616d2c081150d624270be26853aea2b090f0588866f6462a8ea97e02b48f",
+  "bigscape_version": "2.0.3",
+  "settings": {
+    "record_type": "region",
+    "alignment_mode": "glocal",
+    "extend_strategy": "legacy",
+    "weights": "mix"
+  },
+  "created": "2026-11-27"
+}
