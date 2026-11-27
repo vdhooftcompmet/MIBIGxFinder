@@ -54,21 +54,30 @@ def test_bgc_search_returns_linked_spectra(pfam, tmp_path):
         pfam=pfam, top_n=2, out_dir=tmp_path,
     )
     with pytest.warns(UserWarning, match="linked BGCs are not in"):   # BGC0000005, BGC0003163, ...
-        df = search_bgcs(cfg)
+        result = search_bgcs(cfg)
 
+    # similarities: every reference BGC sharing a domain, closest first, with BiG-SCAPE's own
+    # distances (the query is annotated live here)
+    expected = pd.read_csv(BIGSCAPE, sep="\t")
+    expected = expected[expected["distance"] < 1].reset_index(drop=True)
+    sims = pd.read_csv(tmp_path / "bgc_similarities.csv")
+    assert sims.columns.tolist() == ["query_id", "bgc_id", "distance", "jaccard", "adjacency", "dss", "mibig_rank"]
+    assert sims["bgc_id"].tolist() == expected["bgc_id"].tolist()
+    assert (sims["distance"] - expected["distance"]).abs().max() < 1e-12
+    assert sims["mibig_rank"].tolist() == list(range(1, len(sims) + 1))
+
+    # matches: the spectra of the top_n=2 closest BGCs with spectra
+    df = result.matches
+    assert df.columns.tolist() == ["query_id", "bgc_id", "distance", "mibig_rank", "spectrum_idx", "tanimoto"]
     assert df["bgc_id"].tolist() == ["BGC0000664", "BGC0000649"]
     assert df["spectrum_idx"].tolist() == ["CCMSLIB00000079400", "CCMSLIB00000079401"]
     assert df["mibig_rank"].tolist() == [1, 2]
     assert (tmp_path / "bgc_matches.csv").exists()
+
     summary = pd.read_csv(tmp_path / "bgc_summary.csv")
     assert summary[["query_id", "closest_bgc", "n_bgcs", "n_spectra"]].values.tolist() == [
         ["NC_003888.3.region002", "BGC0000664", 2, 2]
     ]
-
-    # annotating the query live gives BiG-SCAPE's own distances
-    merged = df.merge(pd.read_csv(BIGSCAPE, sep="\t"), on="bgc_id", suffixes=("", "_bigscape"))
-    assert len(merged) == len(df)
-    assert (merged["distance"] - merged["distance_bigscape"]).abs().max() < 1e-12
 
 
 def test_summary_has_one_row_per_query():

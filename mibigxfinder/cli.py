@@ -65,14 +65,14 @@ def bgc(
     reference: Path = typer.Option(Path("data/bgc_reference/mibig_5.0.parquet"), help="BGC reference table (see build-reference)"),
     bgc_links: Path = typer.Option(Path("data/library/bgc_links.csv"), "--links", help="BGC links CSV/TSV (spectrum_idx,bgc_id,...)"),
     pfam: Path = typer.Option(Path("data/pfam/Pfam-A.hmm"), help="Pfam-A.hmm the reference was built with"),
-    top_n: int = typer.Option(5, help="Closest MIBiG BGCs with spectra kept per query"),
-    max_distance: float = typer.Option(1.0, help="Keep BGCs with a BiG-SCAPE distance below this (1.0 = no shared domains)"),
+    top_n: int = typer.Option(5, help="Per query, the closest MIBiG BGCs with spectra whose spectra go into bgc_matches"),
+    max_distance: float = typer.Option(1.0, help="Keep MIBiG BGCs with a BiG-SCAPE distance below this (1.0 = drop only those without shared domains)"),
     cores: int = typer.Option(1, help="CPU cores for the domain search"),
     out_dir: Optional[Path] = typer.Option("./out", help="Output directory"),
 ):
     """Find MIBiG BGCs similar to query BGCs and return their linked spectra (needs BiG-SCAPE)."""
     from mibigxfinder.config import BgcSearchConfig
-    from mibigxfinder.services import search_bgcs, summarize_bgc_matches
+    from mibigxfinder.services import search_bgcs
 
     cfg = BgcSearchConfig(
         query=query,
@@ -84,13 +84,16 @@ def bgc(
         cores=cores,
         out_dir=out_dir,
     )
-    df = search_bgcs(cfg)
-    summary = summarize_bgc_matches(df, [f.stem for f in cfg.query])
+    result = search_bgcs(cfg)
+    summary = result.summary
     typer.echo(summary.to_string(index=False, float_format="{:.3f}".format, na_rep="-"))
     n_hit = int((summary["n_bgcs"] > 0).sum())
-    typer.echo(f"\n{n_hit} of {len(summary)} query BGCs have matches; {len(df):,} rows (query, MIBiG BGC, spectrum)")
+    typer.echo(
+        f"\n{n_hit} of {len(summary)} query BGCs have linked spectra; "
+        f"{len(result.similarities):,} query-MIBiG similarities, {len(result.matches):,} linked spectrum rows"
+    )
     if out_dir is not None:
-        typer.echo(f"written to {out_dir}/: bgc_summary (this table) and bgc_matches (full table), as .csv and .parquet")
+        typer.echo(f"written to {out_dir}/: bgc_summary (this table), bgc_similarities and bgc_matches, as .csv and .parquet")
 
 
 @app.command("build-reference")

@@ -85,14 +85,20 @@ Options:
 | `--reference` | `data/bgc_reference/mibig_5.0.parquet` | BGC reference table (see `build-reference`) |
 | `--links` | `data/library/bgc_links.csv` | BGC-links CSV/TSV (see below) |
 | `--pfam` | `data/pfam/Pfam-A.hmm` | Pfam file the reference was built with; checked against the reference's `.json` manifest |
-| `--top-n` | `5` | Closest MIBiG BGCs with spectra kept per query |
-| `--max-distance` | `1.0` | Keep BGCs with a BiG-SCAPE distance below this; `1.0` only drops BGCs without shared domains (BiG-SCAPE groups BGCs into families at `0.3`) |
+| `--top-n` | `5` | Per query, the closest MIBiG BGCs with spectra whose spectra go into `bgc_matches` |
+| `--max-distance` | `1.0` | Keep MIBiG BGCs with a BiG-SCAPE distance below this; `1.0` only drops BGCs without shared domains (BiG-SCAPE groups BGCs into families at `0.3`) |
 | `--cores` | `1` | CPU cores for the domain search |
-| `--out-dir` | `./out` | Where to write `bgc_matches` and `bgc_summary` (`.csv` / `.parquet`) |
+| `--out-dir` | `./out` | Where to write the output files (below) |
 
-Output columns: `query_id, bgc_id, distance, jaccard, adjacency, dss, mibig_rank`, plus the columns of the links file, one row per query, MIBiG BGC and linked spectrum. `mibig_rank` is the rank among all MIBiG BGCs, so rank 3 means two closer MIBiG BGCs have no spectra.
+Output files, each as `.csv` and `.parquet`:
 
-The terminal only shows a summary, which is also saved as `bgc_summary.csv` / `.parquet`: one line per query with its closest MIBiG BGC with spectra (`closest_bgc`, `distance`, `mibig_rank`, and `compound` if the links file has `bgc_compound`), and how many MIBiG BGCs (`n_bgcs`) and spectra (`n_spectra`) it matched.
+| file | one row per | columns |
+|---|---|---|
+| `bgc_similarities` | query and MIBiG BGC below `--max-distance`, closest first | `query_id, bgc_id, distance, jaccard, adjacency, dss, mibig_rank` |
+| `bgc_matches` | query, MIBiG BGC and linked spectrum, for the `--top-n` closest MIBiG BGCs with spectra | `query_id, bgc_id, distance, mibig_rank, spectrum_idx`, and `tanimoto` if the links file has it |
+| `bgc_summary` | query (also printed in the terminal) | `query_id, closest_bgc, distance, mibig_rank, compound, n_bgcs, n_spectra` |
+
+`mibig_rank` is the rank among all MIBiG BGCs, so in `bgc_matches` rank 3 means two closer MIBiG BGCs have no spectra (they are still in `bgc_similarities`). In `bgc_summary`, `closest_bgc` is the closest MIBiG BGC with spectra, `compound` its compound (only if the links file has `bgc_compound`; "(+n)" for more), and `n_bgcs` / `n_spectra` count what went into `bgc_matches`.
 
 ### Build the BGC reference
 

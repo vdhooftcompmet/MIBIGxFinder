@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import warnings
+from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
@@ -143,12 +144,25 @@ def search_structures(cfg: StructureSearchConfig) -> pd.DataFrame:
 # BGC search
 # ---------------------------------------------------------------------------
 
-def search_bgcs(cfg: BgcSearchConfig) -> pd.DataFrame:
-    """Rank MIBiG BGCs by BiG-SCAPE distance to each query region; keep the closest ones with spectra.
+# columns of bgc_matches (tanimoto only if the links file has it)
+MATCH_COLUMNS = ["query_id", "bgc_id", "distance", "mibig_rank", "spectrum_idx", "tanimoto"]
 
-    One row per (query, MIBiG BGC, linked spectrum). ``mibig_rank`` is the rank among
-    all MIBiG BGCs, so a gap to 1 means closer BGCs without spectra exist.
-    Writes ``bgc_matches.{csv,parquet}`` and the per-query ``bgc_summary.{csv,parquet}``.
+
+@dataclass
+class BgcSearchResult:
+    similarities: pd.DataFrame   # query x MIBiG BGC below max_distance: BiG-SCAPE scores, closest first
+    matches: pd.DataFrame        # query x MIBiG BGC x spectrum, for the top_n closest MIBiG BGCs with spectra
+    summary: pd.DataFrame        # one row per query
+
+
+def search_bgcs(cfg: BgcSearchConfig) -> BgcSearchResult:
+    """Rank MIBiG BGCs by BiG-SCAPE distance to each query region and collect the spectra of the closest.
+
+    ``similarities`` has every MIBiG BGC below ``max_distance``; ``matches`` one row per
+    (query, MIBiG BGC, linked spectrum) for the ``top_n`` closest MIBiG BGCs that have spectra.
+    ``mibig_rank`` is the rank among all MIBiG BGCs, so in ``matches`` a gap to 1 means closer
+    BGCs without spectra exist. Writes ``bgc_similarities``, ``bgc_matches`` and ``bgc_summary``
+    (.csv and .parquet) to ``out_dir``.
     """
     from mibigxfinder import bgc            # needs BiG-SCAPE, so only imported here
 
@@ -168,13 +182,19 @@ def search_bgcs(cfg: BgcSearchConfig) -> pd.DataFrame:
     hits = bgc.score(bgc.annotate(cfg.query, cfg.pfam, cores=cfg.cores), references)
     hits = hits.rename(columns={"reference_id": "bgc_id"})
     hits["mibig_rank"] = hits.groupby("query_id").cumcount() + 1   # hits are sorted by distance
-    hits = hits[(hits["distance"] < cfg.max_distance) & hits["bgc_id"].isin(links["bgc_id"])]
-    hits = hits.groupby("query_id").head(cfg.top_n)
+    similarities = hits[hits["distance"] < cfg.max_distance].reset_index(drop=True)
 
-    df = hits.merge(links, on="bgc_id")
-    _maybe_write(df, cfg.out_dir, name="bgc_matches")
-    _maybe_write(summarize_bgc_matches(df, [f.stem for f in cfg.query]), cfg.out_dir, name="bgc_summary")
-    return df
+    linked = similarities[similarities["bgc_id"].isin(links["bgc_id"])].groupby("query_id").head(cfg.top_n)
+    full = linked[["query_id", "bgc_id", "distance", "mibig_rank"]].merge(links, on="bgc_id")
+    result = BgcSearchResult(
+        similarities=similarities,
+        matches=full[[c for c in MATCH_COLUMNS if c in full.columns]],
+        summary=summarize_bgc_matches(full, [f.stem for f in cfg.query]),   # full table has the compound names
+    )
+    _maybe_write(result.similarities, cfg.out_dir, name="bgc_similarities")
+    _maybe_write(result.matches, cfg.out_dir, name="bgc_matches")
+    _maybe_write(result.summary, cfg.out_dir, name="bgc_summary")
+    return result
 
 
 def summarize_bgc_matches(matches: pd.DataFrame, query_ids: list[str]) -> pd.DataFrame:
