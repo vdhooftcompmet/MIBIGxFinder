@@ -72,7 +72,7 @@ def bgc(
 ):
     """Find MIBiG BGCs similar to query BGCs and return their linked spectra (needs BiG-SCAPE)."""
     from mibigxfinder.config import BgcSearchConfig
-    from mibigxfinder.services import search_bgcs
+    from mibigxfinder.services import search_bgcs, summarize_bgc_matches
 
     cfg = BgcSearchConfig(
         query=query,
@@ -85,7 +85,12 @@ def bgc(
         out_dir=out_dir,
     )
     df = search_bgcs(cfg)
-    typer.echo(df.to_string(index=False))
+    summary = summarize_bgc_matches(df, [f.stem for f in cfg.query])
+    typer.echo(summary.to_string(index=False, float_format="{:.3f}".format, na_rep="-"))
+    n_hit = int((summary["n_bgcs"] > 0).sum())
+    typer.echo(f"\n{n_hit} of {len(summary)} query BGCs have matches; {len(df):,} rows (query, MIBiG BGC, spectrum)")
+    if out_dir is not None:
+        typer.echo(f"written to {out_dir}/: bgc_summary (this table) and bgc_matches (full table), as .csv and .parquet")
 
 
 @app.command("build-reference")

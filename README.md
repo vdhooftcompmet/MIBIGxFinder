@@ -88,9 +88,11 @@ Options:
 | `--top-n` | `5` | Closest MIBiG BGCs with spectra kept per query |
 | `--max-distance` | `1.0` | Keep BGCs with a BiG-SCAPE distance below this; `1.0` only drops BGCs without shared domains (BiG-SCAPE groups BGCs into families at `0.3`) |
 | `--cores` | `1` | CPU cores for the domain search |
-| `--out-dir` | `./out` | Where to write `bgc_matches.csv` / `.parquet` |
+| `--out-dir` | `./out` | Where to write `bgc_matches` and `bgc_summary` (`.csv` / `.parquet`) |
 
 Output columns: `query_id, bgc_id, distance, jaccard, adjacency, dss, mibig_rank`, plus the columns of the links file, one row per query, MIBiG BGC and linked spectrum. `mibig_rank` is the rank among all MIBiG BGCs, so rank 3 means two closer MIBiG BGCs have no spectra.
+
+The terminal only shows a summary, which is also saved as `bgc_summary.csv` / `.parquet`: one line per query with its closest MIBiG BGC with spectra (`closest_bgc`, `distance`, `mibig_rank`, and `compound` if the links file has `bgc_compound`), and how many MIBiG BGCs (`n_bgcs`) and spectra (`n_spectra`) it matched.
 
 ### Build the BGC reference
 

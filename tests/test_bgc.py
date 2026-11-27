@@ -60,8 +60,33 @@ def test_bgc_search_returns_linked_spectra(pfam, tmp_path):
     assert df["spectrum_idx"].tolist() == ["CCMSLIB00000079400", "CCMSLIB00000079401"]
     assert df["mibig_rank"].tolist() == [1, 2]
     assert (tmp_path / "bgc_matches.csv").exists()
+    summary = pd.read_csv(tmp_path / "bgc_summary.csv")
+    assert summary[["query_id", "closest_bgc", "n_bgcs", "n_spectra"]].values.tolist() == [
+        ["NC_003888.3.region002", "BGC0000664", 2, 2]
+    ]
 
     # annotating the query live gives BiG-SCAPE's own distances
     merged = df.merge(pd.read_csv(BIGSCAPE, sep="\t"), on="bgc_id", suffixes=("", "_bigscape"))
     assert len(merged) == len(df)
     assert (merged["distance"] - merged["distance_bigscape"]).abs().max() < 1e-12
+
+
+def test_summary_has_one_row_per_query():
+    from mibigxfinder.services import summarize_bgc_matches
+
+    matches = pd.DataFrame({
+        "query_id": ["q1", "q1", "q1", "q2"],
+        "bgc_id": ["BGC2", "BGC1", "BGC1", "BGC3"],
+        "distance": [0.4, 0.2, 0.2, 0.7],
+        "mibig_rank": [2, 1, 1, 3],
+        "spectrum_idx": ["s1", "s2", "s3", "s2"],
+        "bgc_compound": ["c", "a", "b", "d"],
+    })
+    s = summarize_bgc_matches(matches, ["q1", "q2", "q3"])   # q3: no matches
+
+    assert s["query_id"].tolist() == ["q1", "q2", "q3"]
+    assert s["closest_bgc"].tolist()[:2] == ["BGC1", "BGC3"]
+    assert s["compound"].tolist()[:2] == ["a (+1)", "d"]
+    assert s["mibig_rank"].tolist()[:2] == [1, 3] and pd.isna(s["mibig_rank"].iloc[2])
+    assert s["n_bgcs"].tolist() == [2, 1, 0]
+    assert s["n_spectra"].tolist() == [3, 1, 0]

@@ -148,6 +148,7 @@ def search_bgcs(cfg: BgcSearchConfig) -> pd.DataFrame:
 
     One row per (query, MIBiG BGC, linked spectrum). ``mibig_rank`` is the rank among
     all MIBiG BGCs, so a gap to 1 means closer BGCs without spectra exist.
+    Writes ``bgc_matches.{csv,parquet}`` and the per-query ``bgc_summary.{csv,parquet}``.
     """
     from mibigxfinder import bgc            # needs BiG-SCAPE, so only imported here
 
@@ -172,7 +173,35 @@ def search_bgcs(cfg: BgcSearchConfig) -> pd.DataFrame:
 
     df = hits.merge(links, on="bgc_id")
     _maybe_write(df, cfg.out_dir, name="bgc_matches")
+    _maybe_write(summarize_bgc_matches(df, [f.stem for f in cfg.query]), cfg.out_dir, name="bgc_summary")
     return df
+
+
+def summarize_bgc_matches(matches: pd.DataFrame, query_ids: list[str]) -> pd.DataFrame:
+    """One row per query: its closest MIBiG BGC with spectra and how many BGCs/spectra it got.
+
+    Queries without matches get a row too, with ``n_bgcs`` 0.
+    """
+    rows = []
+    for query_id in query_ids:
+        m = matches[matches["query_id"] == query_id].sort_values(["distance", "mibig_rank"], kind="stable")
+        row = {"query_id": query_id, "closest_bgc": None, "distance": float("nan"),
+               "mibig_rank": pd.NA, "compound": None, "n_bgcs": 0, "n_spectra": 0}
+        if len(m):
+            best = m.iloc[0]
+            row.update(closest_bgc=best["bgc_id"], distance=best["distance"], mibig_rank=best["mibig_rank"],
+                       n_bgcs=m["bgc_id"].nunique(),
+                       n_spectra=m["spectrum_idx"].nunique() if "spectrum_idx" in m else len(m))
+            if "bgc_compound" in m:
+                names = list(dict.fromkeys(m.loc[m["bgc_id"] == best["bgc_id"], "bgc_compound"].dropna()))
+                if names:
+                    row["compound"] = names[0] + (f" (+{len(names) - 1})" if len(names) > 1 else "")
+        rows.append(row)
+    summary = pd.DataFrame(rows)
+    summary["mibig_rank"] = summary["mibig_rank"].astype("Int64")
+    if summary["compound"].isna().all():
+        summary = summary.drop(columns="compound")      # links file without compound names
+    return summary
 
 
 # ---------------------------------------------------------------------------
