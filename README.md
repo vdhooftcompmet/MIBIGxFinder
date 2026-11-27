@@ -86,7 +86,7 @@ Options:
 | `--links` | `data/library/bgc_links.csv` | BGC-links CSV/TSV (see below) |
 | `--pfam` | `data/pfam/Pfam-A.hmm` | Pfam file the reference was built with; checked against the reference's `.json` manifest |
 | `--top-n` | `5` | Per query, the closest MIBiG BGCs with spectra whose spectra go into `bgc_matches` |
-| `--max-distance` | `1.0` | Keep MIBiG BGCs with a BiG-SCAPE distance below this; `1.0` only drops BGCs without shared domains (BiG-SCAPE groups BGCs into families at `0.3`) |
+| `--max-distance` | `0.4` | Keep MIBiG BGCs with a BiG-SCAPE distance below this, in all output files. Just above BiG-SCAPE's family cutoff (`0.3`), so it also keeps clusters for the same compound from other species; `1.0` keeps every MIBiG BGC with a shared domain |
 | `--cores` | `1` | CPU cores for the domain search |
 | `--out-dir` | `./out` | Where to write the output files (below) |
 

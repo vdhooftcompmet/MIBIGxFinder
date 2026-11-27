@@ -75,7 +75,7 @@ class BgcSearchConfig(BaseModel):
     bgc_links: Path = Path("data/library/bgc_links.csv")
     pfam: Path = Path("data/pfam/Pfam-A.hmm")
     top_n: int = 5                                   # closest MIBiG BGCs with spectra, per query
-    max_distance: float = 1.0                        # 1.0 = no shared domains
+    max_distance: float = 0.4                        # 1.0 = keep all with shared domains
     cores: int = 1
     out_dir: Path = Path("./out")
 

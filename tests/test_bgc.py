@@ -56,10 +56,10 @@ def test_bgc_search_returns_linked_spectra(pfam, tmp_path):
     with pytest.warns(UserWarning, match="linked BGCs are not in"):   # BGC0000005, BGC0003163, ...
         result = search_bgcs(cfg)
 
-    # similarities: every reference BGC sharing a domain, closest first, with BiG-SCAPE's own
-    # distances (the query is annotated live here)
+    # similarities: every reference BGC below max_distance (default 0.4), closest first, with
+    # BiG-SCAPE's own distances (the query is annotated live here)
     expected = pd.read_csv(BIGSCAPE, sep="\t")
-    expected = expected[expected["distance"] < 1].reset_index(drop=True)
+    expected = expected[expected["distance"] < cfg.max_distance].reset_index(drop=True)
     sims = pd.read_csv(tmp_path / "bgc_similarities.csv")
     assert sims.columns.tolist() == ["query_id", "bgc_id", "distance", "jaccard", "adjacency", "dss", "mibig_rank"]
     assert sims["bgc_id"].tolist() == expected["bgc_id"].tolist()

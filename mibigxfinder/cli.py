@@ -66,7 +66,7 @@ def bgc(
     bgc_links: Path = typer.Option(Path("data/library/bgc_links.csv"), "--links", help="BGC links CSV/TSV (spectrum_idx,bgc_id,...)"),
     pfam: Path = typer.Option(Path("data/pfam/Pfam-A.hmm"), help="Pfam-A.hmm the reference was built with"),
     top_n: int = typer.Option(5, help="Per query, the closest MIBiG BGCs with spectra whose spectra go into bgc_matches"),
-    max_distance: float = typer.Option(1.0, help="Keep MIBiG BGCs with a BiG-SCAPE distance below this (1.0 = drop only those without shared domains)"),
+    max_distance: float = typer.Option(0.4, help="Keep MIBiG BGCs with a BiG-SCAPE distance below this (BiG-SCAPE families: 0.3; 1.0 = all with shared domains)"),
     cores: int = typer.Option(1, help="CPU cores for the domain search"),
     out_dir: Optional[Path] = typer.Option("./out", help="Output directory"),
 ):
@@ -86,7 +86,8 @@ def bgc(
     )
     result = search_bgcs(cfg)
     summary = result.summary
-    typer.echo(summary.to_string(index=False, float_format="{:.3f}".format, na_rep="-"))
+    shown = summary.assign(mibig_rank=summary["mibig_rank"].astype("string").fillna("-"))   # na_rep skips Int64
+    typer.echo(shown.to_string(index=False, float_format="{:.3f}".format, na_rep="-"))
     n_hit = int((summary["n_bgcs"] > 0).sum())
     typer.echo(
         f"\n{n_hit} of {len(summary)} query BGCs have linked spectra; "
